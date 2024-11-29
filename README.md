@@ -1,9 +1,18 @@
 # Landing page
 
 ## Langues/Langages
+- [English version](#english-version)
+- [Version Française](#version-française)
 
 ## English version
 
+- [Description](#description)
+- [Visualisation](#visualisation)
+- [Technologies](#technologies)
+- [Getting Started](#getting-started)
+  - [Prérequis](#prérequis)
+  - [Installation](#installation)
+- [Setup Docker](#setup-docker)
 ## Description
 
 ## Visualisation
@@ -24,6 +33,14 @@
 
 ## Version Française
 
+- [Description](#description)
+- [Visualisation](#visualisation)
+- [Technologies](#technologies)
+- [Getting Started](#getting-started)
+  - [Prérequis](#prérequis)
+  - [Installation](#installation)
+ - [Configuration Docker](#configuration-docker)
+
 ## Description
 
 ## Visualisation
@@ -39,9 +56,9 @@
 ### Prérequis
 Avant de commencer, assurez-vous d'avoir installé les outils suivants sur votre machine :
 
-Node.js (version 16 ou plus récente) (lien de node.js)
-npm ou yarn
-Docker et Docker Compose (lien de docker)
+- **Node.js** (https://nodejs.org/) (version 16 ou plus récente)
+- **npm ou yarn**
+- **Docker** (https://www.docker.com/) et **Docker Compose** (https://docs.docker.com/compose/)
 
 ### Installation
   1. Clonez le dépôt :
