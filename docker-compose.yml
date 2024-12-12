@@ -2,11 +2,29 @@ networks:
   lsu: {}
 
 services:
-  frontend-next:
-    build:
-      context: .
-      dockerfile: Dockerfile
+  front:
+    container_name: LSU_landing
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.front.rule=Host(`landing`)"
+      - "traefik.http.routers.front.entrypoints=web"
+    networks:
+      - lsu
+
+  reverse-proxy:
+    image: traefik:v3.2.1
+    command:
+      - "--api.insecure=true"
+      - "--entrypoints.web.forwardedHeaders.insecure=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--providers.docker=true"
+      - "--entrypoints.web.address=:80"
     ports:
-      - 3000:3000
+      - "80:80"
+      # - "443:443"
+    labels:
+      - "traefik.enable=true"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
     networks:
       - lsu
