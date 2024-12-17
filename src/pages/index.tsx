@@ -1,9 +1,9 @@
 import Newsletter from "@/components/Newsletter";
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <div>
-      landing page
+      content
       <Newsletter />
     </div>
   );

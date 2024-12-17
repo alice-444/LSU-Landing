@@ -1,6 +1,6 @@
 import { Toaster } from "react-hot-toast";
 
-const ToasterContext = () => {
+const ToasterContext: React.FC = () => {
   return <Toaster />;
 };
 
