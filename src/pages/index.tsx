@@ -1,9 +1,9 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Stats from "@/components/Stats";
-import Working from "@/components/Working";
+import System from "@/components/System";
 import Feedback from "@/components/Feedback";
 import Newsletter from "@/components/Newsletter";
+import LearnTogether from "@/components/LearnTogether";
 import ShareKnowledge from "@/components/ShareKnowledge";
 
 const Home: React.FC = () => {
@@ -12,9 +12,9 @@ const Home: React.FC = () => {
       <Hero />
       <About />
       <ShareKnowledge />
-      <Stats />
+      <LearnTogether />
+      <System />
       <Feedback />
-      <Working />
       <Newsletter />
     </div>
   );

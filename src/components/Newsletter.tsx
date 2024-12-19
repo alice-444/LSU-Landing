@@ -2,22 +2,18 @@ import NewsletterForm from "@/components/NewsletterForm";
 
 const Newsletter: React.FC = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4">
-      <div className="bg-white p-6 md:p-10 rounded-lg shadow-lg max-w-3xl w-full">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-gray-800">
-          Abonnez-vous à notre Newsletter
+    <section className="py-16 px-8 bg-white">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl font-bold text-green-600 mb-6">
+          Inscrivez-vous à notre newsletter
         </h2>
-
+        <p className="text-gray-600 mb-6">
+          En cliquant sur <strong>“S’inscrire”</strong>, vous acceptez de
+          communiquer vos coordonnées afin de recevoir des emails d’informations
+          de la part de LearnSup. Vous pouvez à tout moment demander à vous
+          désinscrire de cette newsletter.
+        </p>
         <NewsletterForm />
-
-        <div className="mt-6 text-gray-600 text-sm text-center">
-          <p>
-            En cliquant sur <strong>“Go!”</strong>, vous acceptez de communiquer
-            vos coordonnées afin de recevoir des emails d’informations de la
-            part de <span className="font-semibold">learnSup</span>. Vous pouvez
-            à tout moment demander à vous désinscrire de cette newsletter.
-          </p>
-        </div>
       </div>
     </section>
   );

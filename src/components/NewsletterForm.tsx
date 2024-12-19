@@ -1,3 +1,4 @@
+import { MdLogin } from "react-icons/md";
 import toast, { Toaster } from "react-hot-toast";
 import { useForm, SubmitHandler } from "react-hook-form";
 
@@ -26,45 +27,45 @@ const NewsletterForm: React.FC = () => {
         reset();
       } else {
         const result = await response.json();
-        toast.error(result.message || "Erreur lors de l'inscription.");
+        toast.error("Erreur lors de l'inscription.");
       }
     } catch (error) {
-      toast.error("Une erreur réseau s'est produite. Veuillez réessayer.");
+      toast.error(
+        "Une erreur réseau s'est produite. Veuillez réessayer plus tard."
+      );
     }
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-white shadow-md rounded-lg">
+    <div className="max-w-md mx-auto">
       <Toaster position="top-center" />
-      <h2 className="text-2xl font-semibold text-center mb-4">Abonnez-vous</h2>
-      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
-        <div>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="flex items-center justify-center gap-4 mt-4"
+      >
+        <div className="flex items-center w-full max-w-md rounded-full border border-green-600 overflow-hidden">
           <input
             type="email"
-            placeholder="Votre e-mail"
-            className={`w-full p-3 border rounded-lg focus:outline-none focus:ring-2 ${
-              errors.email
-                ? "border-red-500 focus:ring-red-500"
-                : "border-gray-300 focus:ring-blue-500"
-            }`}
+            placeholder="Votre adresse mail"
+            className="flex-grow px-4 py-2 focus:outline-none text-gray-600"
             {...register("email", {
-              required: "L'e-mail est requis.",
+              required: "Veuillez entrer une adresse e-mail valide.",
               pattern: {
-                value: /^[\w\.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,6}$/,
-                message: "Format d'e-mail invalide.",
+                value: /^[\w.-]+@[\w-]+\.[a-z]{2,4}$/i,
+                message: "Adresse e-mail invalide.",
               },
             })}
           />
-          {errors.email && (
-            <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
-          )}
+          <button
+            type="submit"
+            className="px-6 py-2 bg-green-600 text-white font-semibold flex items-center gap-2 hover:bg-green-700 transition"
+          >
+            S’inscrire <MdLogin />
+          </button>
         </div>
-        <button
-          type="submit"
-          className="w-full p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300"
-        >
-          Go!
-        </button>
+        {errors.email && (
+          <p className="text-red-500 text-sm mt-2">{errors.email.message}</p>
+        )}
       </form>
     </div>
   );
