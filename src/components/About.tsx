@@ -24,11 +24,6 @@ const About: React.FC = () => {
             alt="Students working together"
             className="rounded-lg shadow-lg w-full mb-4"
           />
-          <img
-            src="/illustrations.png"
-            alt="Collaborative illustration"
-            className="absolute -bottom-16 -left-8 hidden md:block w-1/2"
-          />
         </div>
       </div>
     </div>

@@ -1,10 +1,10 @@
 import dynamic from "next/dynamic";
 
-const Figures: React.FC = () => {
-  const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
-    ssr: false,
-  });
+const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
+  ssr: false,
+});
 
+const Figures: React.FC = () => {
   const FiguresList = [
     {
       metric: "Accompagnateurs",
@@ -12,7 +12,7 @@ const Figures: React.FC = () => {
       postfix: "+",
     },
     {
-      metric: "Etudiants",
+      metric: "Étudiants",
       value: "951",
       postfix: "+",
     },
@@ -24,7 +24,7 @@ const Figures: React.FC = () => {
   ];
 
   return (
-    <div className="py-8 px-4">
+    <div className="py-8 px-4 bg-white">
       <div className="flex flex-col sm:flex-row justify-around items-center">
         {FiguresList.map((figure, index) => (
           <div

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const LearnTogether: React.FC = () => {
   return (
-    <div className="bg-white py-16 px-8">
+    <div className="bg-white py-16 px-8 relative">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <div>
           <h2 className="text-4xl font-bold text-[#019D3B] mb-6">
@@ -27,25 +27,27 @@ const LearnTogether: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex space-x-4">
-          <div className="w-1/2">
-            <Image
-              src="/Etudiant_Enseignant_carte.png"
-              alt="Thibaut Déprez Profile Card"
-              className="rounded-lg shadow-lg"
-              width={300}
-              height={400}
-            />
-          </div>
-
-          <div className="w-1/2">
-            <Image
-              src="/Etudiant_Enseignant_carte_1.png"
-              alt="Alina Forestier Profile Card"
-              className="rounded-lg shadow-lg"
-              width={300}
-              height={400}
-            />
+        <div className="relative flex justify-center lg:justify-start">
+          <div className="absolute bg-[#019D3B] w-full h-full top-8 left-8 rounded-lg z-0"></div>
+          <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="shadow-lg border border-gray-200 rounded-lg">
+              <Image
+                src="/Etudiant_Enseignant_carte.png"
+                alt="Thibaut Déprez Profile Card"
+                className="rounded-lg"
+                width={300}
+                height={400}
+              />
+            </div>
+            <div className="shadow-lg border border-gray-200 rounded-lg">
+              <Image
+                src="/Etudiant_Enseignant_carte_1.png"
+                alt="Alina Forestier Profile Card"
+                className="rounded-lg"
+                width={300}
+                height={400}
+              />
+            </div>
           </div>
         </div>
       </div>

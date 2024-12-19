@@ -2,22 +2,21 @@ import Image from "next/image";
 
 const System: React.FC = () => {
   return (
-    <div className="bg-white py-16 px-8">
+    <div className="bg-white py-16 px-8 relative">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <div className="relative">
-          <div className="absolute top-0 left-0 w-full h-full bg-green-500 -skew-y-3 transform origin-bottom-left rounded-tr-[8rem] z-0"></div>
-          <div className="relative z-10 flex justify-center">
+          <div className="relative z-10">
             <Image
               src="/enjoy.png"
               alt="Unique system"
               className="rounded-lg shadow-lg"
-              width={500}
-              height={350}
+              width={600}
+              height={400}
             />
           </div>
         </div>
 
-        <div>
+        <div className="relative z-10">
           <h2 className="text-4xl font-bold text-[#019D3B] mb-6">
             Un système d’entraide unique !
           </h2>
@@ -35,6 +34,9 @@ const System: React.FC = () => {
           </p>
         </div>
       </div>
+
+      <div className="absolute bg-[#34B162] w-[650px] h-[650px] rounded-full top-1/4 right-0 transform translate-x-1/2"></div>
+      <div className="absolute bg-[#019D3B] w-[400px] h-[400px] rounded-full top-1/2 right-10 transform translate-x-1/4"></div>
     </div>
   );
 };
