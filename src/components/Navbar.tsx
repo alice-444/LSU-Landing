@@ -5,7 +5,7 @@ const Navbar: React.FC = () => {
   return (
     <div className="flex justify-between items-center px-8 py-4 border-b border-gray-200">
       <div className="flex items-center gap-2">
-        <img src="/logo@300x-100.jpg" alt="LearnSup Logo" className="w-30 h-10" />
+        <img src="/logo@300x-100.jpg" alt="LearnSup Logo" className="w-60 h-23" />
       </div>
       <nav className="flex gap-8 text-sm font-medium">
         <a href="#" className="text-gray-600 hover:text-black">

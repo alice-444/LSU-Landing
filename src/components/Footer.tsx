@@ -1,76 +1,86 @@
 import Link from "next/link";
+import { FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer: React.FC = () => {
+  const navLinks = [
+    { title: "A propos de nous", href: "#" },
+    { title: "Découvrir les professeurs", href: "#" },
+    { title: "Je veux enseigner", href: "#" },
+    { title: "Comment ça marche ?", href: "#" },
+    { title: "Nos étudiants", href: "#" },
+    { title: "Contact", href: "#" },
+    { title: "Newsletter", href: "#" },
+  ];
+
+  const legalLinks = [
+    { title: "Conditions d'utilisation générales", href: "#" },
+    { title: "Mentions légales", href: "#" },
+    { title: "Politique de confidentialité et gestion des cookies", href: "#" },
+  ];
+
   return (
-    <footer className="bg-gray-800 text-gray-300 py-8">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <h3 className="text-lg font-semibold text-white mb-3">Name</h3>
-          <ul className="space-y-2">
-            <li>
-              <Link
-                href="/about"
-                className="hover:text-white transition duration-300"
+    <footer className="bg-green-600 text-white py-8">
+      <div className="w-full max-w-screen-xl mx-auto px-4">
+        <div className="flex flex-col lg:flex-row justify-between items-start">
+          <div className="flex flex-col items-center lg:items-start mb-8 lg:mb-0">
+            <div className="flex items-center gap-2 mb-6">
+              <img src="/logo.png" alt="LearnSup Logo" className="w-50 h-12" />
+            </div>
+            <div className="flex gap-4">
+              <a
+                href="#"
+                aria-label="Instagram"
+                className="bg-white text-green-600 p-3 rounded-full shadow hover:bg-gray-200"
               >
-                Qui sommes-nous ?
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/team"
-                className="hover:text-white transition duration-300"
+                <FaInstagram className="w-6 h-6" />
+              </a>
+              <a
+                href="#"
+                aria-label="Facebook"
+                className="bg-white text-green-600 p-3 rounded-full shadow hover:bg-gray-200"
               >
-                Notre équipe
-              </Link>
-            </li>
-          </ul>
+                <FaXTwitter className="w-6 h-6" />
+              </a>
+              <a
+                href="#"
+                aria-label="TikTok"
+                className="bg-white text-green-600 p-3 rounded-full shadow hover:bg-gray-200"
+              >
+                <FaTiktok className="w-6 h-6" />
+              </a>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center">
+            <ul className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm font-medium">
+              {navLinks.map((link, index) => (
+                <li key={index}>
+                  <Link href={link.href} className="hover:underline">
+                    {link.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="flex flex-col items-center lg:items-end">
+            <ul className="space-y-2 text-sm font-medium text-center lg:text-right">
+              {legalLinks.map((link, index) => (
+                <li key={index}>
+                  <Link href={link.href} className="hover:underline">
+                    {link.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
-        <div>
-          <h3 className="text-lg font-semibold text-white mb-3">Aide</h3>
-          <ul className="space-y-2">
-            <li>
-              <Link
-                href="/faq"
-                className="hover:text-white transition duration-300"
-              >
-                FAQ étudiants
-              </Link>
-            </li>
-          </ul>
+        <div className="mt-8 text-center text-sm font-medium">
+          COPYRIGHT &copy; {new Date().getFullYear()} - LEARNSUP TOUS DROITS
+          RÉSERVÉS
         </div>
-
-        <div>
-          <h3 className="text-lg font-semibold text-white mb-3">Légales</h3>
-          <ul className="space-y-2">
-            <li>
-              <Link
-                href="/legal-informations"
-                className="hover:text-white transition duration-300"
-              >
-                Mentions légales
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/terms-conditions"
-                className="hover:text-white transition duration-300"
-              ></Link>
-            </li>
-            <li>
-              <Link
-                href="/privacy-policy"
-                className="hover:text-white transition duration-300"
-              >
-                Politique de protection des données personnelles
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="text-center mt-8 border-t border-gray-700 pt-4">
-        <p>&copy; {new Date().getFullYear()} learnSup Tous droits réservés.</p>
       </div>
     </footer>
   );
