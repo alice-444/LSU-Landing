@@ -1,6 +1,6 @@
 const About: React.FC = () => {
   return (
-    <div className="bg-green-600 text-white p-8 md:p-16">
+    <div className="bg-[#019D3B] text-white p-8 md:p-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
           <h2 className="text-4xl font-bold mb-4">A propos de nous</h2>

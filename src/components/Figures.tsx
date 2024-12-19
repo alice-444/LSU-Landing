@@ -31,16 +31,16 @@ const Figures: React.FC = () => {
             key={index}
             className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
           >
-            <h2 className="text-gray-800 text-4xl font-bold flex flex-row">
+            <h2 className="text-[#000080] text-4xl font-bold flex flex-row">
               <AnimatedNumbers
                 includeComma
                 animateToNumber={parseInt(figure.value)}
                 locale="en-US"
-                className="text-blue-500 text-4xl font-bold"
+                className="text-[#000080] text-4xl font-bold"
               />
               {figure.postfix}
             </h2>
-            <p className="text-gray-600 text-base mt-2">{figure.metric}</p>
+            <p className="text-black text-base mt-2">{figure.metric}</p>
           </div>
         ))}
       </div>

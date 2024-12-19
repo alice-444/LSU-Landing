@@ -2,11 +2,10 @@ const Header: React.FC = () => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-between px-8 py-16">
       <div className="text-left max-w-lg">
-        <h1 className="text-5xl font-bold text-gray-900 leading-snug">
-          Apprenez et progressez en
-          <br /> vous entraidant
+        <h1 className="text-5xl font-bold text-[#000080] leading-snug">
+          Apprenez et progressez en vous entraidant
         </h1>
-        <p className="text-gray-600 text-lg mt-6 mb-8">
+        <p className="text-black text-lg mt-6 mb-8">
           La première plateforme d'entraide et de réseautage exclusivement pour
           les étudiants.
         </p>

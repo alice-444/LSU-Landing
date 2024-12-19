@@ -2,11 +2,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const ShareKnowledge: React.FC = () => {
-  const images = [
-    "/studentWorking.jpg",
-    "/team-collaboration-2.jpg",
-    "/team-collaboration-3.jpg",
-  ];
+  const images = ["/studentWorking.jpg", "/student.jpg"];
 
   return (
     <div className="bg-white py-16 px-8">
@@ -35,16 +31,16 @@ const ShareKnowledge: React.FC = () => {
         </div>
 
         <div className="text-left">
-          <h2 className="text-4xl font-bold mb-4">
+          <h2 className="text-4xl font-bold mb-4 text-[#019D3B]">
             Envie de partager vos connaissances ?
           </h2>
-          <p className="text-lg text-gray-700 mb-6">
+          <p className="text-lg text-black mb-6">
             Faites la différence en devenant une source d'inspiration pour
             d'autres étudiants ! En proposant des cours dans votre domaine
             d'expertise, vous contribuez à construire une communauté solidaire
             où chacun peut apprendre et grandir.
           </p>
-          <p className="text-lg text-gray-700 mb-6">
+          <p className="text-lg text-black mb-6">
             Que ce soit pour approfondir une matière, développer une compétence
             pratique ou explorer une passion commune, vos connaissances peuvent
             transformer le parcours d’un autre étudiant.
@@ -53,7 +49,7 @@ const ShareKnowledge: React.FC = () => {
       </div>
 
       <div className="mt-12 mx-auto max-w-2xl text-center">
-        <p className="text-lg text-gray-700 font-normal">
+        <p className="text-lg text-black font-normal">
           Partagez votre savoir, gagnez en confiance et enrichissez vos propres
           compétences pédagogiques. Ensemble, créons un réseau où
           l’apprentissage est une aventure collective et stimulante.

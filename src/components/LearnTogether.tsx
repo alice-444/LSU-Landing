@@ -5,7 +5,7 @@ const LearnTogether: React.FC = () => {
     <div className="bg-white py-16 px-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <div>
-          <h2 className="text-4xl font-bold text-green-600 mb-6">
+          <h2 className="text-4xl font-bold text-[#019D3B] mb-6">
             Apprendre ensemble pour aller plus loin
           </h2>
           <p className="text-lg text-gray-700 mb-6">
