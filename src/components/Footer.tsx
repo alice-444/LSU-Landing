@@ -14,9 +14,8 @@ const Footer: React.FC = () => {
   ];
 
   const legalLinks = [
-    { title: "Conditions d'utilisation générales", href: "#" },
-    { title: "Mentions légales", href: "#" },
-    { title: "Politique de confidentialité et gestion des cookies", href: "#" },
+    { title: "Mentions légales", href: "/mentionsLegales" },
+    { title: "Politique de confidentialité", href: "/privacyPolicy" },
   ];
 
   return (
