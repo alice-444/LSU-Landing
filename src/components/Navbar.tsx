@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 import { TbWorld } from "react-icons/tb";
 import { FaChevronDown } from "react-icons/fa";
@@ -18,11 +19,13 @@ const Navbar: React.FC = () => {
     <div className="relative z-50 bg-white shadow-md">
       <div className="flex justify-between items-center px-8 py-4 border-b border-gray-200">
         <div className="flex items-center gap-2">
-          <img
-            src="/logo@300x-100.jpg"
-            alt="LearnSup Logo"
-            className="w-60 h-23"
-          />
+          <Link href="/">
+            <img
+              src="/logo@300x-100.jpg"
+              alt="LearnSup Logo"
+              className="w-60 h-23"
+            />
+          </Link>
         </div>
 
         <nav className="hidden md:flex gap-8 text-sm font-medium">

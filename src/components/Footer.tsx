@@ -24,11 +24,13 @@ const Footer: React.FC = () => {
         <div className="flex flex-col lg:flex-row justify-between items-start">
           <div className="flex flex-col items-center lg:items-start mb-8 lg:mb-0">
             <div className="flex items-center gap-2 mb-6">
+              <Link href="/">
               <img
                 src="/logo-blanc.svg"
                 alt="LearnSup Logo"
                 className="w-50 h-20"
               />
+              </Link>
             </div>
             <div className="flex gap-4">
               <a
