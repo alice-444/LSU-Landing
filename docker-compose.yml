@@ -1,0 +1,47 @@
+services:   
+  landing:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: LSU_landing
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.landing.rule=Host(`vps108098.serveur-vps.net`)"
+      - "traefik.http.routers.landing.entrypoints=websecure"
+      - "traefik.http.routers.landing.tls=true"
+      - "traefik.http.services.landing.loadbalancer.server.port=3000"
+      - "traefik.http.routers.landing.tls.certresolver=myresolver"
+    networks:
+      - lsu
+
+  reverse-proxy:
+    image: traefik:v3.2.1
+    container_name: traefik
+    command:      
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--providers.file.watch=true"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
+      - "--entrypoints.websecure.address=:443"
+      - "--ping=true"
+      - "--ping.entrypoint=web"
+      - "--log=true"
+      - "--log.level=DEBUG"
+      - "--accesslog.filters.statuscodes=400-499,500-599"
+      - "--accesslog.fields.headers.defaultMode=keep"
+      -  "--certificatesresolvers.myresolver.acme.tlschallenge=true"
+      - "--certificatesresolvers.myresolver.acme.email=carole.bouche@my-digital-school.org"
+      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+      - "./letsencrypt:/letsencrypt"
+    networks:
+      - lsu 
+
+networks:
+  lsu:
+    external: true
