@@ -1,5 +1,3 @@
-const HelpCenter: React.FC = () => {
-  return <div>Foire à Questions</div>;
-};
+const faqCategories = () => [];
 
-export default HelpCenter;
+const helpCenter = () => {};

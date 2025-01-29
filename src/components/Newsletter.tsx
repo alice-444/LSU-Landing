@@ -1,36 +1,52 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 import NewsletterForm from "@/components/NewsletterForm";
 
 const Newsletter: React.FC = () => {
   return (
-    <section className="py-16 px-8 bg-white relative">
-      <div className="max-w-4xl mx-auto text-center z-10">
-        <h2 className="text-3xl font-bold text-[#019D3B] mb-6">
-          Inscrivez-vous à notre newsletter
-        </h2>
-        <p className="text-gray-600 mb-6">
-          En cliquant sur <strong>“S’inscrire”</strong>, vous acceptez de
-          communiquer vos coordonnées afin de recevoir des emails d’informations
-          de la part de LearnSup. Vous pouvez à tout moment demander à vous
-          désinscrire de cette newsletter.
-        </p>
-        <NewsletterForm />
-      </div>
+    <motion.section
+      className="py-20 px-8 bg-gradient-to-r from-[#fff5f0] via-[#ffefe6] to-[#fff5f0] relative overflow-hidden"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+        <motion.div
+          className="lg:w-1/2 text-center lg:text-left"
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <h2 className="text-5xl font-bold text-[#FF5722] leading-snug mb-6">
+            Rejoignez notre communauté
+          </h2>
+          <p className="text-lg text-gray-700 mb-8">
+            Recevez des mises à jour, des ressources et des opportunités en
+            avant-première en vous inscrivant à notre newsletter.
+          </p>
+          <NewsletterForm />
+        </motion.div>
 
-      <div className="absolute top-1/4 left-0 transform -translate-y-1/2">
-        <div className="bg-green-500 w-32 h-32 rounded-full opacity-70"></div>
+        <motion.div
+          className="relative lg:w-1/2 flex justify-center"
+          initial={{ x: 50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+        >
+          <div className="absolute bg-gradient-to-tr from-pink-300 to-orange-400 w-96 h-96 rounded-full blur-3xl opacity-40 -top-16 -left-10"></div>
+          <Image
+            src="/Sending.png"
+            alt="Newsletter Illustration"
+            width={400}
+            height={400}
+            className="object-contain z-10"
+          />
+        </motion.div>
       </div>
-
-      <div className="absolute bottom-0 right-0 transform translate-x-1/4 translate-y-1/4">
-        <Image
-          src="/Sending.png"
-          alt="Newsletter Illustration"
-          width={200}
-          height={200}
-          className="object-contain"
-        />
-      </div>
-    </section>
+    </motion.section>
   );
 };
 

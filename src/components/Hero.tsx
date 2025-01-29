@@ -3,7 +3,7 @@ import Figures from "./Figures";
 
 const Hero: React.FC = () => {
   return (
-    <div>
+    <div className="pt-20">
       <Header />
       <Figures />
     </div>
