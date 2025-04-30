@@ -1,36 +1,40 @@
-services:   
-  landing:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: LSU_landing
+services:
+  learnsup_website:
+    build: .
+    container_name: showcase-learnsup
+    ports:
+      - "3000:3000"
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.landing.rule=Host(`vps108098.serveur-vps.net`)"
-      - "traefik.http.routers.landing.entrypoints=websecure"
-      - "traefik.http.routers.landing.tls=true"
-      - "traefik.http.services.landing.loadbalancer.server.port=3000"
-      - "traefik.http.routers.landing.tls.certresolver=myresolver"
+      - "traefik.http.routers.learnsup_website.rule=Host(`vps108098.serveur-vps.net`)"
+      - "traefik.http.routers.learnsup_website.entrypoints=websecure"
+      - "traefik.http.routers.learnsup_website.tls.certresolver=myresolver"
     networks:
-      - lsu
+      - vps-mds
 
-  reverse-proxy:
+  traefik:
     image: traefik:v3.2.1
-    container_name: traefik
-    command:      
+    container_name: traefik_reverse_proxy
+    command:
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
       - "--providers.file.watch=true"
       - "--entrypoints.web.address=:80"
       - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
       - "--entrypoints.websecure.address=:443"
+      # Activation du /ping pour le healthcheck
       - "--ping=true"
       - "--ping.entrypoint=web"
+      # Activation des logs
       - "--log=true"
       - "--log.level=DEBUG"
+      # Activation des access logs au format json
+      - "--accesslog=true"
+      - "--accesslog.format=json"
+      # On ne garde que les erreurs et on log les headers
       - "--accesslog.filters.statuscodes=400-499,500-599"
       - "--accesslog.fields.headers.defaultMode=keep"
-      -  "--certificatesresolvers.myresolver.acme.tlschallenge=true"
+      - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
       - "--certificatesresolvers.myresolver.acme.email=carole.bouche@my-digital-school.org"
       - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
     ports:
@@ -40,8 +44,8 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
       - "./letsencrypt:/letsencrypt"
     networks:
-      - lsu 
+      - vps-mds
 
 networks:
-  lsu:
+  vps-mds:
     external: true
