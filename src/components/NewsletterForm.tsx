@@ -29,7 +29,7 @@ const NewsletterForm: React.FC = () => {
       } else {
         toast.error("Erreur lors de l'inscription.");
       }
-    } catch (error) {
+    } catch {
       toast.error(
         "Une erreur réseau s'est produite. Veuillez réessayer plus tard."
       );
@@ -80,7 +80,7 @@ const NewsletterForm: React.FC = () => {
           whileTap={{ scale: 0.98 }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-[var(--secondary-blue)] to-[var(--primary-blue)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          <span className="relative text-lg font-medium">S'inscrire</span>
+          <span className="relative text-lg font-medium">S&apos;inscrire</span>
           <MdLogin className="relative text-xl group-hover:translate-x-1 transition-transform duration-300" />
         </motion.button>
       </motion.form>
