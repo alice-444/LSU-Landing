@@ -43,7 +43,6 @@ const Footer: React.FC = () => {
     { icon: <FaInstagram />, href: "https://instagram.com" },
     { icon: <FaTiktok />, href: "https://tiktok.com" },
     { icon: <FaLinkedin />, href: "https://linkedin.com" },
-    { icon: <FaXTwitter />, href: "https://twitter.com" },
   ];
 
   return (
