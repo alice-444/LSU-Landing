@@ -2,7 +2,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
 
-const Header: React.FC = () => {
+const Hero: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-[#fffaf5] via-[#fff] to-[#fffaf5] py-24">
       <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-6">
@@ -13,13 +13,15 @@ const Header: React.FC = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.h1
-            className="text-6xl font-extrabold text-[#ff7849] leading-tight"
+            className="text-6xl font-extrabold text-[var(--tertiary-blue)] leading-tight"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             Apprenez et progressez <br />
-            <span className="text-[#ff4d6d]">en vous entraidant</span>
+            <span className="text-[var(--primary-blue)]">
+              en vous entraidant
+            </span>
           </motion.h1>
           <motion.p
             className="text-gray-700 text-xl mt-6 mb-8"
@@ -31,7 +33,7 @@ const Header: React.FC = () => {
             pour les étudiants.
           </motion.p>
           <motion.button
-            className="bg-gradient-to-r from-orange-400 to-pink-500 text-white py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-lg flex items-center whitespace-nowrap"
+            className="bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] text-white py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-lg flex items-center whitespace-nowrap"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, y: -20 }}
@@ -85,4 +87,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default Hero;

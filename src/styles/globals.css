@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @keyframes bounce-horizontal {
     0%, 100% {
@@ -13,4 +11,10 @@
   
   .animate-bounce-horizontal {
     animation: bounce-horizontal 1s infinite;
+  }
+
+  :root {
+    --primary-blue: #4A90E2;
+    --secondary-blue: #9DCDEB;
+    --tertiary-blue: #639EDA;
   }
