@@ -87,7 +87,7 @@ const Navbar: React.FC = () => {
         </motion.a>
 
         <ul className="hidden lg:flex space-x-6 md:space-x-6 text-base md:text-lg font-medium text-gray-800">
-          {links.map((link, index) => (
+          {links.map((link) => (
             <motion.li
               key={link.name}
               className="relative flex items-center cursor-pointer group"

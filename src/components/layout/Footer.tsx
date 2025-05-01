@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import LanguageSelector from "../LanguageSelector";
+import { FaLinkedin } from "react-icons/fa6";
 import { FaInstagram, FaTiktok } from "react-icons/fa";
-import { FaXTwitter, FaLinkedin } from "react-icons/fa6";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
