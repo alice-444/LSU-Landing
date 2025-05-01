@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
             pour les étudiants.
           </motion.p>
           <motion.button
-            className="bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] text-white py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-lg flex items-center whitespace-nowrap"
+            className="bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] text-white py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-xl flex items-center whitespace-nowrap"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, y: -20 }}

@@ -23,18 +23,14 @@ const Footer: React.FC = () => {
     },
     {
       category: "Aide & support",
-      items: [{ label: "FAQ", href: "/helpCenter" }],
+      items: [{ label: "FAQ", href: "/faq" }],
     },
     {
       category: "Conditions d'utilisation et Confidentialité",
       items: [
-        {
-          label: "Règles de conduite de la communication",
-          href: "/communication-rules",
-        },
         { label: "Conditions d'utilisation", href: "/terms-of-use" },
         { label: "Mentions légales", href: "/legal-notice" },
-        { label: "Politique de confidentialité", href: "/privacy-policy" },
+        { label: "Politique de confidentialité", href: "/privacy" },
       ],
     },
   ];
