@@ -111,7 +111,7 @@ const FAQ: React.FC = () => {
           viewport={{ once: true }}
         >
           <p className="text-[var(--quaternary-blue)] mb-6 text-xl">
-            Vous n'avez pas trouvé la réponse à votre question ?
+            Vous n&apos;avez pas trouvé la réponse à votre question ?
           </p>
           <Link
             href="/contact"

@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
       console.log(data);
       toast.success("Message envoyé avec succès !");
       reset();
-    } catch (error) {
+    } catch {
       toast.error("Une erreur est survenue. Veuillez réessayer plus tard.");
     }
   };
