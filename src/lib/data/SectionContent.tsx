@@ -159,7 +159,7 @@ const SectionContent: React.FC<SectionContentProps> = ({ activeSection }) => {
                   <HelpCircle className="w-6 h-6 md:w-8 md:h-8 text-[var(--primary-blue)]" />
                 </div>
                 <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-3 md:mb-4">
-                  Centre d'aide
+                  Centre d&apos;aide
                 </h3>
                 <p className="text-gray-600 text-sm md:text-base mb-4 md:mb-6">
                   Notre équipe est disponible pour répondre à toutes vos
@@ -169,7 +169,7 @@ const SectionContent: React.FC<SectionContentProps> = ({ activeSection }) => {
                   href="/contact"
                   className="text-sm md:text-base inline-flex items-center text-[var(--primary-blue)] hover:text-[var(--primary-blue)]/80 font-medium transition-colors"
                 >
-                  Accéder au centre d'aide
+                  Accéder au centre d&apos;aide
                 </Link>
               </div>
 
