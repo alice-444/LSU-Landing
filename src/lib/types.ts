@@ -1,3 +1,7 @@
+import { FieldErrors, RegisterOptions } from "react-hook-form";
+
+import { UseFormRegister } from "react-hook-form";
+
 // privacy page
 export interface SectionProps {
   title: string;
@@ -21,6 +25,17 @@ export interface ContactFormData {
   email: string;
   subject: string;
   message: string;
+}
+
+export interface FormFieldProps {
+  label: string;
+  id: keyof ContactFormData;
+  type?: string;
+  register: UseFormRegister<ContactFormData>;
+  errors: FieldErrors<ContactFormData>;
+  placeholder: string;
+  validation?: RegisterOptions<ContactFormData, keyof ContactFormData>;
+  isTextarea?: boolean;
 }
 
 export interface ContactInfo {

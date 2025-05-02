@@ -37,9 +37,9 @@ const LegalMentions: React.FC = () => {
 
           <Section title="Informations générales">
             <p className="text-gray-700">
-              Conformément à l'article 6 de la loi n° 2004-575 du 21 juin 2004
-              pour la confiance dans l'économie numérique, il est précisé aux
-              utilisateurs de notre site web LearnSup (« le Site ») l'identité
+              Conformément à l&apos;article 6 de la loi n° 2004-575 du 21 juin 2004
+              pour la confiance dans l&apos;économie numérique, il est précisé aux
+              utilisateurs de notre site web LearnSup (&laquo; le Site &raquo;) l&apos;identité
               des différents intervenants dans le cadre de sa réalisation et de
               son suivi.
             </p>
@@ -48,7 +48,7 @@ const LegalMentions: React.FC = () => {
           <Section title="Éditeur du site">
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
               <li>
-                <strong>Nom de l'éditeur :</strong> MyDigitalSchool Paris
+                <strong>Nom de l&apos;éditeur :</strong> MyDigitalSchool Paris
               </li>
               <li>
                 <strong>Adresse :</strong> {ADDRESS}
@@ -72,7 +72,7 @@ const LegalMentions: React.FC = () => {
           <Section title="Hébergeur">
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
               <li>
-                <strong>Nom de l'hébergeur :</strong> MyDigitalSchool Paris
+                <strong>Nom de l&apos;hébergeur :</strong> MyDigitalSchool Paris
               </li>
               <li>
                 <strong>Adresse :</strong> {ADDRESS}
@@ -90,7 +90,7 @@ const LegalMentions: React.FC = () => {
               LearnSup, sauf mention contraire. Toute reproduction,
               distribution, modification, adaptation, retransmission ou
               publication, même partielle, de ces différents éléments est
-              strictement interdite sans l'accord préalable écrit de LearnSup.
+              strictement interdite sans l&apos;accord préalable écrit de LearnSup.
             </p>
           </Section>
 

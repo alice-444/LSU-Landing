@@ -1,13 +1,6 @@
-const FormField: React.FC<{
-  label: string;
-  id: string;
-  type?: string;
-  register: any;
-  errors: any;
-  placeholder: string;
-  validation?: any;
-  isTextarea?: boolean;
-}> = ({
+import { FormFieldProps } from "@/lib/types";
+
+const FormField: React.FC<FormFieldProps> = ({
   label,
   id,
   type = "text",
@@ -42,7 +35,7 @@ const FormField: React.FC<{
       />
     )}
     {errors[id] && (
-      <p className="text-red-500 text-sm mt-1">{errors[id].message}</p>
+      <p className="text-red-500 text-sm mt-1">{errors[id]?.message}</p>
     )}
   </div>
 );

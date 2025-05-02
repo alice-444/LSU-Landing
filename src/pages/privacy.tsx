@@ -38,7 +38,7 @@ const PrivacyPolicy: React.FC = () => {
 
           <Section title="Qui sommes-nous ?">
             <p className="text-gray-700">
-              L'adresse de notre site web est :{" "}
+              L&apos;adresse de notre site web est :{" "}
               <Link href={WEBSITE_URL}>{WEBSITE_URL}</Link>
             </p>
           </Section>
@@ -90,7 +90,7 @@ const PrivacyPolicy: React.FC = () => {
               Nous mettons en place des mesures techniques et organisationnelles
               pour protéger vos données contre tout accès non autorisé, perte,
               destruction ou divulgation. Toutefois, aucune transmission de
-              données sur Internet n'est totalement sécurisée.
+              données sur Internet n&apos;est totalement sécurisée.
             </p>
           </Section>
 
@@ -119,7 +119,7 @@ const PrivacyPolicy: React.FC = () => {
             <p className="text-gray-700 mt-2">
               Si vous souhaitez exercer votre droit à la modification, à la
               consultation, ou à la suppression de vos données personnelles,
-              merci de le faire par mail à l'adresse :{" "}
+              merci de le faire par mail à l&apos;adresse :{" "}
               <Link href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</Link>
             </p>
           </Section>
