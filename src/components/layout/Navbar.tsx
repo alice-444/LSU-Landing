@@ -126,7 +126,7 @@ const Navbar: React.FC = () => {
           className="hidden lg:flex"
         >
           <Link href="https://learn-sup.vercel.app/">
-            <button className="bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] text-white px-4 sm:px-6 py-2 sm:py-2 rounded-full shadow-md hover:shadow-lg transition duration-300 text-base sm:text-lg">
+            <button className="bg-gradient-to-r from-[var(--primary-blue)] to-[var(--quaternary-blue)] text-white px-4 sm:px-6 py-2 sm:py-2 rounded-full shadow-md hover:shadow-lg transition duration-300 text-base sm:text-lg">
               Rejoignez-nous
             </button>
           </Link>
@@ -187,7 +187,7 @@ const Navbar: React.FC = () => {
             ))}
           </ul>
           <motion.button
-            className="mt-4 sm:mt-6 w-full bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] text-white px-4 sm:px-5 py-2 sm:py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-lg sm:text-xl font-medium hover:opacity-90"
+            className="mt-4 sm:mt-6 w-full bg-gradient-to-r from-[var(--primary-blue)] to-[var(--quaternary-blue)] text-white px-4 sm:px-5 py-2 sm:py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-lg sm:text-xl font-medium hover:opacity-90"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={() => setIsOpen(false)}

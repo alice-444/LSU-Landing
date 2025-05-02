@@ -1,7 +1,7 @@
 import Hero from "@/components/home/Hero";
 import Features from "@/components/home/Features";
 import FAQ from "@/components/home/FAQ";
-import Newsletter from "@/components/Newsletter";
+import Newsletter from "@/components/newsletter/Newsletter";
 
 const Home: React.FC = () => {
   return (
