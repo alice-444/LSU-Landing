@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import NewsletterForm from "@/components/NewsletterForm";
+import NewsletterForm from "@/components/newsletter/NewsletterForm";
 
 const Newsletter: React.FC = () => {
   return (
