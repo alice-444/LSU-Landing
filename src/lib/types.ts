@@ -43,3 +43,32 @@ export interface ContactInfo {
   title: string;
   content: string;
 }
+
+// Footer
+export interface FooterProps {
+  setActiveSection?: (section: Section) => void;
+}
+
+// LearnSup page
+export type Section = "mission" | "approche" | "équipe" | "contact";
+
+export interface FeatureProps {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+}
+
+export interface NavigationProps {
+  activeSection: Section;
+  setActiveSection: (section: Section) => void;
+}
+
+export interface TeamMemberProps {
+  name: string;
+  role: string;
+  image: string;
+}
+
+export interface SectionContentProps {
+  activeSection: Section;
+}
