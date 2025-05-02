@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const links = [
-    { name: "Découvrir Learnsup", href: "/", icon: <SiOpentofu /> },
+    { name: "Découvrir Learnsup", href: "/learnsup", icon: <SiOpentofu /> },
     {
       name: "Produit",
       href: "/product",

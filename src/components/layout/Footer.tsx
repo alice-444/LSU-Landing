@@ -2,19 +2,21 @@ import { motion } from "framer-motion";
 import LanguageSelector from "../LanguageSelector";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaInstagram, FaTiktok } from "react-icons/fa";
+import Link from "next/link";
+import { FooterProps } from "@/lib/types";
 
-const Footer: React.FC = () => {
+const Footer: React.FC<FooterProps> = () => {
   const currentYear = new Date().getFullYear();
 
   const links = [
     {
       category: "À propos",
       items: [
-        { label: "Équipe", href: "/team" },
-        { label: "Mission", href: "/mission" },
-        { label: "Approche", href: "/approach" },
+        { label: "Mission", href: "/learnsup?section=mission" },
+        { label: "Approche", href: "/learnsup?section=approche" },
+        { label: "Équipe", href: "/learnsup?section=équipe" },
         { label: "Directive de la marque", href: "/brand-guidelines" },
-        { label: "Nous Contacter", href: "/contact" },
+        { label: "Nous Contacter", href: "/learnsup?section=contact" },
       ],
     },
     {
@@ -22,15 +24,19 @@ const Footer: React.FC = () => {
       items: [{ label: "Découvrir le produit", href: "/product" }],
     },
     {
-      category: "Aide & support",
-      items: [{ label: "FAQ", href: "/faq" }],
+      category: "Aide & Support",
+      items: [
+        { label: "Centre d'aide", href: "/learnsup?section=contact" },
+        { label: "Partenariats", href: "/learnsup?section=contact" },
+        { label: "FAQ", href: "/faq" },
+      ],
     },
     {
-      category: "Conditions d'utilisation et Confidentialité",
+      category: "Conditions d'utilisation et confidentialité",
       items: [
-        { label: "Conditions d'utilisation", href: "/terms-of-use" },
-        { label: "Mentions légales", href: "/legal-notice" },
+        { label: "Conditions d'utilisation", href: "/" },
         { label: "Politique de confidentialité", href: "/privacy" },
+        { label: "Mentions légales", href: "/legal-notice" },
       ],
     },
   ];
@@ -66,12 +72,12 @@ const Footer: React.FC = () => {
                     whileHover={{ x: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
-                    <a
+                    <Link
                       href={item.href}
                       className="text-gray-600 hover:text-gray-900 transition-colors"
                     >
                       {item.label}
-                    </a>
+                    </Link>
                   </motion.li>
                 ))}
               </ul>
