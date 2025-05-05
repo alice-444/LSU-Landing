@@ -25,11 +25,11 @@ const NewsletterForm: React.FC = () => {
         toast.success("Merci pour votre inscription !");
         reset();
       } else {
-        toast.error("Erreur lors de l'inscription.");
+        toast.error("Erreur lors de l&apos;inscription.");
       }
     } catch {
       toast.error(
-        "Une erreur réseau s'est produite. Veuillez réessayer plus tard."
+        "Une erreur réseau s&apos;est produite. Veuillez réessayer plus tard."
       );
     }
   };
@@ -65,7 +65,7 @@ const NewsletterForm: React.FC = () => {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            S'inscrire
+            S&apos;inscrire
           </motion.button>
         </div>
       </motion.form>
