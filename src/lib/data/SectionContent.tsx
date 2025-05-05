@@ -10,7 +10,6 @@ import {
   Users,
   GraduationCap,
   Lightbulb,
-  Target,
   HeartHandshake,
   BrainCircuit,
 } from "lucide-react";
