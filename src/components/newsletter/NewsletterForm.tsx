@@ -25,11 +25,11 @@ const NewsletterForm: React.FC = () => {
         toast.success("Merci pour votre inscription !");
         reset();
       } else {
-        toast.error("Erreur lors de l'inscription.");
+        toast.error("Erreur lors de l&apos;inscription.");
       }
     } catch {
       toast.error(
-        "Une erreur réseau s'est produite. Veuillez réessayer plus tard."
+        "Une erreur réseau s&apos;est produite. Veuillez réessayer plus tard."
       );
     }
   };
