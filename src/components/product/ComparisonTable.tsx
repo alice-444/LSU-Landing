@@ -19,7 +19,7 @@ const ComparisonTable: FC<ComparisonTableProps> = ({ rows }) => (
             Superprof
           </th>
           <th className="py-4 px-4 font-semibold text-lg text-white bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] border-l border-white border-b-4 border-[var(--primary-blue)] last:rounded-tr-2xl">
-            Teach'R
+            Teach&apos;R
           </th>
         </tr>
       </thead>

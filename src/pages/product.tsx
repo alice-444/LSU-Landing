@@ -27,8 +27,8 @@ const Product: React.FC = () => {
             motivante, pensée pour les etudiants d&apos;aujourd&apos;hui.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            {keyPoints.map((point, idx) => (
-              <KeyPoint key={idx} icon={point.icon} label={point.label} />
+            {keyPoints.map((point) => (
+              <KeyPoint key={point.label} icon={point.icon} label={point.label} />
             ))}
           </div>
           <Link href="https://learn-sup.vercel.app/">
@@ -103,7 +103,7 @@ const Product: React.FC = () => {
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {features.map((feature, idx) => (
+            {features.map((feature) => (
               <FeatureCard key={feature.title} {...feature} />
             ))}
           </div>

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { MousePointerClick, HeartHandshake } from "lucide-react";
-import { FiUsers, FiClock, FiMessageSquare, FiBarChart2 } from "react-icons/fi";
+import { FiUsers, FiClock, FiMessageSquare } from "react-icons/fi";
 import { FeatureCardProps, KeyPointProps, ComparisonRow } from "@/lib/types";
 
 export const features: FeatureCardProps[] = [
