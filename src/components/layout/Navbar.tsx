@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
     },
     {
       name: "Learnsup pour les écoles",
-      href: "/school",
+      href: "/learnsup-for-school",
       icon: <PiChalkboardTeacherDuotone />,
     },
   ];

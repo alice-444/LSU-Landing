@@ -20,11 +20,11 @@ const Product: React.FC = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h1 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-[var(--primary-blue)] to-[var(--tertiary-blue)] bg-clip-text text-transparent">
-            La plateforme qui revolutionne l&apos;entraide etudiante
+            La plateforme qui revolutionne l&apos;entraide étudiante
           </h1>
           <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-xl">
             Decouvrez une experience d&apos;apprentissage collaborative, intuitive et
-            motivante, pensee pour les etudiants d&apos;aujourd&apos;hui.
+            motivante, pensée pour les etudiants d&apos;aujourd&apos;hui.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
             {keyPoints.map((point, idx) => (
@@ -95,11 +95,11 @@ const Product: React.FC = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-4xl font-bold text-[var(--tertiary-blue)] mb-4">
-              Tout ce dont vous avez besoin pour reussir
+              Tout ce dont vous avez besoin pour réussir
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Une plateforme complete qui vous accompagne tout au long de votre
-              parcours d'apprentissage
+              parcours d&apos;apprentissage
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
@@ -131,10 +131,10 @@ const Product: React.FC = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Pret a commencer votre voyage d&apos;apprentissage ?
+              Prêt à commencer votre voyage d&apos;apprentissage ?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Rejoignez notre communaute d&apos;apprenants et découvrez une nouvelle
+              Rejoignez notre communauté d&apos;apprenants et découvrez une nouvelle
               facon d&apos;apprendre ensemble.
             </p>
             <Link href="https://learn-sup.vercel.app/">

@@ -15,7 +15,6 @@ const Footer: React.FC<FooterProps> = () => {
         { label: "Mission", href: "/learnsup?section=mission" },
         { label: "Approche", href: "/learnsup?section=approche" },
         { label: "Équipe", href: "/learnsup?section=équipe" },
-        { label: "Directive de la marque", href: "/brand-guidelines" },
         { label: "Nous Contacter", href: "/learnsup?section=contact" },
       ],
     },

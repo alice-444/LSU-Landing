@@ -22,11 +22,6 @@ export const features: FeatureCardProps[] = [
     description:
       "Discutez en temps réel avec vos pairs et vos accompagnateurs.",
   },
-  {
-    icon: <FiBarChart2 className="text-4xl" />,
-    title: "Suivi de Progression",
-    description: "Visualisez vos progrès.",
-  },
 ];
 
 export const keyPoints: KeyPointProps[] = [
@@ -37,10 +32,6 @@ export const keyPoints: KeyPointProps[] = [
   {
     icon: <HeartHandshake className="text-[var(--primary-blue)] text-xl" />,
     label: "Collaboration en temps réel",
-  },
-  {
-    icon: <FiBarChart2 className="text-[var(--primary-blue)] text-xl" />,
-    label: "Suivi personnalisé",
   },
 ];
 

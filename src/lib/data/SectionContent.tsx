@@ -10,7 +10,6 @@ import {
   Users,
   GraduationCap,
   Lightbulb,
-  BookOpen,
   Target,
   HeartHandshake,
   BrainCircuit,
@@ -46,34 +45,24 @@ const SectionContent: React.FC<SectionContentProps> = ({ activeSection }) => {
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16"
           >
             <Feature
-              title="Title 1"
-              description="..."
+              title="Apprentissage par les pairs"
+              description="Nous croyons en la puissance de l'apprentissage collaboratif. Notre plateforme facilite les échanges entre étudiants, favorisant l'entraide et le partage de connaissances. Les étudiants peuvent s'entraider, poser des questions et partager leurs expériences."
               icon={<Users className="w-8 h-8 md:w-10 md:h-10" />}
             />
             <Feature
-              title="Title 2"
-              description="..."
+              title="Accessibilité universelle"
+              description="Nous rendons l'éducation accessible à tous, en proposant des solutions adaptées aux différents besoins et niveaux d'apprentissage. Notre plateforme est conçue pour être intuitive et accessible à tous les étudiants, quel que soit leur niveau."
               icon={<GraduationCap className="w-8 h-8 md:w-10 md:h-10" />}
             />
             <Feature
-              title="Title 3"
-              description="..."
+              title="Innovation pédagogique"
+              description="Nous repensons les méthodes d'apprentissage traditionnelles en intégrant les dernières avancées technologiques et pédagogiques. Notre approche combine le meilleur de l'enseignement traditionnel avec les innovations numériques."
               icon={<Lightbulb className="w-8 h-8 md:w-10 md:h-10" />}
             />
             <Feature
-              title="Title 5"
-              description="..."
-              icon={<Users className="w-8 h-8 md:w-10 md:h-10" />}
-            />
-            <Feature
-              title="Title 5"
-              description="..."
-              icon={<GraduationCap className="w-8 h-8 md:w-10 md:h-10" />}
-            />
-            <Feature
-              title="Title 6"
-              description="..."
-              icon={<Lightbulb className="w-8 h-8 md:w-10 md:h-10" />}
+              title="Communauté engagée"
+              description="Nous favorisons la création d'une communauté d'apprentis active et engagée. Les étudiants peuvent interagir, partager leurs connaissances et créer des liens durables."
+              icon={<HeartHandshake className="w-8 h-8 md:w-10 md:h-10" />}
             />
           </motion.div>
         );
@@ -88,25 +77,10 @@ const SectionContent: React.FC<SectionContentProps> = ({ activeSection }) => {
             className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-16"
           >
             <Feature
-              title="Title 1"
-              description="..."
-              icon={<BookOpen className="w-8 h-8 md:w-10 md:h-10" />}
-            />
-            <Feature
-              title="Title 2"
-              description="..."
-              icon={<Target className="w-8 h-8 md:w-10 md:h-10" />}
-            />
-            <Feature
-              title="Title 3"
-              description="..."
-              icon={<HeartHandshake className="w-8 h-8 md:w-10 md:h-10" />}
-            />
-            <Feature
-              title="Title 4"
-              description="..."
+              title="Méthodologie active"
+              description="Nous privilégions une approche active où les étudiants sont au cœur de leur apprentissage. Notre plateforme encourage la participation, l&apos;expérimentation et la mise en pratique des connaissances."
               icon={<BrainCircuit className="w-8 h-8 md:w-10 md:h-10" />}
-            />
+            />   
           </motion.div>
         );
 
@@ -152,7 +126,7 @@ const SectionContent: React.FC<SectionContentProps> = ({ activeSection }) => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-              <div className="flex flex-col items-center text-center p-6 md:p-8 bg-white/50 rounded-xl backdrop-blur-sm">
+              <div className="flex flex-col items-center text-center">
                 <div className="w-12 h-12 md:w-16 md:h-16 bg-[var(--primary-blue)]/10 rounded-full flex items-center justify-center mb-4 md:mb-6">
                   <HelpCircle className="w-6 h-6 md:w-8 md:h-8 text-[var(--primary-blue)]" />
                 </div>
@@ -171,7 +145,7 @@ const SectionContent: React.FC<SectionContentProps> = ({ activeSection }) => {
                 </Link>
               </div>
 
-              <div className="flex flex-col items-center text-center p-6 md:p-8 bg-white/50 rounded-xl backdrop-blur-sm">
+              <div className="flex flex-col items-center text-center">
                 <div className="w-12 h-12 md:w-16 md:h-16 bg-[var(--primary-blue)]/10 rounded-full flex items-center justify-center mb-4 md:mb-6">
                   <Mail className="w-6 h-6 md:w-8 md:h-8 text-[var(--primary-blue)]" />
                 </div>
