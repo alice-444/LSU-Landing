@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { FieldErrors, RegisterOptions } from "react-hook-form";
 
 import { UseFormRegister } from "react-hook-form";
@@ -71,4 +72,28 @@ export interface TeamMemberProps {
 
 export interface SectionContentProps {
   activeSection: Section;
+}
+
+// Product page
+export interface KeyPointProps {
+  icon: ReactNode;
+  label: string;
+}
+
+export interface FeatureCardProps {
+  icon: ReactNode;
+  title: string;
+  description: string;
+  badge?: string;
+}
+
+export interface ComparisonRow {
+  label: string;
+  lsu: boolean;
+  sp: boolean;
+  tr: boolean;
+}
+
+export interface ComparisonTableProps {
+  rows: ComparisonRow[];
 }

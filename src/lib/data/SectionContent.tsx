@@ -15,8 +15,6 @@ import {
   HeartHandshake,
   BrainCircuit,
 } from "lucide-react";
-  
-
 
 const SectionContent: React.FC<SectionContentProps> = ({ activeSection }) => {
   const teamMembers = [

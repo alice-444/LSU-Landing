@@ -11,7 +11,7 @@ const Meta: React.FC<MetaProps> = ({
   title = "learnSup",
   description = "This is a description of my app.",
   keywords = "student learning, collaborative learning, knowledge sharing, study resources, academic support",
-  favicon = "/logo.ico"
+  favicon = "/logo_blanc.svg"
 }) => {
   return (
     <Head>

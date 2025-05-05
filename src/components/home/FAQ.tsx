@@ -115,7 +115,7 @@ const FAQ: React.FC = () => {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-gradient-to-r from-[var(--primary-blue)] to-[var(--quaternary-blue)] text-white px-6 py-3 rounded-full text-xl font-medium shadow-md hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-200 ease-in-out"
+            className="inline-block bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] text-white px-6 py-3 rounded-full text-xl font-medium shadow-md hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-200 ease-in-out"
           >
             Contactez-nous
           </Link>
