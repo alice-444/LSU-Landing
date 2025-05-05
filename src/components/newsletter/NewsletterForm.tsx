@@ -65,7 +65,7 @@ const NewsletterForm: React.FC = () => {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            S'inscrire
+            S&apos;inscrire
           </motion.button>
         </div>
       </motion.form>
