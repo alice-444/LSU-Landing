@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { MdLogin } from "react-icons/md";
 import toast, { Toaster } from "react-hot-toast";
 import { useForm, SubmitHandler } from "react-hook-form";
 
@@ -11,7 +10,6 @@ const NewsletterForm: React.FC = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
     reset,
   } = useForm<FormData>();
 
@@ -37,22 +35,21 @@ const NewsletterForm: React.FC = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full max-w-2xl mx-auto">
       <Toaster position="top-center" />
       <motion.form
         onSubmit={handleSubmit(onSubmit)}
-        className="space-y-6"
+        className="flex flex-row items-center justify-center w-full px-2 py-2"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
       >
-        <div className="relative group">
-          <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] rounded-xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+        <div className="flex w-full sm:w-auto relative">
           <input
             type="email"
             placeholder="Entre ton adresse email"
-            className="relative w-full px-6 py-4 text-base bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[var(--primary-blue)] focus:border-transparent transition-all duration-300 shadow-sm hover:shadow-md"
+            className="relative w-full sm:w-80 px-4 py-2.5 text-base bg-white border border-gray-200 rounded-l-full rounded-r-none focus:outline-none focus:ring-2 focus:ring-[var(--primary-blue)] focus:border-transparent transition-all duration-300 shadow-sm placeholder-gray-400 font-medium tracking-wide"
             {...register("email", {
               required: "Veuillez entrer une adresse e-mail valide.",
               pattern: {
@@ -61,28 +58,16 @@ const NewsletterForm: React.FC = () => {
               },
             })}
           />
-          {errors.email && (
-            <motion.p
-              className="absolute -bottom-6 left-0 text-red-500 text-sm"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              {errors.email.message}
-            </motion.p>
-          )}
+          <motion.button
+            type="submit"
+            className="bg-gradient-to-r from-[var(--primary-blue)] to-[var(--quaternary-blue)] text-white px-5 py-3 text-base font-semibold rounded-r-full rounded-l-none shadow-sm hover:shadow-md transition-all duration-300 hover:opacity-90 whitespace-nowrap h-full"
+            style={{ minHeight: 'auto', width: 'auto' }}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            S'inscrire
+          </motion.button>
         </div>
-
-        <motion.button
-          type="submit"
-          className="relative w-full px-5 py-3 bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] text-white font-semibold rounded-full flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden"
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-[var(--secondary-blue)] to-[var(--primary-blue)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          <span className="relative text-lg font-medium">S&apos;inscrire</span>
-          <MdLogin className="relative text-xl group-hover:translate-x-1 transition-transform duration-300" />
-        </motion.button>
       </motion.form>
     </div>
   );

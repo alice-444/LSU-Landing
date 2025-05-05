@@ -5,7 +5,7 @@ import { FiArrowRight } from "react-icons/fi";
 const Hero: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-[#fffaf5] via-[#fff] to-[#fffaf5] py-24">
-      <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-6">
+      <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-6 pt-[100px]">
         <motion.div
           className="text-left max-w-2xl"
           initial={{ opacity: 0, x: -50 }}
@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
             priority
           />
           <motion.div
-            className="absolute -top-8 -left-8 w-24 h-24 bg-[#ff7849]/20 rounded-full"
+            className="absolute -top-8 -left-8 w-24 h-24 bg-[var(--green)]/25 rounded-full"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{

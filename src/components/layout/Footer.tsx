@@ -10,12 +10,11 @@ const Footer: React.FC<FooterProps> = () => {
 
   const links = [
     {
-      category: "À propos",
+      category: "LearnSup",
       items: [
         { label: "Mission", href: "/learnsup?section=mission" },
         { label: "Approche", href: "/learnsup?section=approche" },
         { label: "Équipe", href: "/learnsup?section=équipe" },
-        { label: "Directive de la marque", href: "/brand-guidelines" },
         { label: "Nous Contacter", href: "/learnsup?section=contact" },
       ],
     },
@@ -34,7 +33,6 @@ const Footer: React.FC<FooterProps> = () => {
     {
       category: "Conditions d'utilisation et confidentialité",
       items: [
-        { label: "Conditions d'utilisation", href: "/" },
         { label: "Politique de confidentialité", href: "/privacy" },
         { label: "Mentions légales", href: "/legal-notice" },
       ],
@@ -103,7 +101,7 @@ const Footer: React.FC<FooterProps> = () => {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 text-3xl hover:text-gray-900 transition-colors"
+                  className="text-[var(--primary-blue)] text-3xl hover:text-[var(--quaternary-blue)] transition-colors"
                 >
                   {link.icon}
                 </a>

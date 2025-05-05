@@ -1,6 +1,6 @@
 export const faqs = [
   {
-    question: "Qu'est-ce que LearnSup ?",
+    question: "C'est quoi LearnSup ?",
     answer:
       "LearnSup est une plateforme d'apprentissage collaboratif qui permet aux étudiants de progresser ensemble, de partager leurs connaissances et de s'entraider dans leur parcours éducatif, personnel et professionnel.",
   },
@@ -21,6 +21,11 @@ export const faqs = [
   },
   {
     question: "Comment puis-je commencer ?",
+    answer:
+      "Pour commencer, créez simplement un compte gratuit sur notre plateforme. Une fois inscrit, vous aurez accès à toutes les fonctionnalités de base et pourrez commencer à interagir avec la communauté.",
+  },
+  {
+    question: "Comment réserver un atelier ?",
     answer:
       "Pour commencer, créez simplement un compte gratuit sur notre plateforme. Une fois inscrit, vous aurez accès à toutes les fonctionnalités de base et pourrez commencer à interagir avec la communauté.",
   },
