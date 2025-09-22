@@ -1,8 +1,6 @@
 services:
   learnsup_website:
-    build: 
-      dockerfile: Dockerfile.dev
-    container_name: showcase-learnsup
+    build: ../Dockerfile.dev
     expose:
       - "3000"
     labels:
