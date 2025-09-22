@@ -1,12 +1,12 @@
 services:
   learnsup_website:
-    build: .
+    build: ./Dockerfile.dev
     container_name: showcase-learnsup
-    ports:
-      - "3000:3000"
+    expose:
+      - "3000"
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.learnsup_website.rule=Host(`vps108098.serveur-vps.net`)"
+      - "traefik.http.routers.learnsup_website.rule=Host(`${FRONTEND_URL}`)"
       - "traefik.http.routers.learnsup_website.entrypoints=websecure"
       - "traefik.http.routers.learnsup_website.tls.certresolver=myresolver"
     networks:
@@ -38,7 +38,6 @@ services:
       - "--certificatesresolvers.myresolver.acme.email=carole.bouche@my-digital-school.org"
       - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
     ports:
-      - "80:80"
       - "443:443"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
