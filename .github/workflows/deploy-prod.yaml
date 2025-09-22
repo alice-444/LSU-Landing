@@ -1,0 +1,24 @@
+name: Deploy Production Environment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+    deploy:
+      name: Deployment
+      runs-on: ubuntu-latest
+      steps:
+      - name: Connect to server user credientials and deploy
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+         host: ${{ secrets.SSH_HOST }}
+         username: ${{ secrets.SSH_USERNAME }}
+         password: ${{ secrets.SSH_PASSWORD }}
+         script: |
+          cd /home/root/projects/LSU-Landing
+          git checkout main
+          git pull
+          docker compose -f ./docker/docker-compose.prod.yml down
+          docker compose -f ./docker/docker-compose.prod.yml up --build -d
