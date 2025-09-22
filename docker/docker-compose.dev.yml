@@ -1,22 +1,18 @@
-version: '3.8'
-
 services:
-  app-prod:
-    container_name: app-prod
+  learnsup_website:
     build:
       context: .
-      dockerfile: Dockerfile.prod
+      dockerfile: ./docker/Dockerfile.dev
     expose:
       - "3000"
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.app-prod.rule=Host(`${FRONTEND_URL}`)"
-      - "traefik.http.routers.app-prod.entrypoints=websecure"
-      - "traefik.http.routers.app-prod.tls.certresolver=myresolver"
+      - "traefik.http.routers.learnsup_website.rule=Host(`${FRONTEND_URL}`)"
+      - "traefik.http.routers.learnsup_website.entrypoints=websecure"
+      - "traefik.http.routers.learnsup_website.tls.certresolver=myresolver"
     networks:
       - vps-mds
-    restart: unless-stopped
-    
+
   traefik:
     image: traefik:v3.2.1
     container_name: traefik_reverse_proxy

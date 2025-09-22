@@ -19,7 +19,7 @@ RUN \
     fi
 
 # Copie du reste des fichiers du projet
-COPY . .
+COPY ../ .
 
 # Exposition du port de développement
 EXPOSE 3000
