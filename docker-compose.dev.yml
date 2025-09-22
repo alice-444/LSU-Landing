@@ -1,7 +1,7 @@
 services:
   learnsup_website:
     build: 
-      dockerfile: ./Dockerfile.dev
+      dockerfile: Dockerfile.dev
     container_name: showcase-learnsup
     expose:
       - "3000"
