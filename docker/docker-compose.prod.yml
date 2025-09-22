@@ -5,7 +5,7 @@ services:
     container_name: app-prod
     build:
       context: .
-      dockerfile: ./docker/Dockerfile.prod
+      dockerfile: ./Dockerfile.prod
     expose:
       - "3000"
     labels:
