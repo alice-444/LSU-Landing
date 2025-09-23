@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { useState, useEffect } from "react";
 import { SiOpentofu } from "react-icons/si";
 import { PiChalkboardTeacherDuotone } from "react-icons/pi";
@@ -41,21 +41,21 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
-  const linkHoverEffect = {
+  const linkHoverEffect: Variants = {
     rest: { x: 0, opacity: 1 },
     hover: {
       x: 5,
       opacity: 1,
-      transition: { type: "spring", stiffness: 300, damping: 15 },
+      transition: { type: "spring" as const, stiffness: 300, damping: 15 },
     },
   };
 
-  const underlineEffect = {
+  const underlineEffect: Variants = {
     rest: { scaleX: 0, opacity: 0 },
     hover: {
       scaleX: 1,
       opacity: 1,
-      transition: { duration: 0.4, ease: [0.4, 0, 0.2, 1] },
+      transition: { duration: 0.4, ease: [0.4, 0, 0.2, 1] as [number, number, number, number] },
     },
   };
 
