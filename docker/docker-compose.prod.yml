@@ -18,7 +18,6 @@ services:
     
   traefik:
     image: traefik:v3.2.1
-    container_name: traefik_reverse_proxy
     command:
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
