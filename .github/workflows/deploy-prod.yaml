@@ -20,5 +20,6 @@ jobs:
           cd /home/root/projects/LSU-Landing
           git checkout main
           git pull
+          cd docker
           docker compose -f ./docker/docker-compose.prod.yml down
           docker compose -f ./docker/docker-compose.prod.yml up --build -d
