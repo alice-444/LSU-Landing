@@ -1,8 +1,8 @@
 services:
   learnsup_website:
     build:
-      context: .
-      dockerfile: ./Dockerfile.dev
+      context: ..
+      dockerfile: docker/Dockerfile.dev
     expose:
       - "3000"
     labels:
