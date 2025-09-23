@@ -2,7 +2,6 @@ version: '3.8'
 
 services:
   app-prod:
-    container_name: app-prod
     build:
       context: ..
       dockerfile: docker/Dockerfile.prod
