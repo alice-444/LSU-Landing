@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import LanguageSelector from "../LanguageSelector";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaInstagram, FaTiktok } from "react-icons/fa";
+import { BookOpen, Info, Headphones, Scale } from "lucide-react";
 import Link from "next/link";
 import { FooterProps } from "@/lib/types";
 
@@ -10,28 +10,33 @@ const Footer: React.FC<FooterProps> = () => {
 
   const links = [
     {
-      category: "LearnSup",
+      category: "Services",
+      icon: <BookOpen />,
       items: [
-        { label: "Mission", href: "/learnsup?section=mission" },
-        { label: "Approche", href: "/learnsup?section=approche" },
-        { label: "Équipe", href: "/learnsup?section=équipe" },
-        { label: "Nous Contacter", href: "/learnsup?section=contact" },
+        { label: "Découvrir nos services", href: "/product" },
+        { label: "Tarifs", href: "/pricing" },
+        { label: "Pour les écoles", href: "/learnsup-for-school" },
       ],
     },
     {
-      category: "Notre produit",
-      items: [{ label: "Découvrir le produit", href: "/product" }],
+      category: "LearnSup",
+      icon: <Info />,
+      items: [
+        { label: "À propos", href: "/about" },
+        { label: "Notre vision", href: "/learnsup?section=vision" },
+      ],
     },
     {
-      category: "Aide & Support",
+      category: "Support",
+      icon: <Headphones />,
       items: [
-        { label: "Centre d'aide", href: "/learnsup?section=contact" },
-        { label: "Partenariats", href: "/learnsup?section=contact" },
+        { label: "Support", href: "/support" },
         { label: "FAQ", href: "/faq" },
       ],
     },
     {
-      category: "Conditions d'utilisation et confidentialité",
+      category: "Légal",
+      icon: <Scale />,
       items: [
         { label: "Politique de confidentialité", href: "/privacy" },
         { label: "Mentions légales", href: "/legal-notice" },
@@ -46,24 +51,28 @@ const Footer: React.FC<FooterProps> = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-r from-[#fffaf5] via-white to-[#fffaf5] py-16">
+    <footer className="relative overflow-hidden bg-[linear-gradient(135deg,var(--primary-orange)_0%,var(--primary-orange-dark)_100%)] py-12">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-white/0 via-white/70 to-white/0" />
+      <div className="absolute inset-x-0 top-px h-px bg-black/10" />
+      
       <motion.div
-        className="container mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-start lg:space-x-12 px-6"
+        className="container mx-auto flex flex-col lg:flex-row lg:justify-center lg:items-start lg:space-x-8 px-6"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8">
           {links.map((section) => (
             <motion.div
               key={section.category}
               whileHover={{ scale: 1.05 }}
-              className="mb-6"
+              className="mb-4"
             >
-              <h3 className="text-lg font-bold text-gray-800 mb-4">
+              <h3 className="text-lg font-bold text-white drop-shadow-sm flex items-center mb-3 tracking-wide">
+                <span className="mr-2 text-lg">{section.icon}</span>
                 {section.category}
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-2">
                 {section.items.map((item) => (
                   <motion.li
                     key={item.href}
@@ -72,7 +81,7 @@ const Footer: React.FC<FooterProps> = () => {
                   >
                     <Link
                       href={item.href}
-                      className="text-gray-600 hover:text-gray-900 transition-colors"
+                      className="text-white/95 hover:text-white transition-colors hover:underline underline-offset-4 decoration-white/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 rounded px-1"
                     >
                       {item.label}
                     </Link>
@@ -83,10 +92,10 @@ const Footer: React.FC<FooterProps> = () => {
           ))}
         </div>
 
-        <div className="mt-8 lg:mt-0 lg:ml-12">
-          <h3 className="text-lg font-bold text-gray-800 mb-4">Suivez-nous</h3>
+        <div className="mt-6 lg:mt-0">
+          <h3 className="text-base font-bold text-white drop-shadow-sm mb-3 tracking-wide">Suivez-nous</h3>
           <motion.ul
-            className="flex space-x-6"
+            className="flex space-x-3"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
@@ -94,35 +103,33 @@ const Footer: React.FC<FooterProps> = () => {
             {socialLinks.map((link, index) => (
               <motion.li
                 key={index}
-                whileHover={{ scale: 1.2, rotate: 10 }}
+                whileHover={{ scale: 1.12, rotate: 4 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <a
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[var(--primary-blue)] text-3xl hover:text-[var(--quaternary-blue)] transition-colors"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/50 text-white text-xl hover:bg-white/15 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
                 >
                   {link.icon}
                 </a>
               </motion.li>
             ))}
           </motion.ul>
-          <div className="mt-6">
-            <LanguageSelector />
-          </div>
+          <div className="mt-6"></div>
         </div>
       </motion.div>
 
       <motion.hr
-        className="w-3/4 mx-auto border-gray-300 my-8"
+        className="w-3/4 mx-auto border-white/30 my-4"
         initial={{ width: "0%" }}
         animate={{ width: "75%" }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
       />
 
       <motion.p
-        className="text-center text-gray-600 text-sm"
+        className="text-center text-white/80 text-sm"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}

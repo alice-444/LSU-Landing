@@ -14,11 +14,20 @@
   }
 
   :root {
-    --primary-blue: #4A90E2;
-    --secondary-blue: #9DCDEB;
+    --primary-orange: #FFB647;
+    --primary-orange-dark: #e69a2f;
+    /* --secondary-blue: #9DCDEB;
     --tertiary-blue: #639EDA;
     --quaternary-blue: #26547c;
     --purple: #c9a0dc;
     --blue:#26547c;
-    --green:#a8d5ba;
+    --green:#a8d5ba; */
+  }
+
+  .soft-noise-bg {
+    background-image:
+      radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px),
+      radial-gradient(rgba(0,0,0,0.08) 1px, transparent 1px);
+    background-position: 0 0, 12px 12px;
+    background-size: 24px 24px;
   }

@@ -5,28 +5,32 @@ import { useState, useEffect } from "react";
 import { SiOpentofu } from "react-icons/si";
 import { PiChalkboardTeacherDuotone } from "react-icons/pi";
 import { AiOutlineMenu, AiOutlineClose, AiFillProduct } from "react-icons/ai";
-import { Telescope } from "lucide-react";
+import { TestTubeDiagonal, BadgeEuro } from "lucide-react";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   const links = [
-    { name: "Learnsup", href: "/learnsup", icon: <Telescope /> },
     {
-      name: "Produit",
+      name: "Services",
       href: "/product",
       icon: <SiOpentofu />,
     },
     {
       name: "Tarifs",
       href: "/pricing",
-      icon: <AiFillProduct />,
+      icon: <BadgeEuro />,
     },
     {
-      name: "Learnsup pour les écoles",
+      name: "Pour les écoles",
       href: "/learnsup-for-school",
       icon: <PiChalkboardTeacherDuotone />,
+    },
+    {
+      name: "Demo",
+      href: "/demo",
+      icon: <TestTubeDiagonal />,
     },
   ];
 
@@ -55,7 +59,10 @@ const Navbar: React.FC = () => {
     hover: {
       scaleX: 1,
       opacity: 1,
-      transition: { duration: 0.4, ease: [0.4, 0, 0.2, 1] as [number, number, number, number] },
+      transition: {
+        duration: 0.4,
+        ease: [0.4, 0, 0.2, 1] as [number, number, number, number],
+      },
     },
   };
 
@@ -87,7 +94,7 @@ const Navbar: React.FC = () => {
           />
         </motion.a>
 
-        <ul className="hidden lg:flex space-x-6 md:space-x-6 text-base md:text-lg font-medium text-gray-800">
+        <ul className="hidden lg:flex space-x-6 md:space-x-6 text-base md:text-lg font-medium text-gray-800 ml-auto mr-8">
           {links.map((link) => (
             <motion.li
               key={link.name}
@@ -98,7 +105,7 @@ const Navbar: React.FC = () => {
             >
               {link.icon && (
                 <motion.span
-                  className="text-xl md:text-xl text-gray-600 group-hover:text-[var(--primary-blue)] transition-colors duration-300"
+                  className="text-xl md:text-xl text-gray-600 group-hover:text-[var(--primary-orange)] transition-colors duration-300"
                   variants={linkHoverEffect}
                 >
                   {link.icon}
@@ -106,13 +113,13 @@ const Navbar: React.FC = () => {
               )}
               <motion.a
                 href={link.href}
-                className="ml-2 md:ml-2 text-gray-700 group-hover:text-[var(--primary-blue)] transition-colors duration-300"
+                className="ml-2 md:ml-2 text-gray-700 group-hover:text-[var(--primary-orange)] transition-colors duration-300"
                 variants={linkHoverEffect}
               >
                 {link.name}
               </motion.a>
               <motion.div
-                className="absolute bottom-[-2px] left-0 h-[2px] bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] origin-left"
+                className="absolute bottom-[-2px] left-0 h-[2px] bg-gradient-to-r from-[var(--primary-orange)] to-[var(--secondary-orange)] origin-left"
                 style={{ width: "100%" }}
                 variants={underlineEffect}
               />
@@ -127,8 +134,8 @@ const Navbar: React.FC = () => {
           className="hidden lg:flex"
         >
           <Link href="https://learn-sup.vercel.app/">
-            <button className="bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] text-white px-4 sm:px-6 py-2 sm:py-2 rounded-full shadow-md hover:shadow-lg transition duration-300 text-base sm:text-lg">
-              Rejoignez-nous
+            <button className="bg-gradient-to-r from-[var(--primary-orange)] to-[var(--secondary-orange)] text-white px-4 sm:px-6 py-2 sm:py-2 rounded-full shadow-md hover:shadow-lg transition duration-300 text-base sm:text-lg">
+              S'inscrire
             </button>
           </Link>
         </motion.div>
@@ -166,7 +173,7 @@ const Navbar: React.FC = () => {
               >
                 {link.icon && (
                   <motion.span
-                    className="text-xl sm:text-lg text-gray-600 group-hover:text-[var(--primary-blue)] transition-colors duration-300"
+                    className="text-xl sm:text-lg text-gray-600 group-hover:text-[var(--primary-orange)] transition-colors duration-300"
                     variants={linkHoverEffect}
                   >
                     {link.icon}
@@ -174,13 +181,13 @@ const Navbar: React.FC = () => {
                 )}
                 <motion.a
                   href={link.href}
-                  className="ml-2 sm:ml-2 text-gray-700 group-hover:text-[var(--primary-blue)] transition-colors duration-300"
+                  className="ml-2 sm:ml-2 text-gray-700 group-hover:text-[var(--primary-orange)] transition-colors duration-300"
                   variants={linkHoverEffect}
                 >
                   {link.name}
                 </motion.a>
                 <motion.div
-                  className="absolute bottom-[-2px] left-0 h-[2px] bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] origin-left"
+                  className="absolute bottom-[-2px] left-0 h-[2px] bg-gradient-to-r from-[var(--primary-orange)] to-[var(--secondary-orange)] origin-left"
                   style={{ width: "100%" }}
                   variants={underlineEffect}
                 />
@@ -188,12 +195,12 @@ const Navbar: React.FC = () => {
             ))}
           </ul>
           <motion.button
-            className="mt-4 sm:mt-6 w-full bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] text-white px-4 sm:px-5 py-2 sm:py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-lg sm:text-xl font-medium hover:opacity-90"
+            className="mt-4 sm:mt-6 w-full bg-gradient-to-r from-[var(--primary-orange)] to-[var(--secondary-orange)] text-white px-4 sm:px-5 py-2 sm:py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-lg sm:text-xl font-medium hover:opacity-90"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={() => setIsOpen(false)}
           >
-            <Link href="https://learn-sup.vercel.app/">Rejoignez-nous</Link>
+            <Link href="https://learn-sup.vercel.app/">S'inscrire</Link>
           </motion.button>
         </motion.div>
       )}

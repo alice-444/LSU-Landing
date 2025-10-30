@@ -1,88 +1,35 @@
 import Image from "next/image";
-import { motion } from "framer-motion";
+import Link from "next/link";
 import { FiArrowRight } from "react-icons/fi";
 
 const Hero: React.FC = () => {
   return (
-    <div className="bg-gradient-to-r from-[#fffaf5] via-[#fff] to-[#fffaf5] py-24">
-      <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-6 pt-[100px]">
-        <motion.div
-          className="text-left max-w-2xl"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <motion.h1
-            className="text-6xl font-extrabold text-[var(--tertiary-blue)] leading-tight"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Apprenez et progressez <br />
-            <span className="text-[var(--primary-blue)]">
-              en vous entraidant
-            </span>
-          </motion.h1>
-          <motion.p
-            className="text-gray-700 text-xl mt-6 mb-8"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            La première plateforme d entraide et de réseautage exclusivement
-            pour les étudiants.
-          </motion.p>
-          <motion.button
-            className="bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] text-white py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-xl flex items-center whitespace-nowrap"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            Inscrivez-vous
-            <FiArrowRight className="ml-3 text-xl animate-bounce-horizontal" />
-          </motion.button>
-        </motion.div>
-
-        <motion.div
-          className="w-full max-w-lg mb-8 md:mb-0 md:ml-12 relative"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-        >
-          <Image
-            src="/studentWorking.webp"
-            alt="Students Working"
-            className="rounded-xl shadow-2xl"
-            width={600}
-            height={450}
-            priority
-          />
-          <motion.div
-            className="absolute -top-8 -left-8 w-24 h-24 bg-[var(--green)]/25 rounded-full"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{
-              duration: 1,
-              delay: 0.5,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }}
-          />
-          <motion.div
-            className="absolute -bottom-8 -right-8 w-20 h-20 bg-[#ff4d6d]/20 rounded-full"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{
-              duration: 1,
-              delay: 0.7,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }}
-          />
-        </motion.div>
+    <div className="relative w-full h-screen flex justify-end items-end pl-24 pt-40 overflow-hidden">
+      <div className="relative w-[140%] h-[140%]">
+        <Image
+          src="/Hero.png"
+          alt="LearnSup Hero"
+          fill
+          className="object-cover object-left"
+          priority
+        />
       </div>
+      
+        <div className="absolute bottom-40 left-36 z-10">
+          <Link href="#">
+            <button className="group relative overflow-hidden bg-gradient-to-r from-[var(--primary-orange)] to-[#ffb36b] text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 ease-out text-lg font-medium hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent flex items-center whitespace-nowrap hover:shadow-[0_8px_24px_rgba(255,102,0,0.35)]">
+              <span className="pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 bg-white/25 blur-md -skew-x-12 translate-x-0 group-hover:translate-x-[260%] transition-transform duration-700 ease-out" />
+              Essayer LearnSup
+              <FiArrowRight className="ml-3 text-xl transition-transform duration-300 group-hover:translate-x-1" />
+            </button>
+          </Link>
+          <Link href="#" className="block mt-3">
+            <button className="bg-white text-[var(--primary-orange)] px-6 py-3 rounded-full shadow-md hover:shadow-xl transition-all duration-300 ease-out text-lg font-medium hover:bg-[var(--primary-orange)] hover:text-white hover:-translate-y-0.5 hover:scale-[1.02] active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-orange)]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-white flex items-center whitespace-nowrap border border-[var(--primary-orange)]">
+              Voir la démo
+              <FiArrowRight className="ml-3 text-xl" />
+            </button>
+          </Link>
+        </div>
     </div>
   );
 };
