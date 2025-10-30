@@ -1,4 +1,5 @@
 import Hero from "@/components/home/Hero";
+import FAQ from "@/components/home/FAQ";
 
 const Home: React.FC = () => {
   return (
@@ -6,8 +7,8 @@ const Home: React.FC = () => {
       <div className="py-16">
         <Hero />
         {/* <Features />
-        <FAQ />
         <Newsletter /> */}
+        <FAQ />
       </div>
     </div>
   );

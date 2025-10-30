@@ -30,24 +30,23 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <div className="py-10 sm:py-20 bg-gradient-to-r from-[#fffaf5] via-white to-[#fffaf5] relative">
+    <div className="py-16 sm:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className="inline-block mb-3">
-            <MessageCircleQuestion className="text-[var(--primary-blue)] w-16 h-16" />
+          <div className="inline-flex items-center justify-center mb-4 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[var(--primary-orange)]/10">
+            <MessageCircleQuestion className="text-[var(--primary-orange)] w-10 h-10 sm:w-12 sm:h-12" />
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-4">
             Questions fréquentes
           </h2>
-          <p className="text-xl text-[var(--quaternary-blue)] max-w-2xl mx-auto">
-            Trouvez les réponses aux questions les plus courantes sur notre
-            plateforme
+          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+            Trouvez les réponses aux questions les plus courantes
           </p>
         </motion.div>
 
@@ -62,27 +61,33 @@ const FAQ: React.FC = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="mb-3 sm:mb-6"
+              className="mb-3 sm:mb-4"
             >
+              {index > 0 && (
+                <div className="h-px bg-gray-100/90 mb-3 sm:mb-4" />
+              )}
               <motion.div
-                className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100"
-                whileHover={{ scale: 1.01 }}
+                className={`rounded-xl transition-[background,border,box-shadow] duration-200 overflow-hidden border ${openIndex === index ? 'bg-[var(--primary-orange)]/5 border-[var(--primary-orange)]/50 shadow-sm' : 'bg-white border-gray-200 hover:border-[var(--primary-orange)]/50 shadow-sm hover:shadow-md'}`}
+                whileHover={{ scale: 1.001 }}
               >
                 <button
-                  className="w-full px-6 py-4 sm:px-8 sm:py-6 flex justify-between items-center text-left group"
+                  className="w-full px-6 py-4 sm:px-7 sm:py-5 flex justify-between items-center text-left gap-4 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-orange)]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                  aria-expanded={openIndex === index}
                   onClick={() =>
                     setOpenIndex(openIndex === index ? null : index)
                   }
                 >
-                  <h3 className="text-lg sm:text-xl font-semibold text-gray-800 group-hover:text-[var(--primary-blue)] transition-colors duration-300">
+                  <h3 className="text-[1.05rem] sm:text-xl font-semibold tracking-tight text-gray-900 group-hover:text-[var(--primary-orange)] transition-colors duration-150">
                     {faq.question}
                   </h3>
                   <motion.div
                     animate={{ rotate: openIndex === index ? 180 : 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="text-[var(--primary-blue)]"
+                    transition={{ duration: 0.25 }}
+                    className="shrink-0"
                   >
-                    <FaChevronDown className="text-xl" />
+                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[var(--primary-orange)]/10 group-hover:bg-[var(--primary-orange)]/20 transition-colors">
+                      <FaChevronDown className="text-base sm:text-lg text-[var(--primary-orange)]" />
+                    </div>
                   </motion.div>
                 </button>
 
@@ -90,13 +95,18 @@ const FAQ: React.FC = () => {
                   className="overflow-hidden"
                   initial={{ height: 0 }}
                   animate={{ height: openIndex === index ? "auto" : 0 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.25 }}
                 >
-                  <div className="px-6 sm:px-8 pb-6 sm:pb-8">
-                    <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: openIndex === index ? 1 : 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="px-6 sm:px-7 pb-6 sm:pb-7"
+                  >
+                    <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
                       {faq.answer}
                     </p>
-                  </div>
+                  </motion.div>
                 </motion.div>
               </motion.div>
             </motion.div>
@@ -104,20 +114,20 @@ const FAQ: React.FC = () => {
         </motion.div>
 
         <motion.div
-          className="mt-16 text-center"
+          className="mt-6 sm:mt-8 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <p className="text-[var(--quaternary-blue)] mb-6 text-xl">
-            Vous n&apos;avez pas trouvé la réponse à votre question ?
+          <p className="text-gray-600 mb-6 text-lg sm:text-xl">
+          Toujours une question en tête ?
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] text-white px-6 py-3 rounded-full text-xl font-medium shadow-md hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-200 ease-in-out"
+            className="inline-block bg-[var(--primary-orange)] text-white px-6 py-3 rounded-full text-lg sm:text-xl font-medium shadow-sm hover:shadow-md hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--primary-orange)] transition-all duration-200 ease-out"
           >
-            Contactez-nous
+            Centre d'aide
           </Link>
         </motion.div>
       </div>

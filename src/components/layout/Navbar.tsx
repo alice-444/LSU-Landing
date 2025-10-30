@@ -4,7 +4,7 @@ import { motion, type Variants } from "framer-motion";
 import { useState, useEffect } from "react";
 import { SiOpentofu } from "react-icons/si";
 import { PiChalkboardTeacherDuotone } from "react-icons/pi";
-import { AiOutlineMenu, AiOutlineClose, AiFillProduct } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineClose} from "react-icons/ai";
 import { TestTubeDiagonal, BadgeEuro } from "lucide-react";
 
 const Navbar: React.FC = () => {
