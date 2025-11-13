@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   app-prod:
     build:
@@ -17,7 +15,7 @@ services:
     restart: unless-stopped
     
   traefik:
-    image: traefik:v3.2.1
+    image: traefik:v3.6.0
     command:
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
