@@ -36,12 +36,10 @@ export const keyPoints: KeyPointProps[] = [
 ];
 
 export const comparisonRows: ComparisonRow[] = [
-  { label: "DarkMode", lsu: true, sp: false, tr: false },
   { label: "Système de récompense", lsu: true, sp: false, tr: false },
   { label: "Support prioritaire", lsu: true, sp: true, tr: true },
-  { label: "Contenus interactifs", lsu: true, sp: false, tr: false },
-  { label: "Accès hors ligne", lsu: true, sp: false, tr: false },
-  { label: "Stockage de fichiers", lsu: true, sp: false, tr: false },
+  { label: "Accès hors ligne", lsu: false, sp: false, tr: false },
+  { label: "Stockage de fichiers", lsu: false, sp: false, tr: false },
   {
     label: "Accès aux planning des utilisateurs",
     lsu: true,
@@ -49,5 +47,4 @@ export const comparisonRows: ComparisonRow[] = [
     tr: false,
   },
   { label: "Un suivi de l'élève", lsu: false, sp: true, tr: true },
-  { label: "Conseiller à l'écoute", lsu: false, sp: false, tr: true },
 ];
