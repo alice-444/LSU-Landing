@@ -7,7 +7,7 @@ services:
       - "3000"
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.app-prod.rule=Host(`${FRONTEND_URL}`)"
+      - "traefik.http.routers.app-prod.rule=Host(`learnsup.fr`)"
       - "traefik.http.routers.app-prod.entrypoints=websecure"
       - "traefik.http.routers.app-prod.tls.certresolver=myresolver"
     networks:
