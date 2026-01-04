@@ -1,8 +1,9 @@
-import { motion } from "framer-motion";
-import toast, { Toaster } from "react-hot-toast";
-import { useForm, SubmitHandler } from "react-hook-form";
+import React from "react";
+import { useForm } from "react-hook-form";
+import { Mail } from "lucide-react";
+import toast from "react-hot-toast";
 
-type FormData = {
+type NewsletterFormData = {
   email: string;
 };
 
@@ -11,9 +12,10 @@ const NewsletterForm: React.FC = () => {
     register,
     handleSubmit,
     reset,
-  } = useForm<FormData>();
+    formState: { errors },
+  } = useForm<NewsletterFormData>();
 
-  const onSubmit: SubmitHandler<FormData> = async (data) => {
+  const onSubmit = async (data: NewsletterFormData) => {
     try {
       const response = await fetch("/api/newsletter", {
         method: "POST",
@@ -35,21 +37,16 @@ const NewsletterForm: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto">
-      <Toaster position="top-center" />
-      <motion.form
-        onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-row items-center justify-center w-full px-2 py-2"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-      >
-        <div className="flex w-full sm:w-auto relative">
+    <div className="bg-linear-to-br from-orange-50 to-purple-50 rounded-[24px] p-8 border-4 border-gray-900 shadow-[8px_8px_0_0_rgba(0,0,0,0.1)]">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+        <div className="relative">
+          <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
+            <Mail className="w-5 h-5" strokeWidth={3} />
+          </div>
           <input
             type="email"
-            placeholder="Entre ton adresse email"
-            className="relative w-full sm:w-80 px-4 py-2.5 text-base bg-white border border-gray-200 rounded-l-full rounded-r-none focus:outline-none focus:ring-2 focus:ring-[var(--primary-blue)] focus:border-transparent transition-all duration-300 shadow-sm placeholder-gray-400 font-medium tracking-wide"
+            placeholder="ton-email@exemple.com"
+            className="w-full pl-12 pr-4 py-4 bg-white border-[3px] border-gray-900 rounded-[16px] font-bold text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-4 focus:ring-[#FFB647] focus:ring-opacity-30 transition-all shadow-[0_4px_0_0_rgba(0,0,0,0.1)]"
             {...register("email", {
               required: "Veuillez entrer une adresse e-mail valide.",
               pattern: {
@@ -58,17 +55,20 @@ const NewsletterForm: React.FC = () => {
               },
             })}
           />
-          <motion.button
-            type="submit"
-            className="bg-gradient-to-r from-[var(--primary-blue)] to-[var(--quaternary-blue)] text-white px-5 py-3 text-base font-semibold rounded-r-full rounded-l-none shadow-sm hover:shadow-md transition-all duration-300 hover:opacity-90 whitespace-nowrap h-full"
-            style={{ minHeight: 'auto', width: 'auto' }}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            S&apos;inscrire
-          </motion.button>
+          {errors.email && (
+            <p className="text-red-500 text-sm mt-1 font-medium">
+              {errors.email.message}
+            </p>
+          )}
         </div>
-      </motion.form>
+
+        <button
+          type="submit"
+          className="w-full bg-linear-to-r from-[#FFB647] to-[#C9A0DC] text-white py-4 px-8 rounded-[16px] font-black border-[3px] border-gray-900 shadow-[0_6px_0_0_rgba(0,0,0,0.15)] hover:shadow-[0_3px_0_0_rgba(0,0,0,0.15)] hover:translate-y-1 transition-all duration-200 flex items-center justify-center gap-2 group"
+        >
+          <span>S&apos;inscrire</span>
+        </button>
+      </form>
     </div>
   );
 };
