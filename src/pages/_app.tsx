@@ -2,6 +2,7 @@ import Meta from "@/Meta";
 import "@/styles/globals.css";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
+import ScrollToTop from "@/components/layout/ScrollToTop";
 import ToasterContext from "@/components/ToasterContext";
 import { type ComponentType } from "react";
 
@@ -18,6 +19,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <Navbar />
       <Component {...pageProps} />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };

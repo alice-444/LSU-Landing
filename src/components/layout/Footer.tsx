@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
       icon: <HelpCircle />,
       items: [
         { label: "FAQ", href: "/faq" },
-        { label: "Centre d'aide", href: "/learnsup?section=contact" },
+        { label: "Centre d'aide", href: "/contact" },
       ],
     },
     {
