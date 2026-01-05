@@ -9,16 +9,16 @@ const ComparisonTable: FC<ComparisonTableProps> = ({ rows }) => (
     <table className="min-w-full rounded-2xl shadow-xl border-separate border-spacing-0 bg-white">
       <thead>
         <tr>
-          <th className="py-4 px-4 font-semibold text-lg text-white bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] first:rounded-tl-2xl last:rounded-tr-2xl border-b-4 border-[var(--primary-blue)]">
+          <th className="py-4 px-4 font-semibold text-lg text-white bg-linear-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] first:rounded-tl-2xl last:rounded-tr-2xl border-b-4 border-[var(--primary-blue)]">
             Fonctionnalité
           </th>
-          <th className="py-4 px-4 font-semibold text-lg text-white bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] border-l border-white border-b-4 border-[var(--primary-blue)]">
+          <th className="py-4 px-4 font-semibold text-lg text-white bg-linear-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] border-l border-white border-b-4 border-[var(--primary-blue)]">
             LearnSup
           </th>
-          <th className="py-4 px-4 font-semibold text-lg text-white bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] border-l border-white border-b-4 border-[var(--primary-blue)]">
+          <th className="py-4 px-4 font-semibold text-lg text-white bg-linear-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] border-l border-white border-b-4 border-[var(--primary-blue)]">
             Superprof
           </th>
-          <th className="py-4 px-4 font-semibold text-lg text-white bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] border-l border-white border-b-4 border-[var(--primary-blue)] last:rounded-tr-2xl">
+          <th className="py-4 px-4 font-semibold text-lg text-white bg-linear-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] border-l border-white border-b-4 border-[var(--primary-blue)] last:rounded-tr-2xl">
             Teach&apos;R
           </th>
         </tr>

@@ -30,7 +30,7 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <div className="py-10 sm:py-20 bg-gradient-to-r from-[#fffaf5] via-white to-[#fffaf5] relative">
+    <div className="py-10 sm:py-20 bg-linear-to-r from-[#fffaf5] via-white to-[#fffaf5] relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
@@ -115,7 +115,7 @@ const FAQ: React.FC = () => {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] text-white px-6 py-3 rounded-full text-xl font-medium shadow-md hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-200 ease-in-out"
+            className="inline-block bg-linear-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] text-white px-6 py-3 rounded-full text-xl font-medium shadow-md hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-200 ease-in-out"
           >
             Contactez-nous
           </Link>

@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
       icon: <Globe />,
       items: [
         { label: "A propos", href: "/about" },
-        { label: "Decouvrir nos services", href: "/" },
+        { label: "Decouvrir nos services", href: "/services" },
         { label: "Tarifs", href: "/pricing" },
         { label: "Learnsup pour les écoles", href: "/learnsup-for-school" },
       ],

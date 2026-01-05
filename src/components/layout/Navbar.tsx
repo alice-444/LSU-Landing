@@ -6,19 +6,17 @@ import { PiChalkboardTeacherDuotone } from "react-icons/pi";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { BrainCircuit, BadgeEuro } from "lucide-react";
 
-// Types
 interface NavLink {
   name: string;
   href: string;
   icon: ReactNode;
 }
 
-// Constants
 const NAV_LINKS: NavLink[] = [
   { name: "Services", href: "/services", icon: <BrainCircuit /> },
   { name: "Tarifs", href: "/pricing", icon: <BadgeEuro /> },
   {
-    name: "Learnsup pour les écoles",
+    name: "Ecoles",
     href: "/learnsup-for-school",
     icon: <PiChalkboardTeacherDuotone />,
   },
@@ -39,7 +37,6 @@ const LOGO_CONFIG = {
   className: "w-48 sm:w-48 md:w-48 h-auto",
 } as const;
 
-// Animation variants
 const linkHoverEffect: Variants = {
   rest: { x: 0, opacity: 1 },
   hover: {
