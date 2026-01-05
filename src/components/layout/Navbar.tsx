@@ -17,7 +17,7 @@ const NAV_LINKS: NavLink[] = [
   { name: "Tarifs", href: "/pricing", icon: <BadgeEuro /> },
   {
     name: "Ecoles",
-    href: "/learnsup-for-school",
+    href: "/school",
     icon: <PiChalkboardTeacherDuotone />,
   },
 ];

@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
         { label: "A propos", href: "/about" },
         { label: "Decouvrir nos services", href: "/services" },
         { label: "Tarifs", href: "/pricing" },
-        { label: "Learnsup pour les écoles", href: "/learnsup-for-school" },
+        { label: "Learnsup pour les écoles", href: "/school" },
       ],
     },
     {
