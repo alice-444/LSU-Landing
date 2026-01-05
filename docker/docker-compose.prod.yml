@@ -13,7 +13,7 @@ services:
     networks:
       - vps-mds
     restart: unless-stopped
-    
+
   traefik:
     image: traefik:v3.2.1
     command:

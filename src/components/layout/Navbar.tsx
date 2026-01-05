@@ -1,38 +1,147 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
-import { useState, useEffect } from "react";
-import { SiOpentofu } from "react-icons/si";
+import { useState, useEffect, type ReactNode } from "react";
 import { PiChalkboardTeacherDuotone } from "react-icons/pi";
-import { AiOutlineMenu, AiOutlineClose, AiFillProduct } from "react-icons/ai";
-import { Telescope } from "lucide-react";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { BrainCircuit, BadgeEuro } from "lucide-react";
+
+interface NavLink {
+  name: string;
+  href: string;
+  icon: ReactNode;
+}
+
+const NAV_LINKS: NavLink[] = [
+  { name: "Services", href: "/services", icon: <BrainCircuit /> },
+  { name: "Tarifs", href: "/pricing", icon: <BadgeEuro /> },
+  {
+    name: "Ecoles",
+    href: "/school",
+    icon: <PiChalkboardTeacherDuotone />,
+  },
+];
+
+const CTA_BUTTON = {
+  href: "https://learn-sup.vercel.app/",
+  text: "Rejoins-nous",
+  colors: "from-[#FFB647] to-[#FF9500]",
+} as const;
+
+const SCROLL_THRESHOLD = 20;
+const LOGO_CONFIG = {
+  src: "/logo/logo.png",
+  width: 180,
+  height: 315,
+  alt: "logo",
+  className: "w-48 sm:w-48 md:w-48 h-auto",
+} as const;
+
+const linkHoverEffect: Variants = {
+  rest: { x: 0, opacity: 1 },
+  hover: {
+    x: 5,
+    opacity: 1,
+    transition: { type: "spring" as const, stiffness: 300, damping: 15 },
+  },
+};
+
+const underlineEffect: Variants = {
+  rest: { scaleX: 0, opacity: 0 },
+  hover: {
+    scaleX: 1,
+    opacity: 1,
+    transition: {
+      duration: 0.4,
+      ease: [0.4, 0, 0.2, 1] as [number, number, number, number],
+    },
+  },
+};
+
+interface NavLinkItemProps {
+  link: NavLink;
+  isMobile?: boolean;
+}
+
+const NavLinkItem: React.FC<NavLinkItemProps> = ({
+  link,
+  isMobile = false,
+}) => {
+  const iconSize = isMobile ? "text-xl sm:text-lg" : "text-xl md:text-xl";
+  const textSize = isMobile ? "text-xl sm:text-xl" : "text-base md:text-lg";
+
+  return (
+    <motion.li
+      className={`relative flex items-center cursor-pointer group ${
+        isMobile ? "" : "space-x-6 md:space-x-6"
+      }`}
+      initial="rest"
+      whileHover="hover"
+      animate="rest"
+    >
+      {link.icon && (
+        <motion.span
+          className={`${iconSize} text-gray-600 group-hover:text-[var(--primary-blue)] transition-colors duration-300`}
+          variants={linkHoverEffect}
+        >
+          {link.icon}
+        </motion.span>
+      )}
+      <motion.a
+        href={link.href}
+        className={`ml-2 md:ml-2 text-gray-700 group-hover:text-[var(--primary-blue)] transition-colors duration-300 ${textSize} font-medium`}
+        variants={linkHoverEffect}
+      >
+        {link.name}
+      </motion.a>
+      <motion.div
+        className="absolute bottom-[-2px] left-0 h-[2px] bg-linear-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] origin-left"
+        style={{ width: "100%" }}
+        variants={underlineEffect}
+      />
+    </motion.li>
+  );
+};
+
+interface CTAButtonProps {
+  isMobile?: boolean;
+  onClick?: () => void;
+}
+
+const CTAButton: React.FC<CTAButtonProps> = ({ isMobile = false, onClick }) => {
+  const baseClasses = `bg-linear-to-r ${CTA_BUTTON.colors} text-white rounded-full shadow-md hover:shadow-lg transition duration-300`;
+  const desktopClasses = "px-4 sm:px-6 py-2 sm:py-2 text-base sm:text-lg";
+  const mobileClasses =
+    "w-full px-4 sm:px-5 py-2 sm:py-2 text-lg sm:text-xl font-medium hover:opacity-90 shadow-lg hover:shadow-xl mt-4 sm:mt-6";
+
+  return (
+    <motion.div
+      whileHover={{ scale: isMobile ? 1.02 : 1.05 }}
+      whileTap={{ scale: isMobile ? 0.98 : 0.95 }}
+      transition={{ duration: 0.3 }}
+      className={isMobile ? "w-full" : "hidden lg:flex"}
+    >
+      <Link href={CTA_BUTTON.href}>
+        <button
+          className={`${baseClasses} ${
+            isMobile ? mobileClasses : desktopClasses
+          }`}
+          onClick={onClick}
+        >
+          {CTA_BUTTON.text}
+        </button>
+      </Link>
+    </motion.div>
+  );
+};
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const links = [
-    { name: "Learnsup", href: "/learnsup", icon: <Telescope /> },
-    {
-      name: "Produit",
-      href: "/product",
-      icon: <SiOpentofu />,
-    },
-    {
-      name: "Tarifs",
-      href: "/pricing",
-      icon: <AiFillProduct />,
-    },
-    {
-      name: "Learnsup pour les écoles",
-      href: "/learnsup-for-school",
-      icon: <PiChalkboardTeacherDuotone />,
-    },
-  ];
-
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > SCROLL_THRESHOLD);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -40,24 +149,6 @@ const Navbar: React.FC = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const linkHoverEffect: Variants = {
-    rest: { x: 0, opacity: 1 },
-    hover: {
-      x: 5,
-      opacity: 1,
-      transition: { type: "spring" as const, stiffness: 300, damping: 15 },
-    },
-  };
-
-  const underlineEffect: Variants = {
-    rest: { scaleX: 0, opacity: 0 },
-    hover: {
-      scaleX: 1,
-      opacity: 1,
-      transition: { duration: 0.4, ease: [0.4, 0, 0.2, 1] as [number, number, number, number] },
-    },
-  };
 
   return (
     <motion.nav
@@ -79,59 +170,21 @@ const Navbar: React.FC = () => {
           transition={{ duration: 0.3 }}
         >
           <Image
-            src="/logo/logo.png"
-            width={180}
-            height={315}
-            alt="logo"
-            className="w-48 sm:w-48 md:w-48 h-auto"
+            src={LOGO_CONFIG.src}
+            width={LOGO_CONFIG.width}
+            height={LOGO_CONFIG.height}
+            alt={LOGO_CONFIG.alt}
+            className={LOGO_CONFIG.className}
           />
         </motion.a>
 
         <ul className="hidden lg:flex space-x-6 md:space-x-6 text-base md:text-lg font-medium text-gray-800">
-          {links.map((link) => (
-            <motion.li
-              key={link.name}
-              className="relative flex items-center cursor-pointer group"
-              initial="rest"
-              whileHover="hover"
-              animate="rest"
-            >
-              {link.icon && (
-                <motion.span
-                  className="text-xl md:text-xl text-gray-600 group-hover:text-[var(--primary-blue)] transition-colors duration-300"
-                  variants={linkHoverEffect}
-                >
-                  {link.icon}
-                </motion.span>
-              )}
-              <motion.a
-                href={link.href}
-                className="ml-2 md:ml-2 text-gray-700 group-hover:text-[var(--primary-blue)] transition-colors duration-300"
-                variants={linkHoverEffect}
-              >
-                {link.name}
-              </motion.a>
-              <motion.div
-                className="absolute bottom-[-2px] left-0 h-[2px] bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] origin-left"
-                style={{ width: "100%" }}
-                variants={underlineEffect}
-              />
-            </motion.li>
+          {NAV_LINKS.map((link) => (
+            <NavLinkItem key={link.name} link={link} />
           ))}
         </ul>
 
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          transition={{ duration: 0.3 }}
-          className="hidden lg:flex"
-        >
-          <Link href="https://learn-sup.vercel.app/">
-            <button className="bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] text-white px-4 sm:px-6 py-2 sm:py-2 rounded-full shadow-md hover:shadow-lg transition duration-300 text-base sm:text-lg">
-              Rejoignez-nous
-            </button>
-          </Link>
-        </motion.div>
+        <CTAButton />
 
         <motion.div
           className="lg:hidden cursor-pointer p-2 sm:p-2 rounded-lg hover:bg-gray-100/50 transition-colors duration-300"
@@ -155,46 +208,12 @@ const Navbar: React.FC = () => {
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.4 }}
         >
-          <ul className="space-y-6 sm:space-y-6 text-xl sm:text-xl">
-            {links.map((link) => (
-              <motion.li
-                key={link.name}
-                className="flex items-center cursor-pointer group relative"
-                initial="rest"
-                whileHover="hover"
-                animate="rest"
-              >
-                {link.icon && (
-                  <motion.span
-                    className="text-xl sm:text-lg text-gray-600 group-hover:text-[var(--primary-blue)] transition-colors duration-300"
-                    variants={linkHoverEffect}
-                  >
-                    {link.icon}
-                  </motion.span>
-                )}
-                <motion.a
-                  href={link.href}
-                  className="ml-2 sm:ml-2 text-gray-700 group-hover:text-[var(--primary-blue)] transition-colors duration-300"
-                  variants={linkHoverEffect}
-                >
-                  {link.name}
-                </motion.a>
-                <motion.div
-                  className="absolute bottom-[-2px] left-0 h-[2px] bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] origin-left"
-                  style={{ width: "100%" }}
-                  variants={underlineEffect}
-                />
-              </motion.li>
+          <ul className="space-y-6 sm:space-y-6">
+            {NAV_LINKS.map((link) => (
+              <NavLinkItem key={link.name} link={link} isMobile />
             ))}
           </ul>
-          <motion.button
-            className="mt-4 sm:mt-6 w-full bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] text-white px-4 sm:px-5 py-2 sm:py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-lg sm:text-xl font-medium hover:opacity-90"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            onClick={() => setIsOpen(false)}
-          >
-            <Link href="https://learn-sup.vercel.app/">Rejoignez-nous</Link>
-          </motion.button>
+          <CTAButton isMobile onClick={() => setIsOpen(false)} />
         </motion.div>
       )}
     </motion.nav>

@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Navigation from "@/components/learnsup/Navigation";
-import SectionContent from "@/lib/data/SectionContent";
+import AboutHero from "@/components/learnsup/AboutHero";
+import AboutNavigation from "@/components/learnsup/AboutNavigation";
+import AboutSectionContent from "@/components/learnsup/AboutSectionContent";
 import { Section } from "@/lib/types";
 
 export default function LearnSup() {
@@ -16,12 +17,13 @@ export default function LearnSup() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-[#fffaf5] via-white to-[#fffaf5] py-25">
-      <Navigation
+    <div className="min-h-screen bg-white">
+      <AboutHero />
+      <AboutNavigation
         activeSection={activeSection}
         setActiveSection={setActiveSection}
       />
-      <SectionContent activeSection={activeSection} />
+      <AboutSectionContent activeSection={activeSection} />
     </div>
   );
 }
