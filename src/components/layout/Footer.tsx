@@ -1,22 +1,24 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Instagram, Linkedin, Mail, Youtube } from "lucide-react";
+import { Globe, HelpCircle, Instagram, Linkedin, Mail, Shield, Youtube, Scale } from "lucide-react";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   const links = [
     {
-      category: "LearnSup",
+      category: "Services",
+      icon: <Globe />,
       items: [
-        { label: "Mission", href: "/learnsup?section=mission" },
-        { label: "Approche", href: "/learnsup?section=approche" },
-        { label: "Équipe", href: "/learnsup?section=équipe" },
-        { label: "Nous Contacter", href: "/learnsup?section=contact" },
+        { label: "A propos", href: "/about" },
+        { label: "Decouvrir nos services", href: "/" },
+        { label: "Tarifs", href: "/pricing" },
+        { label: "Learnsup pour les écoles", href: "/learnsup-for-school" },
       ],
     },
     {
-      category: "Aide & Support",
+      category: "Support",
+      icon: <HelpCircle />,
       items: [
         { label: "FAQ", href: "/faq" },
         { label: "Centre d'aide", href: "/learnsup?section=contact" },
@@ -24,10 +26,10 @@ const Footer: React.FC = () => {
     },
     {
       category: "Légal",
+      icon: <Scale />,
       items: [
         { label: "Confidentialité", href: "/privacy" },
         { label: "Mentions légales", href: "/legal-notice" },
-        { label: "CGU", href: "cgu" },
       ],
     },
   ];
@@ -138,7 +140,10 @@ const Footer: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
             >
               <h4 className="text-gray-900 font-black mb-3 text-sm uppercase tracking-wide">
-                {section.category}
+              <span className="flex items-center gap-2">
+              {section.icon}
+              {section.category}</span>
+
               </h4>
               <ul className="space-y-2">
                 {section.items.map((item) => (

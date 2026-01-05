@@ -1,16 +1,18 @@
 import Meta from "@/Meta";
 import "@/styles/globals.css";
-import type { AppProps } from "next/app";
-import { Roboto } from "next/font/google";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import ToasterContext from "@/components/ToasterContext";
+import { type ComponentType } from "react";
 
-const inter = Roboto({ subsets: ["latin"], weight: "400" });
+type AppProps = {
+  Component: ComponentType<any>;
+  pageProps: any;
+};
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <div className={`${inter.className}`}>
+    <div style={{ fontFamily: '"Omnes", sans-serif' }}>
       <Meta />
       <ToasterContext />
       <Navbar />

@@ -9,6 +9,9 @@ export default {
   theme: {
     extend: {
       colors: {},
+      fontFamily: {
+        sans: ['"Omnes"', "sans-serif"],
+      },
     },
   },
   plugins: [],
