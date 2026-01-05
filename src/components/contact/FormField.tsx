@@ -13,7 +13,7 @@ const FormField: React.FC<FormFieldProps> = ({
   <div className="group">
     <label
       htmlFor={id}
-      className="block text-lg sm:text-lg font-medium text-gray-700 mb-2 group-hover:text-[var(--primary-blue)] transition-colors duration-200"
+      className="block text-base sm:text-lg font-bold text-gray-800 mb-2 group-hover:text-[#FFB647] transition-colors duration-200"
     >
       {label}
     </label>
@@ -22,7 +22,7 @@ const FormField: React.FC<FormFieldProps> = ({
         id={id}
         rows={4}
         {...register(id, validation)}
-        className="w-full px-4 py-3 sm:py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[var(--primary-blue)] focus:border-transparent transition-all duration-200 bg-white/50 backdrop-blur-sm hover:bg-white/80 focus:bg-white resize-none text-sm sm:text-base"
+        className="w-full px-4 py-3 sm:py-3 border-2 border-gray-200 rounded-2xl focus:ring-2 focus:ring-[#FFB647] focus:border-[#FFB647] transition-all duration-200 bg-white hover:bg-gray-50 focus:bg-white resize-none text-sm sm:text-base"
         placeholder={placeholder}
       />
     ) : (
@@ -30,7 +30,7 @@ const FormField: React.FC<FormFieldProps> = ({
         type={type}
         id={id}
         {...register(id, validation)}
-        className="w-full px-4 py-3 sm:py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[var(--primary-blue)] focus:border-transparent transition-all duration-200 bg-white/50 backdrop-blur-sm hover:bg-white/80 focus:bg-white text-sm sm:text-base"
+        className="w-full px-4 py-3 sm:py-3 border-2 border-gray-200 rounded-2xl focus:ring-2 focus:ring-[#FFB647] focus:border-[#FFB647] transition-all duration-200 bg-white hover:bg-gray-50 focus:bg-white text-sm sm:text-base"
         placeholder={placeholder}
       />
     )}
