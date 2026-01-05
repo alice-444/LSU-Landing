@@ -1,0 +1,26 @@
+name: Deploy Staging Environment
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  deploy:
+    name: Deploy to Staging
+    runs-on: ubuntu-latest
+    steps:
+      - name: Connect to server and deploy staging
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: |
+            cd /home/root/projects/LSU-Landing
+            git checkout dev
+            git pull
+            cd docker
+            docker compose -f ./docker-compose.dev.yml down
+            docker compose -f ./docker-compose.dev.yml up --build -d
+

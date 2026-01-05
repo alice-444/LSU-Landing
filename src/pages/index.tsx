@@ -1,13 +1,19 @@
-import Hero from "@/components/Hero";
-import Features from "@/components/Features";
-import Newsletter from "@/components/Newsletter";
+import Hero from "@/components/home/Hero";
+import WhyLearnSup from "@/components/home/WhyLearnSup";
+import HowItWorks from "@/components/home/HowItWork";
+import Newsletter from "@/components/newsletter/Newsletter";
+import CTA from "@/components/CTA";
 
 const Home: React.FC = () => {
   return (
-    <div>
-      <Hero />
-      <Features />
-      <Newsletter />
+    <div className="bg-linear-to-r from-[#fffaf5] via-white to-[#fffaf5]">
+      <div className="py-10">
+        <Hero />
+        <HowItWorks />
+        <WhyLearnSup />
+        <Newsletter />
+        <CTA />
+      </div>
     </div>
   );
 };

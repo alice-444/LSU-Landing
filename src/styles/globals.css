@@ -1,6 +1,69 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* Omnes Font Family */
+@font-face {
+	font-family: "Omnes";
+	src: url("/typo/omnes/Omnes Light.ttf") format("truetype");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Omnes";
+	src: url("/typo/omnes/Omnes Light Italic.ttf") format("truetype");
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Omnes";
+	src: url("/typo/omnes/Omnes Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Omnes";
+	src: url("/typo/omnes/Omnes Italic.ttf") format("truetype");
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Omnes";
+	src: url("/typo/omnes/Omnes Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Omnes";
+	src: url("/typo/omnes/Omnes Medium Italic.ttf") format("truetype");
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Omnes";
+	src: url("/typo/omnes/Omnes SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Omnes";
+	src: url("/typo/omnes/Omnes SemiBold Italic.ttf") format("truetype");
+	font-weight: 600;
+	font-style: italic;
+	font-display: swap;
+}
 
 @keyframes bounce-horizontal {
     0%, 100% {
@@ -13,4 +76,18 @@
   
   .animate-bounce-horizontal {
     animation: bounce-horizontal 1s infinite;
+  }
+
+  :root {
+    --primary-blue: #4A90E2;
+    --secondary-blue: #9DCDEB;
+    --tertiary-blue: #639EDA;
+    --quaternary-blue: #26547c;
+    --purple: #c9a0dc;
+    --blue:#26547c;
+    --green:#a8d5ba;
+  }
+
+  body {
+    font-family: "Omnes", sans-serif;
   }

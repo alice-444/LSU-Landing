@@ -1,3 +1,0 @@
-const faqCategories = () => [];
-
-const helpCenter = () => {};
