@@ -1,5 +1,5 @@
 export const CONTACT_EMAIL = "contact@maxence-chabot.fr";
-export const WEBSITE_URL = "https://vps108098.serveur-vps.net/";
+export const WEBSITE_URL = "https://learnsup.fr/";
 
 export const DATA_COLLECTION = [
   {

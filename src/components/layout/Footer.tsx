@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Globe, HelpCircle, Instagram, Linkedin, Mail, Shield, Youtube, Scale } from "lucide-react";
+import { Globe, HelpCircle, Instagram, Linkedin, Mail, Youtube, Scale } from "lucide-react";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
