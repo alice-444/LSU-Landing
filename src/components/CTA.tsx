@@ -1,4 +1,5 @@
 import { Check, CreditCard, X } from "lucide-react";
+import { clarityEvent, ClarityEvents } from "@/lib/clarity";
 
 const CTA: React.FC = () => {
   return (
@@ -25,10 +26,26 @@ const CTA: React.FC = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center mb-4">
-          <button className="group bg-white text-[#FFB647] px-6 py-3 rounded-[20px] flex items-center justify-center gap-2 hover:scale-105 transition-all shadow-2xl font-bold">
+          <button
+            onClick={() => {
+              clarityEvent.track(ClarityEvents.CTA_CLICK, {
+                cta_type: "start_now",
+                location: "home_cta_section",
+              });
+            }}
+            className="group bg-white text-[#FFB647] px-6 py-3 rounded-[20px] flex items-center justify-center gap-2 hover:scale-105 transition-all shadow-2xl font-bold"
+          >
             <span>Commence maintenant</span>
           </button>
-          <button className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-[20px] hover:bg-white/30 transition-all border-4 border-white/40 font-bold hover:scale-105">
+          <button
+            onClick={() => {
+              clarityEvent.track(ClarityEvents.CTA_CLICK, {
+                cta_type: "contact_us",
+                location: "home_cta_section",
+              });
+            }}
+            className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-[20px] hover:bg-white/30 transition-all border-4 border-white/40 font-bold hover:scale-105"
+          >
             Nous contacter
           </button>
         </div>

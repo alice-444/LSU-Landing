@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { Mail } from "lucide-react";
 import toast from "react-hot-toast";
+import { clarityEvent, ClarityEvents } from "@/lib/clarity";
 
 type NewsletterFormData = {
   email: string;
@@ -16,6 +17,9 @@ const NewsletterForm: React.FC = () => {
   } = useForm<NewsletterFormData>();
 
   const onSubmit = async (data: NewsletterFormData) => {
+    // Tracker l'inscription à la newsletter
+    clarityEvent.track(ClarityEvents.NEWSLETTER_SUBSCRIBE);
+
     try {
       const response = await fetch("/api/newsletter", {
         method: "POST",
@@ -26,13 +30,26 @@ const NewsletterForm: React.FC = () => {
       if (response.ok) {
         toast.success("Merci pour votre inscription !");
         reset();
+
+        // Tracker le succès
+        clarityEvent.track(ClarityEvents.NEWSLETTER_SUCCESS);
       } else {
         toast.error("Erreur lors de l&apos;inscription.");
+
+        // Tracker l'erreur
+        clarityEvent.track(ClarityEvents.NEWSLETTER_ERROR, {
+          status: response.status.toString(),
+        });
       }
-    } catch {
+    } catch (error) {
       toast.error(
         "Une erreur réseau s&apos;est produite. Veuillez réessayer plus tard."
       );
+
+      // Tracker l'erreur réseau
+      clarityEvent.track(ClarityEvents.NEWSLETTER_ERROR, {
+        error: "network_error",
+      });
     }
   };
 

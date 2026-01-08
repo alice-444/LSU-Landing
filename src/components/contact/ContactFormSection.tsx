@@ -5,6 +5,7 @@ import { toast } from "react-hot-toast";
 import { ContactFormData } from "@/lib/types";
 import FormField from "@/components/contact/FormField";
 import SubmitButton from "@/components/contact/SubmitButton";
+import { clarityEvent, ClarityEvents } from "@/lib/clarity";
 
 const ContactFormSection: React.FC = () => {
   const {
@@ -15,12 +16,27 @@ const ContactFormSection: React.FC = () => {
   } = useForm<ContactFormData>();
 
   const onSubmit = async (data: ContactFormData) => {
+    // Tracker la soumission du formulaire
+    clarityEvent.track(ClarityEvents.CONTACT_FORM_SUBMIT, {
+      subject: data.subject || "unknown",
+    });
+
     try {
       console.log(data);
       toast.success("Message envoyé avec succès !");
       reset();
-    } catch {
+      
+      // Tracker le succès
+      clarityEvent.track(ClarityEvents.CONTACT_FORM_SUCCESS, {
+        subject: data.subject || "unknown",
+      });
+    } catch (error) {
       toast.error("Une erreur est survenue. Veuillez réessayer plus tard.");
+      
+      // Tracker l'erreur
+      clarityEvent.track(ClarityEvents.CONTACT_FORM_ERROR, {
+        error: error instanceof Error ? error.message : "unknown_error",
+      });
     }
   };
 
