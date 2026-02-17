@@ -10,10 +10,10 @@ const Footer: React.FC = () => {
       category: "Services",
       icon: <Globe />,
       items: [
-        { label: "A propos", href: "/about" },
-        { label: "Decouvrir nos services", href: "/services" },
+        { label: "À propos", href: "/about" },
+        { label: "Découvrir nos services", href: "/services" },
         { label: "Tarifs", href: "/pricing" },
-        { label: "Learnsup pour les écoles", href: "/school" },
+        { label: "LearnSup pour les écoles", href: "/school" },
       ],
     },
     {

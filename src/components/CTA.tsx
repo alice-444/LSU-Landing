@@ -1,3 +1,5 @@
+import Link from "next/link";
+import toast from "react-hot-toast";
 import { Check, CreditCard, X } from "lucide-react";
 import { clarityEvent, ClarityEvents } from "@/lib/clarity";
 
@@ -32,22 +34,33 @@ const CTA: React.FC = () => {
                 cta_type: "start_now",
                 location: "home_cta_section",
               });
+              toast("En cours de développement — à très bientôt ! 🚧", {
+                icon: "🔨",
+                duration: 4000,
+                style: {
+                  background: "linear-gradient(135deg, #FFB647 0%, #FF9500 100%)",
+                  color: "#fff",
+                  fontWeight: 600,
+                },
+              });
             }}
             className="group bg-white text-[#FFB647] px-6 py-3 rounded-[20px] flex items-center justify-center gap-2 hover:scale-105 transition-all shadow-2xl font-bold"
           >
             <span>Commence maintenant</span>
           </button>
-          <button
-            onClick={() => {
-              clarityEvent.track(ClarityEvents.CTA_CLICK, {
-                cta_type: "contact_us",
-                location: "home_cta_section",
-              });
-            }}
-            className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-[20px] hover:bg-white/30 transition-all border-4 border-white/40 font-bold hover:scale-105"
-          >
-            Nous contacter
-          </button>
+          <Link href="/contact">
+            <button
+              onClick={() => {
+                clarityEvent.track(ClarityEvents.CTA_CLICK, {
+                  cta_type: "contact_us",
+                  location: "home_cta_section",
+                });
+              }}
+              className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-[20px] hover:bg-white/30 transition-all border-4 border-white/40 font-bold hover:scale-105"
+            >
+              Nous contacter
+            </button>
+          </Link>
         </div>
 
         <div className="flex flex-wrap justify-center gap-4 items-center text-white text-sm">

@@ -26,7 +26,7 @@ const ServicesHero: React.FC = () => {
             étudiants
             <br />
             <span className="inline-block bg-white text-[#FFB647] px-6 py-2 rounded-2xl transform -rotate-2 shadow-2xl mt-4">
-              pour Apprendre
+              pour apprendre
             </span>
           </h1>
 

@@ -42,16 +42,6 @@ export const comparisonFeatures: ComparisonFeature[] = [
     emoji: "⏱️",
   },
   {
-    name: "Accès hors ligne",
-    values: [false, false, false],
-    emoji: "💻",
-  },
-  {
-    name: "Stockage de fichiers",
-    values: [false, false, false],
-    emoji: "📂",
-  },
-  {
     name: "Communauté active",
     values: [true, false, false],
     emoji: "🌟",
@@ -61,7 +51,7 @@ export const comparisonFeatures: ComparisonFeature[] = [
     values: [true, false, true],
     emoji: "💰",
   },
-  { name: "Un suivi de l'élève", values: [false, true, true], emoji: "👨‍💻" },
+  { name: "Un suivi de l'étudiant", values: [false, true, true], emoji: "👨‍💻" },
 ];
 
 export const uniqueFeatures: UniqueFeature[] = [
@@ -86,5 +76,5 @@ export const uniqueFeatures: UniqueFeature[] = [
 export const benefits: Benefit[] = [
   { text: "Interface intuitive et addictive", icon: Sparkles },
   { text: "Mentors passionnés", icon: Star },
-  { text: "Communauté étudiante entraide", icon: Heart },
+  { text: "Communauté étudiante d'entraide", icon: Heart },
 ];

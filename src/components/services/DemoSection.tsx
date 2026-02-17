@@ -4,7 +4,7 @@ import { PlayCircle, Clock } from "lucide-react";
 
 const DemoSection: React.FC = () => {
   return (
-    <section className="relative bg-linear-to-br from-[#FFB647]/10 via-white to-[#C9A0DC]/10 py-20 overflow-hidden">
+    <section id="demo" className="relative bg-linear-to-br from-[#FFB647]/10 via-white to-[#C9A0DC]/10 py-20 overflow-hidden">
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-20 right-20 w-96 h-96 bg-[#FFB647] rounded-full blur-3xl animate-pulse"></div>
         <div

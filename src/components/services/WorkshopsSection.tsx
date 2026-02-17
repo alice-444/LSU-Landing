@@ -13,10 +13,10 @@ const WorkshopsSection: React.FC<WorkshopsSectionProps> = ({ benefits }) => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
             <div className="inline-block bg-[#4A90E2] text-white px-5 py-2 rounded-full mb-4 text-sm font-bold">
-              Nos services Principaux
+              Nos services principaux
             </div>
             <h2 className="text-4xl sm:text-5xl mb-6">
-              Des Ateliers Pensés pour Ta Réussite
+              Des Ateliers pensés pour ta réussite
             </h2>
             <p className="text-xl text-gray-600 mb-8">
               Learnsup combine le meilleur de la pédagogie moderne avec la

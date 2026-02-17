@@ -46,7 +46,7 @@ const HowItWorks: React.FC = () => {
     {
       icon: Users,
       title: "Inscris-toi gratuitement",
-      description: "Inscris-toi et partage ton expertise",
+      description: "Crée ton compte en 2 min",
       color: "from-[#FFB647] to-[#FF9500]",
       emoji: "👨‍🏫",
       step: "01",
@@ -104,7 +104,7 @@ const HowItWorks: React.FC = () => {
                 : "text-gray-600 hover:text-gray-900"
             }`}
           >
-            Je suis apprenant(e)
+            Je suis Apprenant·e
           </button>
           <button
             onClick={() => setActiveTab("mentor")}
@@ -228,11 +228,12 @@ const HowItWorks: React.FC = () => {
       </div>
 
       <div className="text-center mt-16">
-        <Link href="/services">
-          <button className="group bg-linear-to-r from-[#FFB647] to-[#C9A0DC] text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all flex items-center gap-2 mx-auto">
-            <span>Découvrir nos services</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
+        <Link
+          href="/services"
+          className="group bg-linear-to-r from-[#FFB647] to-[#C9A0DC] text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all inline-flex items-center justify-center gap-2 mx-auto"
+        >
+          <span>Découvrir nos services</span>
+          <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
         </Link>
       </div>
     </div>

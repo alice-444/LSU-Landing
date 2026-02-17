@@ -15,7 +15,7 @@ const UniqueFeaturesSection: React.FC<UniqueFeaturesSectionProps> = ({
           <div className="inline-block bg-linear-to-r from-[#FFB647] to-[#FF9500] text-white px-6 py-3 rounded-full mb-4 font-bold transform hover:scale-105 transition-transform">
             Notre Secret 🔥
           </div>
-          <h2 className="text-4xl sm:text-5xl mb-4">Ce Qui Nous Rend Unique</h2>
+          <h2 className="text-4xl sm:text-5xl mb-4">Ce qui nous rend unique</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Pas de blabla marketing. Voici pourquoi on cartonne vraiment
           </p>

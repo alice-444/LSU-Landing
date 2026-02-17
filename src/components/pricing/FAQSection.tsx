@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import CategoryFilter from "./CategoryFilter";
 import FAQItem from "./FAQItem";
@@ -84,10 +85,12 @@ const FAQSection: React.FC<FAQSectionProps> = ({
             Notre équipe est là pour t'aider ! Contacte-nous et on te répond
             super vite 💬
           </p>
-          <button className="bg-linear-to-r from-[#FFB647] to-[#FF9500] text-white px-8 py-4 rounded-2xl hover:shadow-xl transition-all font-bold inline-flex items-center gap-2 group">
-            Contacter le Support
-            <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
+          <Link href="/contact">
+            <button className="bg-linear-to-r from-[#FFB647] to-[#FF9500] text-white px-8 py-4 rounded-2xl hover:shadow-xl transition-all font-bold inline-flex items-center gap-2 group">
+              Contacter le Support
+              <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import toast from "react-hot-toast";
 import { motion, type Variants } from "framer-motion";
 import { useState, useEffect, type ReactNode } from "react";
 import { PiChalkboardTeacherDuotone } from "react-icons/pi";
@@ -16,7 +17,7 @@ const NAV_LINKS: NavLink[] = [
   { name: "Services", href: "/services", icon: <BrainCircuit /> },
   { name: "Tarifs", href: "/pricing", icon: <BadgeEuro /> },
   {
-    name: "Ecoles",
+    name: "Écoles",
     href: "/school",
     icon: <PiChalkboardTeacherDuotone />,
   },
@@ -114,6 +115,20 @@ const CTAButton: React.FC<CTAButtonProps> = ({ isMobile = false, onClick }) => {
   const mobileClasses =
     "w-full px-4 sm:px-5 py-2 sm:py-2 text-lg sm:text-xl font-medium hover:opacity-90 shadow-lg hover:shadow-xl mt-4 sm:mt-6";
 
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    onClick?.();
+    toast("En cours de développement — à très bientôt ! 🚧", {
+      icon: "🔨",
+      duration: 4000,
+      style: {
+        background: "linear-gradient(135deg, #FFB647 0%, #FF9500 100%)",
+        color: "#fff",
+        fontWeight: 600,
+      },
+    });
+  };
+
   return (
     <motion.div
       whileHover={{ scale: isMobile ? 1.02 : 1.05 }}
@@ -121,16 +136,15 @@ const CTAButton: React.FC<CTAButtonProps> = ({ isMobile = false, onClick }) => {
       transition={{ duration: 0.3 }}
       className={isMobile ? "w-full" : "hidden lg:flex"}
     >
-      <Link href={CTA_BUTTON.href}>
-        <button
-          className={`${baseClasses} ${
-            isMobile ? mobileClasses : desktopClasses
-          }`}
-          onClick={onClick}
-        >
-          {CTA_BUTTON.text}
-        </button>
-      </Link>
+      <button
+        type="button"
+        className={`${baseClasses} ${
+          isMobile ? mobileClasses : desktopClasses
+        }`}
+        onClick={handleClick}
+      >
+        {CTA_BUTTON.text}
+      </button>
     </motion.div>
   );
 };
