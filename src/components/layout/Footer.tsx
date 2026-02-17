@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Globe, HelpCircle, Instagram, Linkedin, Mail, Youtube, Scale } from "lucide-react";
+import { Globe, HelpCircle, Instagram, Linkedin, Mail, Scale } from "lucide-react";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -43,22 +43,15 @@ const Footer: React.FC = () => {
     },
     {
       icon: Instagram,
-      href: "#",
+      href: "https://www.instagram.com/learn_sup/",
       label: "Instagram",
       color: "#C9A0DC",
     },
     {
       icon: Linkedin,
-      href: "#",
+      href: "https://www.linkedin.com/company/learnsup/",
       label: "LinkedIn",
       color: "#4A90E2",
-    },
-
-    {
-      icon: Youtube,
-      href: "#",
-      label: "Youtube",
-      color: "#FF6B6B",
     },
   ];
 
