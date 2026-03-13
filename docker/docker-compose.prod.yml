@@ -46,6 +46,6 @@ services:
 #     networks:
 #       - vps-mds
 
-# networks:
-#   vps-mds:
-#     external: true
+networks:
+  vps-mds:
+    external: true
