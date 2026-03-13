@@ -4,7 +4,7 @@ import NewsletterForm from "@/components/newsletter/NewsletterForm";
 const Newsletter: React.FC = () => {
   return (
     <section className="relative py-20 sm:py-24 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-[#fffaf5] via-white to-[#fffaf5]" />
+      <div className="absolute inset-0 bg-linear-to-r from-[#fffaf5] via-white to-[#fffaf5]" />
 
       <div className="container mx-auto px-2 sm:px-6 lg:px-8 relative">
         <div className="max-w-4xl mx-auto">
@@ -18,7 +18,7 @@ const Newsletter: React.FC = () => {
             >
               <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 mb-4 sm:mb-6">
                 Restez informé avec notre{" "}
-                <span className="text-[var(--primary-blue)]">newsletter</span>
+                <span className="text-(--primary-blue)">newsletter</span>
               </h2>
               <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
                 Des infos utiles, des bons plans, et de l&apos;entraide dans ta
@@ -35,7 +35,7 @@ const Newsletter: React.FC = () => {
             >
               <div className="relative">
                 <NewsletterForm />
-                <p className="text-xs sm:text-sm text-[var(--quaternary-blue)] mt-3 sm:mt-4">
+                <p className="text-xs sm:text-sm text-(--quaternary-blue) mt-3 sm:mt-4">
                   En communiquant votre adresse courriel, vous acceptez de
                   recevoir des informations marketing sur le produits de
                   LearnSup par courriel et sur les plateformes des réseaux

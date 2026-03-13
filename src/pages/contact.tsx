@@ -36,16 +36,26 @@ const Contact: React.FC = () => {
 
   const onSubmit = async (data: ContactFormData) => {
     try {
-      console.log(data);
-      toast.success("Message envoyé avec succès !");
-      reset();
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        toast.success("Message envoyé avec succès !");
+        reset();
+      } else {
+        const errorData = await response.json();
+        toast.error(errorData.message || "Une erreur est survenue.");
+      }
     } catch {
-      toast.error("Une erreur est survenue. Veuillez réessayer plus tard.");
+      toast.error("Une erreur réseau s'est produite. Veuillez réessayer plus tard.");
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-[#fffaf5] via-white to-[#fffaf5] px-4 sm:px-6 py-29">
+    <div className="min-h-screen bg-linear-to-r from-[#fffaf5] via-white to-[#fffaf5] px-4 sm:px-6 py-29">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -60,7 +70,7 @@ const Contact: React.FC = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="inline-block mb-4 sm:mb-6"
             >
-              <MessageCircleQuestion className="text-[var(--primary-blue)] w-12 h-12 sm:w-16 sm:h-16" />
+              <MessageCircleQuestion className="text-(--primary-blue) w-12 h-12 sm:w-16 sm:h-16" />
             </motion.div>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -74,7 +84,7 @@ const Contact: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-lg sm:text-xl text-[var(--quaternary-blue)] max-w-2xl mx-auto px-4 sm:px-0"
+              className="text-lg sm:text-xl text-(--quaternary-blue) max-w-2xl mx-auto px-4 sm:px-0"
             >
               Nous sommes là pour répondre à toutes vos questions
             </motion.p>
