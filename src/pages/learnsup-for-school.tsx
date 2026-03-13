@@ -39,28 +39,28 @@ const LearnSupForSchool: React.FC = () => {
 
   const features = [
     {
-      icon: <Users className="w-8 h-8 text-[var(--primary-blue)]" />,
+      icon: <Users className="w-8 h-8 text-(--primary-blue)" />,
       title: "Gestion des promotions",
       description:
         "Organisez et gérez vos promotions, groupes de travail et projets d'étudiants.",
     },
     {
-      icon: <BrainCircuit className="w-8 h-8 text-[var(--primary-blue)]" />,
+      icon: <BrainCircuit className="w-8 h-8 text-(--primary-blue)" />,
       title: "Apprentissage collaboratif",
       description: "Encouragez l'échange de connaissances entre étudiants.",
     },
     {
-      icon: <Shield className="w-8 h-8 text-[var(--primary-blue)]" />,
+      icon: <Shield className="w-8 h-8 text-(--primary-blue)" />,
       title: "Sécurité et confidentialité",
       description: "Protection des données et environnement sécurisé",
     },
     {
-      icon: <Clock className="w-8 h-8 text-[var(--primary-blue)]" />,
+      icon: <Clock className="w-8 h-8 text-(--primary-blue)" />,
       title: "Suivi en temps réel",
       description: "Suivez la progression des étudiants",
     },
     {
-      icon: <Briefcase className="w-8 h-8 text-[var(--primary-blue)]" />,
+      icon: <Briefcase className="w-8 h-8 text-(--primary-blue)" />,
       title: "Réseau professionnel",
       description: "Connectez vos étudiants avec des acccompagnateurs.",
     },
@@ -85,7 +85,7 @@ const LearnSupForSchool: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[var(--primary-blue)]/10 via-[#fffaf5] to-[var(--secondary-blue)]/10 overflow-x-hidden py-32">
+    <div className="min-h-screen bg-linear-to-br from-(--primary-blue)/10 via-[#fffaf5] to-(--secondary-blue)/10 overflow-x-hidden py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-20"
@@ -94,12 +94,12 @@ const LearnSupForSchool: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <div className="inline-block mb-6">
-            <GraduationCap className="text-[var(--primary-blue)] w-16 h-16" />
+            <GraduationCap className="text-(--primary-blue) w-16 h-16" />
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-800 mb-6">
             LearnSup pour les écoles supérieures
           </h1>
-          <p className="text-xl text-[var(--quaternary-blue)] max-w-3xl mx-auto">
+          <p className="text-xl text-(--quaternary-blue) max-w-3xl mx-auto">
             Une plateforme collaborative pour connecter vos étudiants avec le
             monde professionnel
           </p>
@@ -119,24 +119,24 @@ const LearnSupForSchool: React.FC = () => {
               className="group relative"
               whileHover={{ y: -5 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary-blue)]/20 via-[var(--secondary-blue)]/10 to-white/5 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-linear-to-r from-(--primary-blue)/20 via-[var(--secondary-blue)]/10 to-white/5 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="relative bg-white/60 backdrop-blur-xl rounded-2xl p-8 shadow-lg border border-white/40 group-hover:shadow-[0_8px_32px_0_rgba(74,144,226,0.25)] transition-all duration-300">
                 <div className="relative">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-[var(--primary-blue)]/20 to-[var(--secondary-blue)]/20 rounded-full blur opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute -inset-1 bg-linear-to-r from-(--primary-blue)/20 to-(--secondary-blue)/20 rounded-full blur opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="relative bg-white rounded-full p-3 inline-block mb-4 group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}
                   </div>
                 </div>
 
-                <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-[var(--primary-blue)] transition-colors duration-300">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-(--primary-blue) transition-colors duration-300">
                   {feature.title}
                 </h3>
                 <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
                   {feature.description}
                 </p>
 
-                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                <div className="absolute bottom-0 left-0 w-full h-1 bg-linear-to-r from-(--primary-blue) to-(--secondary-blue) transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
               </div>
             </motion.div>
           ))}
@@ -153,7 +153,7 @@ const LearnSupForSchool: React.FC = () => {
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-4">
               Questions fréquentes
             </h2>
-            <p className="text-xl text-[var(--quaternary-blue)] max-w-2xl mx-auto">
+            <p className="text-xl text-(--quaternary-blue) max-w-2xl mx-auto">
               Tout ce que vous devez savoir sur LearnSup pour les écoles
               supérieures
             </p>
@@ -182,13 +182,13 @@ const LearnSupForSchool: React.FC = () => {
                       setOpenIndex(openIndex === index ? null : index)
                     }
                   >
-                    <h3 className="text-lg sm:text-xl font-semibold text-gray-800 group-hover:text-[var(--primary-blue)] transition-colors duration-300">
+                    <h3 className="text-lg sm:text-xl font-semibold text-gray-800 group-hover:text-(--primary-blue) transition-colors duration-300">
                       {faq.question}
                     </h3>
                     <motion.div
                       animate={{ rotate: openIndex === index ? 180 : 0 }}
                       transition={{ duration: 0.3 }}
-                      className="text-[var(--primary-blue)]"
+                      className="text-(--primary-blue)"
                     >
                       <FaChevronDown className="text-xl" />
                     </motion.div>
@@ -218,12 +218,12 @@ const LearnSupForSchool: React.FC = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <p className="text-[var(--quaternary-blue)] mb-6 text-xl">
+            <p className="text-(--quaternary-blue) mb-6 text-xl">
               Prêt à transformer l&apos;expérience de vos étudiants ?
             </p>
             <Link href="/contact">
               <motion.button
-                className="inline-block bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] text-white px-8 py-4 rounded-full text-xl font-medium shadow-md hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-200 ease-in-out"
+                className="inline-block bg-linear-to-r from-(--primary-blue) to-(--secondary-blue) text-white px-8 py-4 rounded-full text-xl font-medium shadow-md hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-200 ease-in-out"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

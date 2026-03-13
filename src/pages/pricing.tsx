@@ -84,7 +84,7 @@ const Pricing: React.FC = () => {
   };
 
   return (
-    <div className="relative bg-gradient-to-br from-[var(--primary-blue)]/10 via-[#fffaf5] to-[var(--secondary-blue)]/10 overflow-x-hidden py-32">
+    <div className="relative bg-linear-to-br from-(--primary-blue)/10 via-[#fffaf5] to-(--secondary-blue)/10 overflow-x-hidden py-32">
       <div className="container mx-auto max-w-7xl px-4">
         <motion.div
           className="text-center mb-16"
@@ -92,7 +92,7 @@ const Pricing: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-[var(--primary-blue)] to-[var(--tertiary-blue)] bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 bg-linear-to-r from-(--primary-blue) to-[var(--tertiary-blue)] bg-clip-text text-transparent">
             Des tarifs adaptés à vos besoins
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -111,23 +111,22 @@ const Pricing: React.FC = () => {
               className={`relative group ${plan.popular ? "md:scale-105" : ""}`}
             >
               {plan.popular && (
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-[var(--primary-blue)]/30 via-[var(--secondary-blue)]/20 to-white/10 blur-lg opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-(--primary-blue)/30 via-[var(--secondary-blue)]/20 to-white/10 blur-lg opacity-0 group-hover:opacity-100 transition-all duration-500" />
               )}
 
               <div
-                className={`relative z-10 p-8 rounded-3xl bg-white/60 backdrop-blur-xl border border-white/40 shadow-xl group-hover:shadow-[0_8px_32px_0_rgba(74,144,226,0.25)] transition-all duration-300 ${
-                  plan.popular ? "border-[var(--primary-blue)]" : ""
-                }`}
+                className={`relative z-10 p-8 rounded-3xl bg-white/60 backdrop-blur-xl border border-white/40 shadow-xl group-hover:shadow-[0_8px_32px_0_rgba(74,144,226,0.25)] transition-all duration-300 ${plan.popular ? "border-[var(--primary-blue)]" : ""
+                  }`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] text-white text-sm font-bold px-4 py-1 rounded-full">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-(--primary-blue) to-[var(--secondary-blue)] text-white text-sm font-bold px-4 py-1 rounded-full">
                     Le plus populaire
                   </div>
                 )}
 
                 <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                 <div className="flex items-baseline mb-4">
-                  <span className="text-4xl font-extrabold bg-gradient-to-r from-[var(--primary-blue)] to-[var(--tertiary-blue)] bg-clip-text text-transparent">
+                  <span className="text-4xl font-extrabold bg-gradient-to-r from-(--primary-blue) to-[var(--tertiary-blue)] bg-clip-text text-transparent">
                     {plan.price}
                   </span>
                   {plan.period && (
@@ -156,11 +155,10 @@ const Pricing: React.FC = () => {
 
                 <Link href={plan.href}>
                   <motion.button
-                    className={`w-full py-3 px-6 rounded-full font-semibold transition-all duration-300 ${
-                      plan.popular
-                        ? "bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] text-white hover:shadow-lg"
-                        : "bg-white text-[var(--primary-blue)] border-2 border-[var(--primary-blue)] hover:bg-[var(--primary-blue)]/10"
-                    }`}
+                    className={`w-full py-3 px-6 rounded-full font-semibold transition-all duration-300 ${plan.popular
+                        ? "bg-linear-to-r from-(--primary-blue) to-[var(--secondary-blue)] text-white hover:shadow-lg"
+                        : "bg-white text-(--primary-blue) border-2 border-[var(--primary-blue)] hover:bg-[var(--primary-blue)]/10"
+                      }`}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
@@ -190,12 +188,12 @@ const Pricing: React.FC = () => {
             viewport={{ once: true }}
           >
             <div className="inline-block mb-3">
-              <MessageCircleQuestion className="text-[var(--primary-blue)] w-16 h-16" />
+              <MessageCircleQuestion className="text-(--primary-blue) w-16 h-16" />
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">
               Questions fréquentes
             </h2>
-            <p className="text-xl text-[var(--quaternary-blue)] max-w-2xl mx-auto">
+            <p className="text-xl text-(--quaternary-blue) max-w-2xl mx-auto">
               Tout ce que vous devez savoir sur nos tarifs et services
             </p>
           </motion.div>
@@ -255,13 +253,13 @@ const Pricing: React.FC = () => {
                       setOpenIndex(openIndex === index ? null : index)
                     }
                   >
-                    <h3 className="text-lg sm:text-xl font-semibold text-gray-800 group-hover:text-[var(--primary-blue)] transition-colors duration-300">
+                    <h3 className="text-lg sm:text-xl font-semibold text-gray-800 group-hover:text-(--primary-blue) transition-colors duration-300">
                       {faq.question}
                     </h3>
                     <motion.div
                       animate={{ rotate: openIndex === index ? 180 : 0 }}
                       transition={{ duration: 0.3 }}
-                      className="text-[var(--primary-blue)]"
+                      className="text-(--primary-blue)"
                     >
                       <FaChevronDown className="text-xl" />
                     </motion.div>
@@ -291,12 +289,12 @@ const Pricing: React.FC = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <p className="text-[var(--quaternary-blue)] mb-6 text-xl">
+            <p className="text-(--quaternary-blue) mb-6 text-xl">
               Vous n&apos;avez pas trouvé la réponse à votre question ?
             </p>
             <Link href="/contact">
               <motion.button
-                className="inline-block bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] text-white px-6 py-3 rounded-full text-xl font-medium shadow-md hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-200 ease-in-out"
+                className="inline-block bg-linear-to-r from-(--primary-blue) to-[var(--secondary-blue)] text-white px-6 py-3 rounded-full text-xl font-medium shadow-md hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-200 ease-in-out"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
