@@ -1,144 +1,80 @@
-# Landing page
+# LearnSup - Landing Page
 
-![Next.js](https://img.shields.io/badge/Next.js-000?style=for-the-badge&logo=next.js&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-16.1.6-000?style=for-the-badge&logo=next.js&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.2.1-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Resend](https://img.shields.io/badge/Resend-Mailing-000?style=for-the-badge&logo=resend&logoColor=white)
+![Clarity](https://img.shields.io/badge/Clarity-Analytics-0078D4?style=for-the-badge&logo=microsoft-clarity&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
-## Langues/Langages
-- [English version](#english-version)
-- [Version Française](#version-française)
+## 📚 Documentation Complète
+Pour plus de détails sur l'architecture, le design, le mailing ou le déploiement, consultez le dossier [**/docs**](./docs/README.md).
+
+---
 
 ## English version
 
-- [Description](#description)
-- [Visualisation](#visualisation)
-- [Technologies](#technologies)
-- [Getting Started](#getting-started)
-  - [Prérequis](#prérequis)
-  - [Installation](#installation)
-- [Setup Docker](#setup-docker)
-## Description
+- [Technologies](#technologies-en)
+- [Getting Started](#getting-started-en)
+- [Setup Docker](#setup-docker-en)
 
-## Visualisation
+### Technologies (EN)
 
-## Technologies
+- **[Next.js 16](https://nextjs.org/)**: React framework for SSR and SSG.
+- **[Tailwind CSS 4](https://tailwindcss.com/)**: Utility-first CSS framework.
+- **[Resend](https://resend.com/)**: Email API for contact forms and newsletters.
+- **[Microsoft Clarity](https://clarity.microsoft.com/)**: Behavior analytics and session recordings.
+- **[Docker](https://www.docker.com/)**: Containerization for dev and prod.
 
-- **[Next.js](https://nextjs.org/)**: A React framework for server-side rendering and static site generation.
-- **[Tailwind CSS](https://tailwindcss.com/)**: A utility-first CSS framework for building modern and flexible designs.
-- **[Docker](https://www.docker.com/)**: Simplifies deployment and execution in a containerized environment.
+### Getting Started (EN)
 
-## Getting Started
-
-### prerequis
-
-Before you start, make sure you have the following tools installed:
-
-- **Node.js** (version 16 or higher): [Download here](https://nodejs.org/)
-- **npm** or **yarn**
-- **Docker**: [Install Docker](https://www.docker.com/products/docker-desktop).
-
-### Installation
-
-1. Clone the repository:
-   
-```
-   git clone https://github.com/alice-444/LSU-Landing.git
-   cd LSU-Landing
-```
-2. Install dependencies:
-
-Using npm
-
-   ```
+1. Clone and install:
+   ```bash
    npm install
    ```
-
-Or using yarn
-
+2. Configure environment:
+   ```bash
+   cp .env.example .env.local
    ```
-   yarn install
-   ```
-
-3. Start the development server:
-   
-Using npm
-
-   ```
+3. Run dev server:
+   ```bash
    npm run dev
    ```
-   
-Or using yarn
 
-   ```
-   yarn dev
-   ```
-
-4. Access the application in your browser: http://localhost:3000.
-
-## Setup Docker
+---
 
 ## Version Française
 
-- [Description](#description)
-- [Visualisation](#visualisation)
-- [Technologies](#technologies)
-- [Getting Started](#getting-started)
-  - [Prérequis](#prérequis)
-  - [Installation](#installation)
- - [Configuration Docker](#configuration-docker)
+- [Technologies](#technologies-fr)
+- [Getting Started](#getting-started-fr)
+- [Configuration Docker](#configuration-docker-fr)
 
-## Description
+### Technologies (FR)
 
-## Visualisation
+- **[Next.js 16](https://nextjs.org/)**: Framework React pour le rendu côté serveur et la génération de sites statiques.
+- **[Tailwind CSS 4](https://tailwindcss.com/)**: Framework CSS utilitaire pour concevoir des designs modernes et flexibles.
+- **[Resend](https://resend.com/)**: Service d'envoi d'emails pour le formulaire de contact et la newsletter.
+- **[Microsoft Clarity](https://clarity.microsoft.com/)**: Outil d'analyse comportementale et enregistrement de sessions.
+- **[Docker](https://www.docker.com/)**: Simplifie le déploiement et l'exécution via conteneurs.
 
-## Technologies
+### Getting Started (FR)
 
-- **[Next.js](https://nextjs.org/)**: Framework React pour le rendu côté serveur et la génération de sites statiques.
-- **[Tailwind CSS](https://tailwindcss.com/)**: Framework CSS utilitaire pour concevoir des designs modernes et flexibles.
-- **[Docker](https://www.docker.com/)**: Simplifie le déploiement et l'exécution dans un environnement conteneurisé.
-## Getting Started
-
-### Prérequis
-Avant de commencer, assurez-vous d'avoir installé les outils suivants sur votre machine :
-
-- **Node.js** (https://nodejs.org/) (version 16 ou plus récente)
-- **npm ou yarn**
-- **Docker** (https://www.docker.com/) et **Docker Compose** (https://docs.docker.com/compose/)
-
-### Installation
-  1. Clonez le dépôt :
-  ```
-   git clone https://github.com/alice-444/LSU-Landing.git
-   cd LSU-Landing
-  ```
-  2. Installez les dépendances :
-  Si tu utilise npm
-
-   ```
+1. Clonez et installez :
+   ```bash
    npm install
    ```
-
-  Ou si tu utilise yarn
-
+2. Configurez l'environnement :
+   ```bash
+   cp .env.example .env.local
+   # Remplissez les clés RESEND_API_KEY et NEXT_PUBLIC_CLARITY_ID
    ```
-   yarn install
-   ```
-  3. Lancez le serveur de développement :
-     Si tu utilise npm
-
-   ```
+3. Lancez le serveur :
+   ```bash
    npm run dev
    ```
 
-  Ou si tu utilise yarn
+### Configuration Docker (FR)
 
-   ```
-   yarn dev
-   ```
-    
-  4. Ouvrez votre navigateur et accédez à http://localhost:3000 pour voir la landing page en action.
-
-## Configuration Docker
-
-  1. Assurez-vous que Docker est installé et en cours d'exécution sur votre machine.
-
+Lancement en production :
+```bash
+docker compose -f docker/docker-compose.prod.yml up -d --build
+```
