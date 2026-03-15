@@ -17,7 +17,7 @@ export const ContactFormEmail: React.FC<Readonly<ContactFormEmailProps>> = ({
     <div style={{ maxWidth: '600px', margin: '0 auto', border: '1px solid #ffe8cc', borderRadius: '16px', padding: '30px', backgroundColor: '#ffffff' }}>
       <div style={{ textAlign: 'center', marginBottom: '20px' }}>
         <img
-          src="https://learnsup.com/logo/logo.png"
+          src="https://learnsup.fr/logo/logo.png"
           alt="LearnSup Logo"
           style={{ width: '150px', height: 'auto' }}
         />
