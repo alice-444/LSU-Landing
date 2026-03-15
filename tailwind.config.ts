@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-omnes)", "sans-serif"],
+      },
       colors: {},
       fontFamily: {
         sans: ['"Omnes"', "sans-serif"],
