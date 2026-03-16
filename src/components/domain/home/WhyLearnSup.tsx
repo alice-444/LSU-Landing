@@ -4,15 +4,15 @@ import { Zap, Heart, Brain, ArrowRight } from "lucide-react";
 const WhyLearnSup = () => {
   return (
     <div>
-      <section className="py-20 bg-linear-to-b from-white to-[#C9A0DC]/5 scroll-mt-20">
+      <section className="py-20 bg-linear-to-b from-white to-(--purple)/5 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-block bg-linear-to-r from-[#FFB647] to-[#FF9500] text-white px-8 py-4 rounded-full mb-6 font-bold text-lg transform hover:scale-105 transition-transform shadow-lg">
+            <div className="inline-block bg-linear-to-r from-(--brand-orange) to-(--brand-orange-dark) text-white px-8 py-4 rounded-full mb-6 font-bold text-lg transform hover:scale-105 transition-transform shadow-lg">
               ✨ Ce qui nous rend unique
             </div>
             <h2 className="text-4xl sm:text-5xl mb-4">
               Pourquoi{" "}
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-[#FFB647] to-[#FF9500]">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-(--brand-orange) to-(--brand-orange-dark)">
                 LearnSup
               </span>{" "}
               ?
@@ -24,8 +24,8 @@ const WhyLearnSup = () => {
 
           {/* Main value proposition card */}
           <div className="max-w-4xl mx-auto">
-            <div className="relative bg-linear-to-br from-[#FFB647]/10 via-[#C9A0DC]/10 to-[#4A90E2]/10 rounded-[40px] p-12 border-4 border-[#FFB647] shadow-2xl">
-              <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-linear-to-r from-[#FFB647] to-[#FF9500] text-white px-8 py-4 rounded-full font-bold text-xl shadow-xl flex items-center gap-3">
+            <div className="relative bg-linear-to-br from-(--brand-orange)/10 via-(--purple)/10 to-(--primary-blue)/10 rounded-[40px] p-12 border-4 border-(--brand-orange) shadow-2xl">
+              <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-linear-to-r from-(--brand-orange) to-(--brand-orange-dark) text-white px-8 py-4 rounded-full font-bold text-xl shadow-xl flex items-center gap-3">
                 <span>L'accompagnement LearnSup</span>
               </div>
 
@@ -43,25 +43,25 @@ const WhyLearnSup = () => {
                   {
                     text: "Comprend VRAIMENT où tu bloques",
                     icon: Brain,
-                    color: "#4A90E2",
+                    color: "var(--primary-blue)",
                     description: "Analyse de tes difficultés",
                   },
                   {
                     text: "S'adapte à ton niveau et ton rythme",
                     icon: Zap,
-                    color: "#FFB647",
+                    color: "var(--brand-orange)",
                     description: "Progression personnalisée",
                   },
                   {
                     text: "Te motive et croit en toi",
                     icon: Heart,
-                    color: "#C9A0DC",
+                    color: "var(--purple)",
                     description: "Encouragement et confiance",
                   },
                 ].map((item, i) => (
                   <div
                     key={i}
-                    className="bg-white rounded-[24px] p-6 border-3 border-gray-100 hover:border-[#FFB647] transition-all hover:shadow-xl transform hover:-translate-y-1"
+                    className="bg-white rounded-[24px] p-6 border-3 border-gray-100 hover:border-(--brand-orange) transition-all hover:shadow-xl transform hover:-translate-y-1"
                   >
                     <div className="flex items-start gap-4">
                       <div
@@ -88,7 +88,7 @@ const WhyLearnSup = () => {
           <div className="text-center mt-12">
             <Link
               href="/services"
-              className="group bg-linear-to-r from-[#FFB647] to-[#C9A0DC] text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all inline-flex items-center justify-center gap-2 mx-auto"
+              className="group bg-linear-to-r from-(--brand-orange) to-(--purple) text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all inline-flex items-center justify-center gap-2 mx-auto"
             >
               <span>Découvrir nos services</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

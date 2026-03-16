@@ -1,18 +1,18 @@
 import Link from "next/link";
-import { Rocket, Sparkles, TrendingUp } from "lucide-react";
+import { Rocket, Sparkles } from "lucide-react";
 
 const Hero: React.FC = () => {
   return (
-    <div className="relative overflow-hidden bg-linear-to-br from-[#FFB647] via-[#FF9500] to-[#FFB647]">
-      {/* Decorative blobs - Duolingo style */}
+    <div className="relative overflow-hidden bg-linear-to-br from-(--brand-orange) via-(--brand-orange-dark) to-(--brand-orange)">
+      {/* Decorative blobs */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#C9A0DC] rounded-[50%] blur-3xl animate-pulse"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-(--purple) rounded-[50%] blur-3xl animate-pulse"></div>
         <div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-[#4A90E2] rounded-[50%] blur-3xl animate-pulse"
+          className="absolute bottom-20 right-10 w-96 h-96 bg-(--primary-blue) rounded-[50%] blur-3xl animate-pulse"
           style={{ animationDelay: "1s" }}
         ></div>
         <div
-          className="absolute top-1/2 left-1/3 w-64 h-64 bg-[#A8D5BA] rounded-[50%] blur-3xl animate-pulse"
+          className="absolute top-1/2 left-1/3 w-64 h-64 bg-(--green) rounded-[50%] blur-3xl animate-pulse"
           style={{ animationDelay: "2s" }}
         ></div>
       </div>
@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Link href="https://app.learnsup.fr">
-                <button className="group bg-white text-[#FFB647] px-8 py-5 rounded-[24px] flex items-center justify-center gap-3 hover:scale-105 hover:shadow-2xl transition-all shadow-xl font-bold text-lg">
+                <button className="group bg-white text-(--brand-orange) px-8 py-5 rounded-[24px] flex items-center justify-center gap-3 hover:scale-105 hover:shadow-2xl transition-all shadow-xl font-bold text-lg">
                   <span>Commence gratuitement</span>
                   <Rocket className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -62,9 +62,9 @@ const Hero: React.FC = () => {
           <div className="relative hidden lg:block">
             <div className="relative w-full h-[550px]">
               {/* Level progress card - Middle */}
-              <div className="absolute top-40 left-0 bg-white rounded-[32px] p-8 shadow-2xl transform -rotate-2 hover:rotate-0 hover:scale-105 transition-all border-4 border-[#4A90E2]/20 w-[280px]">
+              <div className="absolute top-40 left-0 bg-white rounded-[32px] p-8 shadow-2xl transform -rotate-2 hover:rotate-0 hover:scale-105 transition-all border-4 border-(--primary-blue)/20 w-[280px]">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-16 h-16 bg-linear-to-br from-[#4A90E2] to-[#26547C] rounded-[20px] flex items-center justify-center text-4xl shadow-lg">
+                  <div className="w-16 h-16 bg-linear-to-br from-(--primary-blue) to-(--blue) rounded-[20px] flex items-center justify-center text-4xl shadow-lg">
                     📈
                   </div>
                   <div className="flex-1">
@@ -78,16 +78,16 @@ const Hero: React.FC = () => {
                 </div>
                 <div className="bg-gray-100 rounded-full h-4 overflow-hidden shadow-inner">
                   <div
-                    className="bg-linear-to-r from-[#4A90E2] to-[#26547C] h-full rounded-full shadow-lg"
+                    className="bg-linear-to-r from-(--primary-blue) to-(--blue) h-full rounded-full shadow-lg"
                     style={{ width: "75%" }}
                   ></div>
                 </div>
               </div>
 
               {/* Achievement card - Bottom */}
-              <div className="absolute bottom-0 right-12 bg-white rounded-[32px] p-8 shadow-2xl transform rotate-2 hover:rotate-0 hover:scale-105 transition-all border-4 border-[#A8D5BA]/20 w-[280px]">
+              <div className="absolute bottom-0 right-12 bg-white rounded-[32px] p-8 shadow-2xl transform rotate-2 hover:rotate-0 hover:scale-105 transition-all border-4 border-(--green)/20 w-[280px]">
                 <div className="flex items-center gap-4 mb-3">
-                  <div className="w-16 h-16 bg-linear-to-br from-[#A8D5BA] to-[#7BC9A6] rounded-[20px] flex items-center justify-center text-4xl shadow-lg">
+                  <div className="w-16 h-16 bg-linear-to-br from-(--green) to-[#7BC9A6] rounded-[20px] flex items-center justify-center text-4xl shadow-lg">
                     ⭐
                   </div>
                   <div>

@@ -63,7 +63,7 @@ const NewsletterForm: React.FC = () => {
           <input
             type="email"
             placeholder="ton-email@exemple.com"
-            className="w-full pl-12 pr-4 py-4 bg-white border-[3px] border-gray-900 rounded-[16px] font-bold text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-4 focus:ring-[#FFB647] focus:ring-opacity-30 transition-all shadow-[0_4px_0_0_rgba(0,0,0,0.1)]"
+            className="w-full pl-12 pr-4 py-4 bg-white border-[3px] border-gray-900 rounded-[16px] font-bold text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-4 focus:ring-(--brand-orange) focus:ring-opacity-30 transition-all shadow-[0_4px_0_0_rgba(0,0,0,0.1)]"
             {...register("email", {
               required: "Veuillez entrer une adresse e-mail valide.",
               pattern: {
@@ -81,7 +81,7 @@ const NewsletterForm: React.FC = () => {
 
         <button
           type="submit"
-          className="w-full bg-linear-to-r from-[#FFB647] to-[#C9A0DC] text-white py-4 px-8 rounded-[16px] font-black border-[3px] border-gray-900 shadow-[0_6px_0_0_rgba(0,0,0,0.15)] hover:shadow-[0_3px_0_0_rgba(0,0,0,0.15)] hover:translate-y-1 transition-all duration-200 flex items-center justify-center gap-2 group"
+          className="w-full bg-linear-to-r from-(--brand-orange) to-(--purple) text-white py-4 px-8 rounded-[16px] font-black border-[3px] border-gray-900 shadow-[0_6px_0_0_rgba(0,0,0,0.15)] hover:shadow-[0_3px_0_0_rgba(0,0,0,0.15)] hover:translate-y-1 transition-all duration-200 flex items-center justify-center gap-2 group"
         >
           <span>S&apos;inscrire</span>
         </button>

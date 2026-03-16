@@ -33,7 +33,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({
     <section className="bg-white py-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-block bg-linear-to-r from-[#C9A0DC] to-[#A66FD9] text-white px-6 py-3 rounded-full mb-4 font-bold transform hover:scale-105 transition-transform">
+          <div className="inline-block bg-linear-to-r from-(--purple) to-(--purple-dark) text-white px-6 py-3 rounded-full mb-4 font-bold transform hover:scale-105 transition-transform">
             Questions / Réponses 💬
           </div>
           <h2 className="text-4xl sm:text-5xl mb-4">FAQ Paiements</h2>
@@ -71,14 +71,14 @@ const FAQSection: React.FC<FAQSectionProps> = ({
             </p>
             <button
               onClick={() => onCategoryChange("Tout")}
-              className="mt-4 text-[#FFB647] hover:text-[#FF9500] font-bold underline"
+              className="mt-4 text-(--brand-orange) hover:text-(--brand-orange-dark) font-bold underline"
             >
               Voir toutes les questions
             </button>
           </div>
         )}
 
-        <div className="mt-12 text-center p-8 bg-linear-to-r from-[#FFB647]/10 to-[#FF9500]/10 rounded-3xl border-2 border-[#FFB647]/20">
+        <div className="mt-12 text-center p-8 bg-linear-to-r from-(--brand-orange)/10 to-(--brand-orange-dark)/10 rounded-3xl border-2 border-(--brand-orange)/20">
           <div className="text-4xl mb-4">🤔</div>
           <h3 className="text-2xl font-bold mb-2">Encore des questions ?</h3>
           <p className="text-gray-600 mb-6">
@@ -86,7 +86,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({
             super vite 💬
           </p>
           <Link href="/contact">
-            <button className="bg-linear-to-r from-[#FFB647] to-[#FF9500] text-white px-8 py-4 rounded-2xl hover:shadow-xl transition-all font-bold inline-flex items-center gap-2 group">
+            <button className="bg-linear-to-r from-(--brand-orange) to-(--brand-orange-dark) text-white px-8 py-4 rounded-2xl hover:shadow-xl transition-all font-bold inline-flex items-center gap-2 group">
               Contacter le Support
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>

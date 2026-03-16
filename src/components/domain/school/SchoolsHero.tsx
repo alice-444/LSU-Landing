@@ -1,17 +1,29 @@
 import React from "react";
 import { Building2, ArrowRight, Shield } from "lucide-react";
+import toast from "react-hot-toast";
+
+const showComingSoonToast = () =>
+  toast("En cours de développement — à très bientôt ! 🚧", {
+    icon: "🔨",
+    duration: 4000,
+    style: {
+      background: "linear-gradient(135deg, var(--brand-orange) 0%, var(--brand-orange-dark) 100%)",
+      color: "#fff",
+      fontWeight: 600,
+    },
+  });
 
 const SchoolsHero: React.FC = () => {
   return (
-    <section className="relative overflow-hidden bg-linear-to-br from-[#FFB647] via-[#FF9500] to-[#FFB647]">
+    <section className="relative overflow-hidden bg-linear-to-br from-(--brand-orange) via-(--brand-orange-dark) to-(--brand-orange)">
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-10 left-10 w-48 h-48 bg-white rounded-full blur-3xl animate-pulse"></div>
         <div
-          className="absolute top-40 right-20 w-64 h-64 bg-[#4A90E2] rounded-full blur-3xl animate-pulse"
+          className="absolute top-40 right-20 w-64 h-64 bg-(--primary-blue) rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: "1s" }}
         ></div>
         <div
-          className="absolute bottom-20 left-1/3 w-56 h-56 bg-[#C9A0DC] rounded-full blur-3xl animate-pulse"
+          className="absolute bottom-20 left-1/3 w-56 h-56 bg-(--purple) rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: "2s" }}
         ></div>
       </div>
@@ -27,7 +39,7 @@ const SchoolsHero: React.FC = () => {
             <h1 className="text-5xl sm:text-6xl lg:text-7xl mb-6 leading-tight">
               Transformez
               <br />
-              <span className="inline-block bg-white text-[#FFB647] px-6 py-2 rounded-2xl transform -rotate-2 shadow-2xl mt-2">
+              <span className="inline-block bg-white text-(--brand-orange) px-6 py-2 rounded-2xl transform -rotate-2 shadow-2xl mt-2">
                 l'Apprentissage
               </span>
             </h1>
@@ -38,11 +50,11 @@ const SchoolsHero: React.FC = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
-              <button className="bg-white text-[#FFB647] px-10 py-5 rounded-2xl font-bold text-lg flex items-center justify-center gap-2 hover:scale-105 transition-transform shadow-2xl group">
+              <button onClick={showComingSoonToast} className="bg-white text-(--brand-orange) px-10 py-5 rounded-2xl font-bold text-lg flex items-center justify-center gap-2 hover:scale-105 transition-transform shadow-2xl group">
                 Demander une Démo
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="bg-white/20 backdrop-blur-md text-white px-10 py-5 rounded-2xl hover:bg-white/30 transition-colors border-2 border-white/40 font-bold text-lg">
+              <button onClick={showComingSoonToast} className="bg-white/20 backdrop-blur-md text-white px-10 py-5 rounded-2xl hover:bg-white/30 transition-colors border-2 border-white/40 font-bold text-lg">
                 Obtenir un Devis
               </button>
             </div>

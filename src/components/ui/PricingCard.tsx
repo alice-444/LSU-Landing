@@ -95,7 +95,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
                       par an
                     </div>
                     {plan.savings && (
-                      <div className="inline-block bg-linear-to-r from-[#A8D5BA] to-[#7BC9A6] text-white text-sm px-3 py-1 rounded-full font-bold">
+                      <div className="inline-block bg-linear-to-r from-(--green) to-[#7BC9A6] text-white text-sm px-3 py-1 rounded-full font-bold">
                         💰 Économise {plan.savings}
                       </div>
                     )}
@@ -104,7 +104,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
               </>
             ) : (
               <div className="text-center py-4">
-                <span className="text-3xl font-bold bg-linear-to-r from-[#C9A0DC] to-[#A66FD9] bg-clip-text text-transparent">
+                <span className="text-3xl font-bold bg-linear-to-r from-(--purple) to-(--purple-dark) bg-clip-text text-transparent">
                   Sur devis
                 </span>
               </div>
@@ -128,7 +128,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
             </div>
             {plan.features.map((feature, featureIndex) => (
               <div key={featureIndex} className="flex items-start gap-3">
-                <div className="shrink-0 w-6 h-6 bg-linear-to-br from-[#A8D5BA] to-[#7BC9A6] rounded-full flex items-center justify-center mt-0.5">
+                <div className="shrink-0 w-6 h-6 bg-linear-to-br from-(--green) to-[#7BC9A6] rounded-full flex items-center justify-center mt-0.5">
                   <Check className="w-4 h-4 text-white" />
                 </div>
                 <span className="text-gray-700 leading-relaxed">{feature}</span>
@@ -155,7 +155,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
       </div>
 
       {plan.highlight && (
-        <div className="absolute -z-10 inset-0 bg-linear-to-br from-[#FFB647]/20 to-[#FF9500]/20 rounded-[32px] blur-xl scale-105"></div>
+        <div className="absolute -z-10 inset-0 bg-linear-to-br from-(--brand-orange)/20 to-(--brand-orange-dark)/20 rounded-[32px] blur-xl scale-105"></div>
       )}
     </div>
   );

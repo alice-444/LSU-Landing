@@ -4,11 +4,11 @@ import { clarityEvent, ClarityEvents } from "@/lib/clarity";
 
 const CTA: React.FC = () => {
   return (
-    <div className="relative bg-linear-to-br from-[#FFB647] via-[#FF9500] to-[#FFB647] py-8 overflow-hidden">
+    <div className="relative bg-linear-to-br from-(--brand-orange) via-(--brand-orange-dark) to-(--brand-orange) py-8 overflow-hidden">
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-[#C9A0DC] rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-10 left-10 w-72 h-72 bg-(--purple) rounded-full blur-3xl animate-pulse"></div>
         <div
-          className="absolute bottom-10 right-10 w-96 h-96 bg-[#4A90E2] rounded-full blur-3xl animate-pulse"
+          className="absolute bottom-10 right-10 w-96 h-96 bg-(--primary-blue) rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: "1s" }}
         ></div>
       </div>
@@ -35,7 +35,7 @@ const CTA: React.FC = () => {
                   location: "home_cta_section",
                 });
               }}
-              className="group bg-white text-[#FFB647] px-6 py-3 rounded-[20px] flex items-center justify-center gap-2 hover:scale-105 transition-all shadow-2xl font-bold"
+              className="group bg-white text-(--brand-orange) px-6 py-3 rounded-[20px] flex items-center justify-center gap-2 hover:scale-105 transition-all shadow-2xl font-bold"
             >
               <span>Commence maintenant</span>
             </button>

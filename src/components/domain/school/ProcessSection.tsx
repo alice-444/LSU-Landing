@@ -11,7 +11,7 @@ const ProcessSection: React.FC<ProcessSectionProps> = ({ steps }) => {
     <section className="bg-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-block bg-linear-to-r from-[#FFB647] to-[#FF9500] text-white px-6 py-3 rounded-full mb-4 font-bold transform hover:scale-105 transition-transform">
+          <div className="inline-block bg-linear-to-r from-(--brand-orange) to-(--brand-orange-dark) text-white px-6 py-3 rounded-full mb-4 font-bold transform hover:scale-105 transition-transform">
             Simple et Rapide
           </div>
           <h2 className="text-4xl sm:text-5xl mb-4">Comment Ça Marche ?</h2>
@@ -27,7 +27,7 @@ const ProcessSection: React.FC<ProcessSectionProps> = ({ steps }) => {
               <div key={index} className="relative group">
                 {index < steps.length - 1 && (
                   <div className="hidden lg:flex absolute top-20 left-full w-8 items-center justify-center z-10 -translate-x-1/2">
-                    <ArrowRight className="w-6 h-6 text-[#FFB647] animate-pulse" />
+                    <ArrowRight className="w-6 h-6 text-(--brand-orange) animate-pulse" />
                   </div>
                 )}
 
@@ -38,7 +38,7 @@ const ProcessSection: React.FC<ProcessSectionProps> = ({ steps }) => {
                     >
                       <div className="text-5xl">{step.emoji}</div>
                     </div>
-                    <div className="absolute -top-3 -right-3 w-14 h-14 bg-white rounded-full shadow-xl flex items-center justify-center text-[#FFB647] border-4 border-[#FFB647]/30 font-bold text-lg group-hover:scale-110 transition-transform">
+                    <div className="absolute -top-3 -right-3 w-14 h-14 bg-white rounded-full shadow-xl flex items-center justify-center text-(--brand-orange) border-4 border-(--brand-orange)/30 font-bold text-lg group-hover:scale-110 transition-transform">
                       {step.step}
                     </div>
                   </div>
@@ -53,10 +53,10 @@ const ProcessSection: React.FC<ProcessSectionProps> = ({ steps }) => {
           })}
         </div>
 
-        <div className="text-center mt-12 p-6 bg-linear-to-r from-[#4A90E2]/10 to-[#26547C]/10 rounded-2xl border-2 border-[#4A90E2]/20">
+        <div className="text-center mt-12 p-6 bg-linear-to-r from-(--primary-blue)/10 to-(--blue)/10 rounded-2xl border-2 border-(--primary-blue)/20">
           <p className="text-lg">
             ⚡{" "}
-            <span className="font-bold text-[#4A90E2]">
+            <span className="font-bold text-(--primary-blue)">
               Déploiement moyen :
             </span>{" "}
             2-3 semaines seulement !

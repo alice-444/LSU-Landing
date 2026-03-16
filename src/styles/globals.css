@@ -79,13 +79,21 @@
   }
 
   :root {
+    /* Blues */
     --primary-blue: #4A90E2;
     --secondary-blue: #9DCDEB;
     --tertiary-blue: #639EDA;
-    --quaternary-blue: #26547c;
-    --purple: #c9a0dc;
-    --blue:#26547c;
-    --green:#a8d5ba;
+    --quaternary-blue: #26547C;
+    --blue: #26547C;
+
+    /* Brand — orange/yellow */
+    --brand-orange: #FFB647;
+    --brand-orange-dark: #FF9500;
+
+    /* Accent */
+    --purple: #C9A0DC;
+    --purple-dark: #A66FD9;
+    --green: #A8D5BA;
   }
 
   body {

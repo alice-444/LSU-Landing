@@ -14,7 +14,7 @@ type AppProps = {
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <div style={{ fontFamily: '"Omnes", sans-serif' }}>
+    <div>
       <Meta />
       <Clarity />
       <ToasterContext />

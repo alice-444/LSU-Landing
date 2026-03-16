@@ -14,7 +14,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ faq, index, isOpen, onToggle }) => {
     <div
       className={`bg-linear-to-r from-gray-50 to-white rounded-2xl shadow-lg overflow-hidden border-2 transition-all ${
         isOpen
-          ? "border-[#FFB647] shadow-2xl"
+          ? "border-(--brand-orange) shadow-2xl"
           : "border-transparent hover:border-gray-200"
       }`}
     >
@@ -24,12 +24,12 @@ const FAQItem: React.FC<FAQItemProps> = ({ faq, index, isOpen, onToggle }) => {
       >
         <div className="flex items-center gap-4 text-left pr-4">
           <span className="text-3xl shrink-0">{faq.emoji}</span>
-          <span className="font-bold text-gray-900 group-hover:text-[#FFB647] transition-colors">
+          <span className="font-bold text-gray-900 group-hover:text-(--brand-orange) transition-colors">
             {faq.question}
           </span>
         </div>
         <div
-          className={`shrink-0 w-10 h-10 bg-linear-to-br from-[#FFB647] to-[#FF9500] rounded-full flex items-center justify-center transition-transform ${
+          className={`shrink-0 w-10 h-10 bg-linear-to-br from-(--brand-orange) to-(--brand-orange-dark) rounded-full flex items-center justify-center transition-transform ${
             isOpen ? "rotate-180" : ""
           }`}
         >

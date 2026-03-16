@@ -14,7 +14,7 @@ const ComparisonTableSection: React.FC<ComparisonTableSectionProps> = ({
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
       <div className="text-center mb-16">
-        <div className="inline-block bg-linear-to-r from-[#C9A0DC] to-[#A66FD9] text-white px-6 py-3 rounded-full mb-4 font-bold transform hover:scale-105 transition-transform">
+        <div className="inline-block bg-linear-to-r from-(--purple) to-(--purple-dark) text-white px-6 py-3 rounded-full mb-4 font-bold transform hover:scale-105 transition-transform">
           Comparaison 🔍
         </div>
         <h2 className="text-4xl sm:text-5xl mb-4">
@@ -22,11 +22,11 @@ const ComparisonTableSection: React.FC<ComparisonTableSectionProps> = ({
         </h2>
       </div>
 
-      <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-[#FFB647]/20">
+      <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-(--brand-orange)/20">
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
-              <tr className="bg-linear-to-r from-[#26547C] to-[#4A90E2]">
+              <tr className="bg-linear-to-r from-(--blue) to-(--primary-blue)">
                 <th className="px-6 py-5 text-left text-white text-lg">
                   Fonctionnalités
                 </th>
@@ -35,7 +35,7 @@ const ComparisonTableSection: React.FC<ComparisonTableSectionProps> = ({
                     key={index}
                     className={`px-6 py-5 text-center text-white text-lg ${
                       comp.isUs
-                        ? "bg-linear-to-r from-[#FFB647] to-[#FF9500]"
+                        ? "bg-linear-to-r from-(--brand-orange) to-(--brand-orange-dark)"
                         : ""
                     }`}
                   >
@@ -55,7 +55,7 @@ const ComparisonTableSection: React.FC<ComparisonTableSectionProps> = ({
                   key={featureIndex}
                   className={`${
                     featureIndex % 2 === 0 ? "bg-gray-50" : "bg-white"
-                  } hover:bg-[#FFB647]/5 transition-colors`}
+                  } hover:bg-(--brand-orange)/5 transition-colors`}
                 >
                   <td className="px-6 py-5">
                     <div className="flex items-center gap-3">
@@ -69,11 +69,11 @@ const ComparisonTableSection: React.FC<ComparisonTableSectionProps> = ({
                     <td
                       key={valueIndex}
                       className={`px-6 py-5 text-center ${
-                        valueIndex === 0 ? "bg-[#FFB647]/10" : ""
+                        valueIndex === 0 ? "bg-(--brand-orange)/10" : ""
                       }`}
                     >
                       {value ? (
-                        <div className="inline-flex items-center justify-center w-10 h-10 bg-linear-to-br from-[#A8D5BA] to-[#7BC9A6] rounded-full shadow-lg transform hover:scale-110 transition-transform">
+                        <div className="inline-flex items-center justify-center w-10 h-10 bg-linear-to-br from-(--green) to-[#7BC9A6] rounded-full shadow-lg transform hover:scale-110 transition-transform">
                           <Check className="w-6 h-6 text-white" />
                         </div>
                       ) : (

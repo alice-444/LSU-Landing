@@ -20,7 +20,7 @@ const HowItWorks: React.FC = () => {
       icon: UserPlus,
       title: "Inscris-toi gratuitement",
       description: "Crée ton compte en 2 min",
-      color: "from-[#FFB647] to-[#FF9500]",
+      color: "from-(--brand-orange) to-(--brand-orange-dark)",
       emoji: "🎯",
       step: "01",
     },
@@ -28,7 +28,7 @@ const HowItWorks: React.FC = () => {
       icon: Target,
       title: "Choisis ton atelier",
       description: "Trouve le mentor parfait pour tes besoins",
-      color: "from-[#4A90E2] to-[#26547C]",
+      color: "from-(--primary-blue) to-(--blue)",
       emoji: "🔍",
       step: "02",
     },
@@ -36,7 +36,7 @@ const HowItWorks: React.FC = () => {
       icon: Rocket,
       title: "Apprends en petit groupe",
       description: "avec étudiants et ton mentor",
-      color: "from-[#C9A0DC] to-[#A66FD9]",
+      color: "from-(--purple) to-(--purple-dark)",
       emoji: "🚀",
       step: "03",
     },
@@ -47,7 +47,7 @@ const HowItWorks: React.FC = () => {
       icon: Users,
       title: "Inscris-toi gratuitement",
       description: "Crée ton compte en 2 min",
-      color: "from-[#FFB647] to-[#FF9500]",
+      color: "from-(--brand-orange) to-(--brand-orange-dark)",
       emoji: "👨‍🏫",
       step: "01",
     },
@@ -55,7 +55,7 @@ const HowItWorks: React.FC = () => {
       icon: Calendar,
       title: "Crée tes ateliers",
       description: "Définis tes créneaux et sujets",
-      color: "from-[#4A90E2] to-[#26547C]",
+      color: "from-(--primary-blue) to-(--blue)",
       emoji: "📅",
       step: "02",
     },
@@ -63,7 +63,7 @@ const HowItWorks: React.FC = () => {
       icon: MessageSquare,
       title: "Accompagne des étudiants",
       description: "Atelier avec des apprenants",
-      color: "from-[#C9A0DC] to-[#A66FD9]",
+      color: "from-(--purple) to-(--purple-dark)",
       emoji: "💬",
       step: "03",
     },
@@ -71,7 +71,7 @@ const HowItWorks: React.FC = () => {
       icon: TrendingUp,
       title: "Impacte et gagne",
       description: "Développe ton impact et tes revenus",
-      color: "from-[#A8D5BA] to-[#7BC9A6]",
+      color: "from-(--green) to-[#7BC9A6]",
       emoji: "💰",
       step: "04",
     },
@@ -85,7 +85,7 @@ const HowItWorks: React.FC = () => {
       id="how-it-works"
     >
       <div className="text-center mb-16">
-        <div className="inline-block bg-linear-to-r from-[#FFB647] to-[#FF9500] text-white px-6 py-3 rounded-full mb-4 font-bold transform hover:scale-105 transition-transform">
+        <div className="inline-block bg-linear-to-r from-(--brand-orange) to-(--brand-orange-dark) text-white px-6 py-3 rounded-full mb-4 font-bold transform hover:scale-105 transition-transform">
           Super simple !
         </div>
         <h2 className="text-4xl sm:text-5xl mb-4">Comment ça marche ?</h2>
@@ -100,7 +100,7 @@ const HowItWorks: React.FC = () => {
             onClick={() => setActiveTab("learner")}
             className={`px-8 py-4 rounded-full font-bold transition-all transform ${
               activeTab === "learner"
-                ? "bg-linear-to-r from-[#FFB647] to-[#FF9500] text-white shadow-xl scale-105"
+                ? "bg-linear-to-r from-(--brand-orange) to-(--brand-orange-dark) text-white shadow-xl scale-105"
                 : "text-gray-600 hover:text-gray-900"
             }`}
           >
@@ -110,7 +110,7 @@ const HowItWorks: React.FC = () => {
             onClick={() => setActiveTab("mentor")}
             className={`px-8 py-4 rounded-full font-bold transition-all transform ${
               activeTab === "mentor"
-                ? "bg-linear-to-r from-[#4A90E2] to-[#26547C] text-white shadow-xl scale-105"
+                ? "bg-linear-to-r from-(--primary-blue) to-(--blue) text-white shadow-xl scale-105"
                 : "text-gray-600 hover:text-gray-900"
             }`}
           >
@@ -138,14 +138,14 @@ const HowItWorks: React.FC = () => {
                 <stop
                   offset="0%"
                   style={{
-                    stopColor: "#FFB647",
+                    stopColor: "var(--brand-orange)",
                     stopOpacity: 0.6,
                   }}
                 />
                 <stop
                   offset={steps.length === 3 ? "50%" : "33%"}
                   style={{
-                    stopColor: "#4A90E2",
+                    stopColor: "var(--primary-blue)",
                     stopOpacity: 0.6,
                   }}
                 />
@@ -153,7 +153,7 @@ const HowItWorks: React.FC = () => {
                   <stop
                     offset="66%"
                     style={{
-                      stopColor: "#C9A0DC",
+                      stopColor: "var(--purple)",
                       stopOpacity: 0.6,
                     }}
                   />
@@ -161,7 +161,7 @@ const HowItWorks: React.FC = () => {
                 <stop
                   offset="100%"
                   style={{
-                    stopColor: steps.length === 3 ? "#C9A0DC" : "#A8D5BA",
+                    stopColor: steps.length === 3 ? "var(--purple)" : "var(--green)",
                     stopOpacity: 0.6,
                   }}
                 />
@@ -194,13 +194,13 @@ const HowItWorks: React.FC = () => {
               <div key={index} className="relative group">
                 {index < steps.length - 1 && (
                   <div className="hidden lg:flex absolute top-20 left-full w-12 items-center justify-center z-10 -translate-x-1/2">
-                    <ArrowRight className="w-8 h-8 text-[#FFB647] animate-pulse" />
+                    <ArrowRight className="w-8 h-8 text-(--brand-orange) animate-pulse" />
                   </div>
                 )}
 
                 {index < steps.length - 1 && (
                   <div className="lg:hidden flex justify-center my-6">
-                    <ChevronRight className="w-8 h-8 text-[#FFB647] rotate-90" />
+                    <ChevronRight className="w-8 h-8 text-(--brand-orange) rotate-90" />
                   </div>
                 )}
 
@@ -211,7 +211,7 @@ const HowItWorks: React.FC = () => {
                     >
                       <div className="text-5xl">{step.emoji}</div>
                     </div>
-                    <div className="absolute -top-3 -right-3 w-14 h-14 bg-white rounded-full shadow-xl flex items-center justify-center text-[#FFB647] border-4 border-[#FFB647]/30 font-bold text-lg group-hover:scale-110 transition-transform">
+                    <div className="absolute -top-3 -right-3 w-14 h-14 bg-white rounded-full shadow-xl flex items-center justify-center text-(--brand-orange) border-4 border-(--brand-orange)/30 font-bold text-lg group-hover:scale-110 transition-transform">
                       {step.step}
                     </div>
                   </div>
@@ -230,7 +230,7 @@ const HowItWorks: React.FC = () => {
       <div className="text-center mt-16">
         <Link
           href="/services"
-          className="group bg-linear-to-r from-[#FFB647] to-[#C9A0DC] text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all inline-flex items-center justify-center gap-2 mx-auto"
+          className="group bg-linear-to-r from-(--brand-orange) to-(--purple) text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all inline-flex items-center justify-center gap-2 mx-auto"
         >
           <span>Découvrir nos services</span>
           <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

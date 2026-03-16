@@ -41,7 +41,7 @@ const AboutSectionContent: React.FC<SectionContentProps> = ({
           <section className="bg-white py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
-                <div className="inline-block bg-linear-to-r from-[#4A90E2] to-[#26547C] text-white px-6 py-3 rounded-full mb-4 font-bold transform hover:scale-105 transition-transform">
+                <div className="inline-block bg-linear-to-r from-(--primary-blue) to-(--blue) text-white px-6 py-3 rounded-full mb-4 font-bold transform hover:scale-105 transition-transform">
                   Notre Mission
                 </div>
                 <h2 className="text-4xl sm:text-5xl mb-4">Ce Qui Nous Anime</h2>
@@ -86,7 +86,7 @@ const AboutSectionContent: React.FC<SectionContentProps> = ({
           <section className="bg-linear-to-b from-gray-50 to-white py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
-                <div className="inline-block bg-linear-to-r from-[#FFB647] to-[#FF9500] text-white px-6 py-3 rounded-full mb-4 font-bold transform hover:scale-105 transition-transform">
+                <div className="inline-block bg-linear-to-r from-(--brand-orange) to-(--brand-orange-dark) text-white px-6 py-3 rounded-full mb-4 font-bold transform hover:scale-105 transition-transform">
                   Notre Approche
                 </div>
                 <h2 className="text-4xl sm:text-5xl mb-4">
@@ -118,7 +118,7 @@ const AboutSectionContent: React.FC<SectionContentProps> = ({
           <section className="bg-white py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
-                <div className="inline-block bg-linear-to-r from-[#C9A0DC] to-[#A66FD9] text-white px-6 py-3 rounded-full mb-4 font-bold transform hover:scale-105 transition-transform">
+                <div className="inline-block bg-linear-to-r from-(--purple) to-(--purple-dark) text-white px-6 py-3 rounded-full mb-4 font-bold transform hover:scale-105 transition-transform">
                   Notre Équipe
                 </div>
                 <h2 className="text-4xl sm:text-5xl mb-4">
@@ -150,7 +150,7 @@ const AboutSectionContent: React.FC<SectionContentProps> = ({
           <section className="bg-linear-to-b from-gray-50 to-white py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
-                <div className="inline-block bg-linear-to-r from-[#A8D5BA] to-[#7BC9A6] text-white px-6 py-3 rounded-full mb-4 font-bold transform hover:scale-105 transition-transform">
+                <div className="inline-block bg-linear-to-r from-(--green) to-[#7BC9A6] text-white px-6 py-3 rounded-full mb-4 font-bold transform hover:scale-105 transition-transform">
                   Contacte-nous
                 </div>
                 <h2 className="text-4xl sm:text-5xl mb-4">
@@ -169,9 +169,9 @@ const AboutSectionContent: React.FC<SectionContentProps> = ({
                 className="max-w-4xl mx-auto"
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                  <div className="bg-white rounded-3xl shadow-xl p-8 border-4 border-[#4A90E2]/20 transform hover:scale-105 transition-all">
+                  <div className="bg-white rounded-3xl shadow-xl p-8 border-4 border-(--primary-blue)/20 transform hover:scale-105 transition-all">
                     <div className="flex flex-col items-center text-center">
-                      <div className="w-16 h-16 bg-linear-to-br from-[#4A90E2] to-[#26547C] rounded-2xl flex items-center justify-center mb-6 shadow-xl">
+                      <div className="w-16 h-16 bg-linear-to-br from-(--primary-blue) to-(--blue) rounded-2xl flex items-center justify-center mb-6 shadow-xl">
                         <HelpCircle className="w-8 h-8 text-white" />
                       </div>
                       <h3 className="text-2xl font-bold text-gray-800 mb-4">
@@ -183,16 +183,16 @@ const AboutSectionContent: React.FC<SectionContentProps> = ({
                       </p>
                       <Link
                         href="/contact"
-                        className="bg-linear-to-r from-[#4A90E2] to-[#26547C] text-white px-6 py-3 rounded-full font-bold hover:shadow-lg transition-all inline-flex items-center gap-2"
+                        className="bg-linear-to-r from-(--primary-blue) to-(--blue) text-white px-6 py-3 rounded-full font-bold hover:shadow-lg transition-all inline-flex items-center gap-2"
                       >
                         Accéder au centre d&apos;aide
                       </Link>
                     </div>
                   </div>
 
-                  <div className="bg-white rounded-3xl shadow-xl p-8 border-4 border-[#FFB647]/20 transform hover:scale-105 transition-all">
+                  <div className="bg-white rounded-3xl shadow-xl p-8 border-4 border-(--brand-orange)/20 transform hover:scale-105 transition-all">
                     <div className="flex flex-col items-center text-center">
-                      <div className="w-16 h-16 bg-linear-to-br from-[#FFB647] to-[#FF9500] rounded-2xl flex items-center justify-center mb-6 shadow-xl">
+                      <div className="w-16 h-16 bg-linear-to-br from-(--brand-orange) to-(--brand-orange-dark) rounded-2xl flex items-center justify-center mb-6 shadow-xl">
                         <Mail className="w-8 h-8 text-white" />
                       </div>
                       <h3 className="text-2xl font-bold text-gray-800 mb-4">
@@ -204,7 +204,7 @@ const AboutSectionContent: React.FC<SectionContentProps> = ({
                       </p>
                       <Link
                         href="mailto:partenariat@learnsup.fr"
-                        className="bg-linear-to-r from-[#FFB647] to-[#FF9500] text-white px-6 py-3 rounded-full font-bold hover:shadow-lg transition-all inline-flex items-center gap-2"
+                        className="bg-linear-to-r from-(--brand-orange) to-(--brand-orange-dark) text-white px-6 py-3 rounded-full font-bold hover:shadow-lg transition-all inline-flex items-center gap-2"
                       >
                         partenariat@learnsup.fr
                       </Link>

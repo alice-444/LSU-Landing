@@ -32,7 +32,7 @@ const ScrollToTop: React.FC = () => {
       {isVisible && (
         <div className="fixed bottom-8 right-8 z-50">
           <motion.div
-            className="absolute inset-0 rounded-full bg-linear-to-r from-[#FFB647] to-[#FF9500] opacity-30 blur-xl"
+            className="absolute inset-0 rounded-full bg-linear-to-r from-(--brand-orange) to-(--brand-orange-dark) opacity-30 blur-xl"
             animate={{
               scale: [1, 1.5, 1],
               opacity: [0.3, 0.6, 0.3],
@@ -44,7 +44,7 @@ const ScrollToTop: React.FC = () => {
             }}
           />
           <motion.div
-            className="absolute inset-0 rounded-full bg-linear-to-r from-[#C9A0DC] to-[#FFB647] opacity-20 blur-2xl"
+            className="absolute inset-0 rounded-full bg-linear-to-r from-(--purple) to-(--brand-orange) opacity-20 blur-2xl"
             animate={{
               scale: [1, 1.8, 1],
               opacity: [0.2, 0.5, 0.2],
@@ -64,7 +64,7 @@ const ScrollToTop: React.FC = () => {
             whileHover={{ scale: 1.15, rotate: 5 }}
             whileTap={{ scale: 0.95 }}
             onClick={scrollToTop}
-            className="relative w-16 h-16 bg-linear-to-br from-[#FFB647] via-[#FF9500] to-[#FF6B35] text-white rounded-2xl shadow-2xl flex items-center justify-center overflow-hidden group border-4 border-white/50"
+            className="relative w-16 h-16 bg-linear-to-br from-(--brand-orange) via-(--brand-orange-dark) to-[#FF6B35] text-white rounded-2xl shadow-2xl flex items-center justify-center overflow-hidden group border-4 border-white/50"
             aria-label="Remonter en haut de la page"
           >
             <motion.div

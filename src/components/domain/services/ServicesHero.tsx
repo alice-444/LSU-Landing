@@ -2,15 +2,15 @@ import React from "react";
 
 const ServicesHero: React.FC = () => {
   return (
-    <section className="relative overflow-hidden bg-linear-to-br from-[#FFB647] via-[#FF9500] to-[#FFB647]">
+    <section className="relative overflow-hidden bg-linear-to-br from-(--brand-orange) via-(--brand-orange-dark) to-(--brand-orange)">
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-3xl animate-pulse"></div>
         <div
-          className="absolute top-40 right-20 w-48 h-48 bg-[#4A90E2] rounded-full blur-3xl animate-pulse"
+          className="absolute top-40 right-20 w-48 h-48 bg-(--primary-blue) rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: "1s" }}
         ></div>
         <div
-          className="absolute bottom-20 left-1/3 w-40 h-40 bg-[#C9A0DC] rounded-full blur-3xl animate-pulse"
+          className="absolute bottom-20 left-1/3 w-40 h-40 bg-(--purple) rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: "2s" }}
         ></div>
       </div>
@@ -25,7 +25,7 @@ const ServicesHero: React.FC = () => {
             La plateforme d&apos;entraide <br /> exclusivement pour les
             étudiants
             <br />
-            <span className="inline-block bg-white text-[#FFB647] px-6 py-2 rounded-2xl transform -rotate-2 shadow-2xl mt-4">
+            <span className="inline-block bg-white text-(--brand-orange) px-6 py-2 rounded-2xl transform -rotate-2 shadow-2xl mt-4">
               pour apprendre
             </span>
           </h1>

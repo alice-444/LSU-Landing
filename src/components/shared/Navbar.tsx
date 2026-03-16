@@ -23,9 +23,9 @@ const NAV_LINKS: NavLink[] = [
 ];
 
 const CTA_BUTTON = {
-  href: "https://learn-sup.vercel.app/",
+  href: "https://app.learnsup.fr",
   text: "Rejoins-nous",
-  colors: "from-[#FFB647] to-[#FF9500]",
+  colors: "from-(--brand-orange) to-(--brand-orange-dark)",
 } as const;
 
 const SCROLL_THRESHOLD = 20;
@@ -33,7 +33,7 @@ const LOGO_CONFIG = {
   src: "/logo/logo.png",
   width: 180,
   height: 315,
-  alt: "logo",
+  alt: "LearnSup",
   className: "w-48 sm:w-48 md:w-48 h-auto",
 } as const;
 
@@ -81,7 +81,7 @@ const NavLinkItem: React.FC<NavLinkItemProps> = ({
     >
       {link.icon && (
         <motion.span
-          className={`${iconSize} text-gray-600 group-hover:text-[var(--primary-blue)] transition-colors duration-300`}
+          className={`${iconSize} text-gray-600 group-hover:text-(--primary-blue) transition-colors duration-300`}
           variants={linkHoverEffect}
         >
           {link.icon}
@@ -89,13 +89,13 @@ const NavLinkItem: React.FC<NavLinkItemProps> = ({
       )}
       <motion.a
         href={link.href}
-        className={`ml-2 md:ml-2 text-gray-700 group-hover:text-[var(--primary-blue)] transition-colors duration-300 ${textSize} font-medium`}
+        className={`ml-2 md:ml-2 text-gray-700 group-hover:text-(--primary-blue) transition-colors duration-300 ${textSize} font-medium`}
         variants={linkHoverEffect}
       >
         {link.name}
       </motion.a>
       <motion.div
-        className="absolute bottom-[-2px] left-0 h-[2px] bg-linear-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] origin-left"
+        className="absolute bottom-[-2px] left-0 h-[2px] bg-linear-to-r from-(--primary-blue) to-(--secondary-blue) origin-left"
         style={{ width: "100%" }}
         variants={underlineEffect}
       />

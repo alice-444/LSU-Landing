@@ -39,28 +39,28 @@ const Footer: React.FC = () => {
       icon: Mail,
       href: "mailto:contact@learnsup.com",
       label: "Email",
-      color: "#FFB647",
+      color: "var(--brand-orange)",
     },
     {
       icon: Instagram,
       href: "https://www.instagram.com/learn_sup/",
       label: "Instagram",
-      color: "#C9A0DC",
+      color: "var(--purple)",
     },
     {
       icon: Linkedin,
       href: "https://www.linkedin.com/company/learnsup/",
       label: "LinkedIn",
-      color: "#4A90E2",
+      color: "var(--primary-blue)",
     },
   ];
 
   return (
     <footer className="relative bg-linear-to-br from-orange-50 via-white to-purple-50 overflow-hidden">
       <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-10 right-20 w-64 h-64 bg-[#FFB647] rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-10 w-80 h-80 bg-[#C9A0DC] rounded-full blur-3xl"></div>
-        <div className="absolute top-40 left-1/2 w-72 h-72 bg-[#A8D5BA] rounded-full blur-3xl"></div>
+        <div className="absolute top-10 right-20 w-64 h-64 bg-(--brand-orange) rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-10 w-80 h-80 bg-(--purple) rounded-full blur-3xl"></div>
+        <div className="absolute top-40 left-1/2 w-72 h-72 bg-(--green) rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
               </div>
               <p className="text-gray-700 text-sm leading-relaxed font-medium">
                 Apprendre ensemble ?{" "}
-                <span className="text-[#FF9500] font-bold">
+                <span className="text-(--brand-orange-dark) font-bold">
                   C'est possible !
                 </span>{" "}
               </p>
@@ -142,11 +142,11 @@ const Footer: React.FC = () => {
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="text-gray-600 hover:text-[#FFB647] transition-all hover:translate-x-1 inline-block font-medium text-sm group"
+                      className="text-gray-600 hover:text-(--brand-orange) transition-all hover:translate-x-1 inline-block font-medium text-sm group"
                     >
                       <span className="relative">
                         {item.label}
-                        <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#FFB647] transition-all group-hover:w-full"></span>
+                        <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-(--brand-orange) transition-all group-hover:w-full"></span>
                       </span>
                     </Link>
                   </li>
@@ -170,7 +170,7 @@ const Footer: React.FC = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           © {currentYear} LearnSup. Tous droits réservés.{" "}
-          <span className="text-sm font-semibold text-[#FF9500]">
+          <span className="text-sm font-semibold text-(--brand-orange-dark)">
             FOR STUDENTS. BY STUDENTS.
           </span>
         </motion.p>

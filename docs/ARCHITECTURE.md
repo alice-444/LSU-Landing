@@ -18,7 +18,18 @@ Ce document détaille les choix techniques et l'organisation du projet.
 │   ├───typo/       # Police Omnes
 │   └───logo/       # Logos officiels
 ├───src/
-│   ├───components/ # Composants React réutilisables (organisés par domaine)
+│   ├───components/
+│   │   ├───ui/         # Composants primitifs et réutilisables (PricingCard, FAQItem, FormField…)
+│   │   ├───shared/     # Composants transversaux présents sur toutes les pages (Navbar, Footer, CTA, Newsletter, Clarity…)
+│   │   └───domain/     # Composants spécifiques à une page ou fonctionnalité
+│   │       ├───home/
+│   │       ├───contact/
+│   │       ├───pricing/
+│   │       ├───faq/
+│   │       ├───learnsup/
+│   │       ├───legal/
+│   │       ├───school/
+│   │       └───services/
 │   ├───emails/     # Templates d'emails (React components)
 │   ├───lib/        # Types et données statiques
 │   ├───pages/      # Pages du site et routes d'API

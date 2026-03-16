@@ -23,8 +23,8 @@ const AboutNavigation: React.FC<NavigationProps> = ({
               onClick={() => setActiveSection(section.id)}
               className={`relative py-3 md:py-4 px-4 md:px-6 text-sm md:text-base font-bold tracking-wider transition-all rounded-full ${
                 activeSection === section.id
-                  ? "bg-linear-to-r from-[#4A90E2] to-[#26547C] text-white shadow-lg scale-105"
-                  : "text-gray-600 hover:text-[#4A90E2] hover:bg-gray-50"
+                  ? "bg-linear-to-r from-(--primary-blue) to-(--blue) text-white shadow-lg scale-105"
+                  : "text-gray-600 hover:text-(--primary-blue) hover:bg-gray-50"
               }`}
             >
               {section.label}

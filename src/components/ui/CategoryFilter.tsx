@@ -19,8 +19,8 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({
           onClick={() => onCategoryChange(category)}
           className={`px-6 py-3 rounded-full font-bold transition-all transform hover:scale-105 ${
             selectedCategory === category
-              ? "bg-linear-to-r from-[#FFB647] to-[#FF9500] text-white shadow-lg scale-105"
-              : "bg-white text-gray-700 border-2 border-gray-200 hover:border-[#FFB647] hover:shadow-md"
+              ? "bg-linear-to-r from-(--brand-orange) to-(--brand-orange-dark) text-white shadow-lg scale-105"
+              : "bg-white text-gray-700 border-2 border-gray-200 hover:border-(--brand-orange) hover:shadow-md"
           }`}
         >
           {category}

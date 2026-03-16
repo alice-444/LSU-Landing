@@ -11,15 +11,15 @@ const PricingHero: React.FC<PricingHeroProps> = ({
   onBillingPeriodChange,
 }) => {
   return (
-    <section className="relative overflow-hidden bg-linear-to-br from-[#FFB647] via-[#FF9500] to-[#FFB647]">
+    <section className="relative overflow-hidden bg-linear-to-br from-(--brand-orange) via-(--brand-orange-dark) to-(--brand-orange)">
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-10 left-10 w-48 h-48 bg-white rounded-full blur-3xl animate-pulse"></div>
         <div
-          className="absolute top-40 right-20 w-64 h-64 bg-[#4A90E2] rounded-full blur-3xl animate-pulse"
+          className="absolute top-40 right-20 w-64 h-64 bg-(--primary-blue) rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: "1s" }}
         ></div>
         <div
-          className="absolute bottom-20 left-1/3 w-56 h-56 bg-[#C9A0DC] rounded-full blur-3xl animate-pulse"
+          className="absolute bottom-20 left-1/3 w-56 h-56 bg-(--purple) rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: "2s" }}
         ></div>
       </div>
@@ -31,7 +31,7 @@ const PricingHero: React.FC<PricingHeroProps> = ({
         </div>
 
         <h1 className="text-5xl sm:text-6xl lg:text-7xl text-white mb-6 leading-tight">
-          <span className="inline-block bg-white text-[#FFB647] px-8 py-3 rounded-2xl transform rotate-1 shadow-2xl mt-4">
+          <span className="inline-block bg-white text-(--brand-orange) px-8 py-3 rounded-2xl transform rotate-1 shadow-2xl mt-4">
             Tarifs
           </span>
         </h1>
@@ -48,7 +48,7 @@ const PricingHero: React.FC<PricingHeroProps> = ({
             onClick={() => onBillingPeriodChange("monthly")}
             className={`px-8 py-4 rounded-full transition-all font-bold ${
               billingPeriod === "monthly"
-                ? "bg-white text-[#FFB647] shadow-xl scale-105"
+                ? "bg-white text-(--brand-orange) shadow-xl scale-105"
                 : "text-white hover:bg-white/10"
             }`}
           >
@@ -58,12 +58,12 @@ const PricingHero: React.FC<PricingHeroProps> = ({
             onClick={() => onBillingPeriodChange("annual")}
             className={`px-8 py-4 rounded-full transition-all font-bold relative ${
               billingPeriod === "annual"
-                ? "bg-white text-[#FFB647] shadow-xl scale-105"
+                ? "bg-white text-(--brand-orange) shadow-xl scale-105"
                 : "text-white hover:bg-white/10"
             }`}
           >
             Annuel
-            <span className="absolute -top-2 -right-2 bg-linear-to-r from-[#4A90E2] to-[#26547C] text-white text-xs px-3 py-1 rounded-full shadow-lg font-bold animate-pulse">
+            <span className="absolute -top-2 -right-2 bg-linear-to-r from-(--primary-blue) to-(--blue) text-white text-xs px-3 py-1 rounded-full shadow-lg font-bold animate-pulse">
               -20%
             </span>
           </button>

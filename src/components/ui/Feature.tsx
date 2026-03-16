@@ -10,7 +10,7 @@ const Feature: React.FC<FeatureProps> = ({ title, description, icon }) => (
     viewport={{ once: true }}
     className="flex flex-col items-center text-center"
   >
-    <div className="text-[var(--primary-blue)] mb-6">{icon}</div>
+    <div className="text-(--primary-blue) mb-6">{icon}</div>
     <h3 className="text-2xl font-semibold text-gray-800 mb-4">{title}</h3>
     <p className="text-gray-600 text-lg max-w-md">{description}</p>
   </motion.div>

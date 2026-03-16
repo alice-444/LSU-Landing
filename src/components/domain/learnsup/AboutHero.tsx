@@ -3,15 +3,15 @@ import { Telescope } from "lucide-react";
 
 const AboutHero: React.FC = () => {
   return (
-    <section className="relative overflow-hidden bg-linear-to-br from-[#4A90E2] via-[#26547C] to-[#C9A0DC]">
+    <section className="relative overflow-hidden bg-linear-to-br from-(--primary-blue) via-(--blue) to-(--purple)">
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-10 left-10 w-48 h-48 bg-white rounded-full blur-3xl animate-pulse"></div>
         <div
-          className="absolute top-40 right-20 w-64 h-64 bg-[#FFB647] rounded-full blur-3xl animate-pulse"
+          className="absolute top-40 right-20 w-64 h-64 bg-(--brand-orange) rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: "1s" }}
         ></div>
         <div
-          className="absolute bottom-20 left-1/3 w-56 h-56 bg-[#A8D5BA] rounded-full blur-3xl animate-pulse"
+          className="absolute bottom-20 left-1/3 w-56 h-56 bg-(--green) rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: "2s" }}
         ></div>
       </div>
@@ -23,7 +23,7 @@ const AboutHero: React.FC = () => {
         </div>
 
         <h1 className="text-5xl sm:text-6xl lg:text-7xl text-white mb-6 leading-tight">
-          <span className="inline-block bg-white text-[#4A90E2] px-8 py-3 rounded-2xl transform rotate-1 shadow-2xl mt-4">
+          <span className="inline-block bg-white text-(--primary-blue) px-8 py-3 rounded-2xl transform rotate-1 shadow-2xl mt-4">
             Découvrez Learnsup
           </span>
         </h1>

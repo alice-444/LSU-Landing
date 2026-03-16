@@ -9,7 +9,7 @@ const BenefitsSection: React.FC<BenefitsSectionProps> = ({ benefits }) => {
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 -mt-10">
       <div className="text-center mb-16">
-        <div className="inline-block bg-linear-to-r from-[#4A90E2] to-[#26547C] text-white px-6 py-3 rounded-full mb-4 font-bold transform hover:scale-105 transition-transform">
+        <div className="inline-block bg-linear-to-r from-(--primary-blue) to-(--blue) text-white px-6 py-3 rounded-full mb-4 font-bold transform hover:scale-105 transition-transform">
           Pourquoi Nous Choisir ?
         </div>
         <h2 className="text-4xl sm:text-5xl mb-4">Tout Pour Votre Réussite</h2>

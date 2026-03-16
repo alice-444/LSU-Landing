@@ -61,14 +61,14 @@ const FAQPageSection: React.FC<FAQPageSectionProps> = ({
             </p>
             <button
               onClick={() => onCategoryChange("Tout")}
-              className="mt-4 text-[#FFB647] hover:text-[#FF9500] font-bold underline"
+              className="mt-4 text-(--brand-orange) hover:text-(--brand-orange-dark) font-bold underline"
             >
               Voir toutes les questions
             </button>
           </div>
         )}
 
-        <div className="mt-12 text-center p-8 bg-linear-to-r from-[#C9A0DC]/10 to-[#A66FD9]/10 rounded-3xl border-2 border-[#C9A0DC]/20">
+        <div className="mt-12 text-center p-8 bg-linear-to-r from-(--purple)/10 to-(--purple-dark)/10 rounded-3xl border-2 border-(--purple)/20">
           <div className="text-4xl mb-4">🤔</div>
           <h3 className="text-2xl font-bold mb-2">Encore des questions ?</h3>
           <p className="text-gray-600 mb-6">
@@ -76,7 +76,7 @@ const FAQPageSection: React.FC<FAQPageSectionProps> = ({
             super vite 💬
           </p>
           <Link href="/contact">
-            <button className="bg-linear-to-r from-[#C9A0DC] to-[#A66FD9] text-white px-8 py-4 rounded-2xl hover:shadow-xl transition-all font-bold inline-flex items-center gap-2 group">
+            <button className="bg-linear-to-r from-(--purple) to-(--purple-dark) text-white px-8 py-4 rounded-2xl hover:shadow-xl transition-all font-bold inline-flex items-center gap-2 group">
               Contacter le Support
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>

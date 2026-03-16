@@ -30,10 +30,10 @@ const ContactInfoSection: React.FC = () => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-          className="bg-white rounded-2xl shadow-lg p-6 border-2 border-gray-100 hover:border-[#FFB647] transition-all transform hover:scale-105"
+          className="bg-white rounded-2xl shadow-lg p-6 border-2 border-gray-100 hover:border-(--brand-orange) transition-all transform hover:scale-105"
         >
           <div className="flex items-start gap-4">
-            <div className="w-12 h-12 bg-linear-to-br from-[#FFB647] to-[#FF9500] rounded-xl flex items-center justify-center shadow-lg text-white shrink-0">
+            <div className="w-12 h-12 bg-linear-to-br from-(--brand-orange) to-(--brand-orange-dark) rounded-xl flex items-center justify-center shadow-lg text-white shrink-0">
               {item.icon}
             </div>
             <div>

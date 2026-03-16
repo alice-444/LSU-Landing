@@ -12,7 +12,7 @@ const UniqueFeaturesSection: React.FC<UniqueFeaturesSectionProps> = ({
     <section className="bg-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-block bg-linear-to-r from-[#FFB647] to-[#FF9500] text-white px-6 py-3 rounded-full mb-4 font-bold transform hover:scale-105 transition-transform">
+          <div className="inline-block bg-linear-to-r from-(--brand-orange) to-(--brand-orange-dark) text-white px-6 py-3 rounded-full mb-4 font-bold transform hover:scale-105 transition-transform">
             Notre Secret 🔥
           </div>
           <h2 className="text-4xl sm:text-5xl mb-4">Ce qui nous rend unique</h2>

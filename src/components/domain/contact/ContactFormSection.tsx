@@ -22,18 +22,23 @@ const ContactFormSection: React.FC = () => {
     });
 
     try {
-      console.log(data);
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
       toast.success("Message envoyé avec succès !");
       reset();
-      
-      // Tracker le succès
+
       clarityEvent.track(ClarityEvents.CONTACT_FORM_SUCCESS, {
         subject: data.subject || "unknown",
       });
     } catch (error) {
       toast.error("Une erreur est survenue. Veuillez réessayer plus tard.");
-      
-      // Tracker l'erreur
+
       clarityEvent.track(ClarityEvents.CONTACT_FORM_ERROR, {
         error: error instanceof Error ? error.message : "unknown_error",
       });
@@ -45,10 +50,10 @@ const ContactFormSection: React.FC = () => {
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6, delay: 0.5 }}
-      className="bg-white rounded-3xl shadow-2xl p-8 border-4 border-[#FFB647]/20"
+      className="bg-white rounded-3xl shadow-2xl p-8 border-4 border-(--brand-orange)/20"
     >
       <div className="mb-6">
-        <div className="inline-block bg-linear-to-r from-[#FFB647] to-[#FF9500] text-white px-6 py-3 rounded-full mb-4 font-bold transform hover:scale-105 transition-transform">
+        <div className="inline-block bg-linear-to-r from-(--brand-orange) to-(--brand-orange-dark) text-white px-6 py-3 rounded-full mb-4 font-bold transform hover:scale-105 transition-transform">
           Envoie-nous un message
         </div>
         <h2 className="text-2xl font-bold text-gray-800 mb-2">

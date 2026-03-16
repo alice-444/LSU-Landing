@@ -3,7 +3,10 @@
 Ce document décrit les conventions de code et les modèles de conception suivis dans le projet.
 
 ## Composants (React)
-- **Organisation** : Regroupés par domaine dans `src/components/` (ex: `home/`, `layout/`, `contact/`).
+- **Organisation** : Séparés en trois couches dans `src/components/` :
+  - `ui/` — composants primitifs et réutilisables sans logique métier (ex: `PricingCard`, `FAQItem`, `FormField`).
+  - `shared/` — composants transversaux présents sur toutes les pages (ex: `Navbar`, `Footer`, `CTA`, `Newsletter`, `Clarity`).
+  - `domain/` — composants spécifiques à une page ou fonctionnalité, organisés par sous-dossier (ex: `domain/home/Hero.tsx`, `domain/pricing/FAQSection.tsx`).
 - **Interfaces** : Définies clairement au-dessus du composant ou dans `src/lib/types.ts`.
 - **Animations** : Centralisées via Framer Motion pour garantir la fluidité sur tous les supports.
 
