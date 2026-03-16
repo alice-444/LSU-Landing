@@ -5,12 +5,7 @@ import Navbar from "@/components/shared/Navbar";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import ToasterContext from "@/components/ui/ToasterContext";
 import Clarity from "@/components/shared/Clarity";
-import { type ComponentType } from "react";
-
-type AppProps = {
-  Component: ComponentType<any>;
-  pageProps: any;
-};
+import type { AppProps } from "next/app";
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (

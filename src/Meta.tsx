@@ -33,7 +33,7 @@ const Meta: React.FC<MetaProps> = ({
       <meta name="keywords" content={keywords} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="author" content={SITE_NAME} />
-      <meta name="theme-color" content="var(--brand-orange)" />
+      <meta name="theme-color" content="#FFB647" />
       <link rel="canonical" href={canonicalUrl} />
       {noIndex && <meta name="robots" content="noindex, nofollow" />}
 

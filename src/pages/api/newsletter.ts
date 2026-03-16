@@ -5,7 +5,10 @@ import { NewsletterWelcomeEmail } from "@/emails/NewsletterWelcomeEmail";
 
 const emailRegex = /^[\w\.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,6}$/;
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
   if (req.method === "POST") {
     const { email } = req.body;
 
@@ -25,16 +28,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           audienceId: audienceId,
         });
       } else {
-        // Si pas d'audience ID, on envoie un email de notification ou on log
-        console.log("RESEND_AUDIENCE_ID non configuré. Nouvel e-mail :", email);
-        
-        // Optionnel: Envoyer un email de bienvenue/confirmation
-        const fromEmail = process.env.RESEND_FROM_EMAIL || 'LearnSup <onboarding@resend.dev>';
-        
+        const fromEmail =
+          process.env.RESEND_FROM_EMAIL ?? "LearnSup <no-reply@learnsup.fr>";
+
         await resend.emails.send({
           from: fromEmail,
           to: email,
-          subject: 'Bienvenue dans la newsletter LearnSup !',
+          subject: "Bienvenue dans la newsletter LearnSup !",
           react: React.createElement(NewsletterWelcomeEmail),
         });
       }
@@ -42,7 +42,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(200).json({ message: "Inscription réussie !" });
     } catch (error) {
       console.error("Erreur Resend:", error);
-      return res.status(500).json({ message: "Une erreur est survenue lors de l'inscription." });
+      return res
+        .status(500)
+        .json({ message: "Une erreur est survenue lors de l'inscription." });
     }
   }
 

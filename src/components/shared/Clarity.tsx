@@ -11,13 +11,7 @@ const Clarity: React.FC = () => {
 
     if (clarityId) {
       clarity.init(clarityId);
-      
-      // Exposer clarity globalement pour les utilitaires
-      if (typeof window !== "undefined") {
-        // Clarity est déjà disponible globalement après init
-        // Pas besoin de l'assigner manuellement
-      }
-    } else {
+    } else if (process.env.NODE_ENV !== "production") {
       console.warn(
         "Microsoft Clarity ID is not configured. Please set NEXT_PUBLIC_CLARITY_ID in your environment variables."
       );
