@@ -1,7 +1,19 @@
 import Link from "next/link";
 import Image from "next/image";
+import toast from "react-hot-toast";
 import { motion, type Variants } from "framer-motion";
 import { useState, useEffect, type ReactNode } from "react";
+
+const showComingSoonToast = () =>
+  toast("En cours de déploiement — à très bientôt ! 🚀", {
+    icon: "🔨",
+    duration: 4000,
+    style: {
+      background: "linear-gradient(135deg, var(--brand-orange) 0%, var(--brand-orange-dark) 100%)",
+      color: "#fff",
+      fontWeight: 600,
+    },
+  });
 import { PiChalkboardTeacherDuotone } from "react-icons/pi";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { BrainCircuit, BadgeEuro } from "lucide-react";
@@ -23,7 +35,6 @@ const NAV_LINKS: NavLink[] = [
 ];
 
 const CTA_BUTTON = {
-  href: "https://app.learnsup.fr",
   text: "Rejoins-nous",
   colors: "from-(--brand-orange) to-(--brand-orange-dark)",
 } as const;
@@ -121,16 +132,15 @@ const CTAButton: React.FC<CTAButtonProps> = ({ isMobile = false, onClick }) => {
       transition={{ duration: 0.3 }}
       className={isMobile ? "w-full" : "hidden lg:flex"}
     >
-      <Link href={CTA_BUTTON.href} onClick={onClick}>
-        <button
-          type="button"
-          className={`${baseClasses} ${
-            isMobile ? mobileClasses : desktopClasses
-          }`}
-        >
-          {CTA_BUTTON.text}
-        </button>
-      </Link>
+      <button
+        type="button"
+        onClick={() => { showComingSoonToast(); onClick?.(); }}
+        className={`${baseClasses} ${
+          isMobile ? mobileClasses : desktopClasses
+        }`}
+      >
+        {CTA_BUTTON.text}
+      </button>
     </motion.div>
   );
 };

@@ -1,6 +1,18 @@
 import Link from "next/link";
+import toast from "react-hot-toast";
 import { Check, CreditCard, X } from "lucide-react";
 import { clarityEvent, ClarityEvents } from "@/lib/clarity";
+
+const showComingSoonToast = () =>
+  toast("En cours de déploiement — à très bientôt ! 🚀", {
+    icon: "🔨",
+    duration: 4000,
+    style: {
+      background: "linear-gradient(135deg, var(--brand-orange) 0%, var(--brand-orange-dark) 100%)",
+      color: "#fff",
+      fontWeight: 600,
+    },
+  });
 
 const CTA: React.FC = () => {
   return (
@@ -27,19 +39,18 @@ const CTA: React.FC = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center mb-4">
-          <Link href="https://app.learnsup.fr">
-            <button
-              onClick={() => {
-                clarityEvent.track(ClarityEvents.CTA_CLICK, {
-                  cta_type: "start_now",
-                  location: "home_cta_section",
-                });
-              }}
-              className="group bg-white text-(--brand-orange) px-6 py-3 rounded-[20px] flex items-center justify-center gap-2 hover:scale-105 transition-all shadow-2xl font-bold"
-            >
-              <span>Commence maintenant</span>
-            </button>
-          </Link>
+          <button
+            onClick={() => {
+              showComingSoonToast();
+              clarityEvent.track(ClarityEvents.CTA_CLICK, {
+                cta_type: "start_now",
+                location: "home_cta_section",
+              });
+            }}
+            className="group bg-white text-(--brand-orange) px-6 py-3 rounded-[20px] flex items-center justify-center gap-2 hover:scale-105 transition-all shadow-2xl font-bold"
+          >
+            <span>Commence maintenant</span>
+          </button>
           <Link href="/contact">
             <button
               onClick={() => {
