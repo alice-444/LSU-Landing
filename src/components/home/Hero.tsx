@@ -1,5 +1,4 @@
 import Link from "next/link";
-import toast from "react-hot-toast";
 import { Rocket, Sparkles, TrendingUp } from "lucide-react";
 
 const Hero: React.FC = () => {
@@ -45,23 +44,12 @@ const Hero: React.FC = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <button
-                onClick={() =>
-                  toast("En cours de développement — à très bientôt ! 🚧", {
-                    icon: "🔨",
-                    duration: 4000,
-                    style: {
-                      background: "linear-gradient(135deg, #FFB647 0%, #FF9500 100%)",
-                      color: "#fff",
-                      fontWeight: 600,
-                    },
-                  })
-                }
-                className="group bg-white text-[#FFB647] px-8 py-5 rounded-[24px] flex items-center justify-center gap-3 hover:scale-105 hover:shadow-2xl transition-all shadow-xl font-bold text-lg"
-              >
-                <span>Commence gratuitement</span>
-                <Rocket className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-              </button>
+              <Link href="https://app.learnsup.fr">
+                <button className="group bg-white text-[#FFB647] px-8 py-5 rounded-[24px] flex items-center justify-center gap-3 hover:scale-105 hover:shadow-2xl transition-all shadow-xl font-bold text-lg">
+                  <span>Commence gratuitement</span>
+                  <Rocket className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </Link>
               <Link href="/services#demo">
                 <button className="bg-white/20 backdrop-blur-sm text-white px-8 py-5 rounded-[24px] hover:bg-white/30 transition-all border-4 border-white/40 font-bold text-lg hover:scale-105">
                   Voir la démo
