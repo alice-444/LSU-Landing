@@ -1,8 +1,8 @@
-import SchoolsHero from "@/components/school/SchoolsHero";
-import BenefitsSection from "@/components/school/BenefitsSection";
-import FeaturesSection from "@/components/school/FeaturesSection";
-import ProcessSection from "@/components/school/ProcessSection";
-import SchoolsCTA from "@/components/school/SchoolsCTA";
+import SchoolsHero from "@/components/domain/school/SchoolsHero";
+import BenefitsSection from "@/components/domain/school/BenefitsSection";
+import FeaturesSection from "@/components/domain/school/FeaturesSection";
+import ProcessSection from "@/components/domain/school/ProcessSection";
+import SchoolsCTA from "@/components/domain/school/SchoolsCTA";
 import { benefits, features, processSteps } from "@/lib/data/school";
 
 const SchoolsPage = () => {

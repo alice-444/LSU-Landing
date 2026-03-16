@@ -40,7 +40,7 @@ export const benefits: Benefit[] = [
     title: "Tableau de Bord Admin",
     description:
       "Suivez les progrès de tous vos étudiants en temps réel avec des rapports détaillés et des analytics ultra-puissants.",
-    color: "from-[#FFB647] to-[#FF9500]",
+    color: "from-(--brand-orange) to-(--brand-orange-dark)",
     emoji: "📊",
   },
   {
@@ -48,7 +48,7 @@ export const benefits: Benefit[] = [
     title: "Rapports Personnalisés",
     description:
       "Générez des rapports sur mesure pour analyser les performances par classe, niveau ou matière en quelques clics.",
-    color: "from-[#4A90E2] to-[#26547C]",
+    color: "from-(--primary-blue) to-(--blue)",
     emoji: "📈",
   },
   {
@@ -56,7 +56,7 @@ export const benefits: Benefit[] = [
     title: "Sécurité",
     description:
       "Conforme RGPD avec authentification SSO et gestion des rôles. Vos données sont en sécurité dans l'UE.",
-    color: "from-[#A8D5BA] to-[#7BC9A6]",
+    color: "from-(--green) to-[#7BC9A6]",
     emoji: "🔒",
   },
   {
@@ -64,7 +64,7 @@ export const benefits: Benefit[] = [
     title: "Support Dédié",
     description:
       "Un gestionnaire de compte dédié et une assistance prioritaire 24/7 pour votre établissement.",
-    color: "from-[#C9A0DC] to-[#A66FD9]",
+    color: "from-(--purple) to-(--purple-dark)",
     emoji: "💬",
   },
 ];
@@ -86,7 +86,7 @@ export const processSteps: ProcessStep[] = [
       "On vous montre comment Learnsup s'adapte à votre établissement",
     icon: MessageSquare,
     emoji: "👋",
-    color: "from-[#FFB647] to-[#FF9500]",
+    color: "from-(--brand-orange) to-(--brand-orange-dark)",
   },
   {
     step: "02",
@@ -94,7 +94,7 @@ export const processSteps: ProcessStep[] = [
     description: "On configure la plateforme selon vos besoins spécifiques",
     icon: Target,
     emoji: "⚙️",
-    color: "from-[#4A90E2] to-[#26547C]",
+    color: "from-(--primary-blue) to-(--blue)",
   },
   {
     step: "03",
@@ -102,7 +102,7 @@ export const processSteps: ProcessStep[] = [
     description: "Vos enseignants sont formés et prêts à démarrer",
     icon: Users,
     emoji: "👨‍🏫",
-    color: "from-[#C9A0DC] to-[#A66FD9]",
+    color: "from-(--purple) to-(--purple-dark)",
   },
   {
     step: "04",
@@ -110,6 +110,6 @@ export const processSteps: ProcessStep[] = [
     description: "On reste à vos côtés pour garantir votre succès",
     icon: Rocket,
     emoji: "🎯",
-    color: "from-[#A8D5BA] to-[#7BC9A6]",
+    color: "from-(--green) to-[#7BC9A6]",
   },
 ];

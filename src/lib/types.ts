@@ -1,24 +1,4 @@
-import { ReactNode } from "react";
-import { FieldErrors, RegisterOptions } from "react-hook-form";
-
-import { UseFormRegister } from "react-hook-form";
-
-// privacy page
-export interface SectionProps {
-  title: string;
-  children: React.ReactNode;
-}
-
-export interface LinkProps {
-  href: string;
-  children: React.ReactNode;
-}
-
-// FAQ page
-export interface FAQItem {
-  question: string;
-  answer: string;
-}
+import { FieldErrors, RegisterOptions, UseFormRegister } from "react-hook-form";
 
 // Contact page
 export interface ContactFormData {
@@ -45,11 +25,6 @@ export interface ContactInfo {
   content: string;
 }
 
-// Footer
-export interface FooterProps {
-  setActiveSection?: (section: Section) => void;
-}
-
 // LearnSup page
 export type Section = "mission" | "approche" | "équipe" | "contact";
 
@@ -74,26 +49,3 @@ export interface SectionContentProps {
   activeSection: Section;
 }
 
-// Product page
-export interface KeyPointProps {
-  icon: ReactNode;
-  label: string;
-}
-
-export interface FeatureCardProps {
-  icon: ReactNode;
-  title: string;
-  description: string;
-  badge?: string;
-}
-
-export interface ComparisonRow {
-  label: string;
-  lsu: boolean;
-  sp: boolean;
-  tr: boolean;
-}
-
-export interface ComparisonTableProps {
-  rows: ComparisonRow[];
-}

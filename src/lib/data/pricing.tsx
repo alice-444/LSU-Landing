@@ -13,6 +13,7 @@ export interface PricingPlan {
   features: string[];
   limitations: string[];
   cta: string;
+  ctaHref: string;
   highlight: boolean;
   savings?: string;
 }
@@ -31,39 +32,38 @@ export const pricingPlans: PricingPlan[] = [
     description: "Parfait pour tester et découvrir",
     icon: Star,
     emoji: "⭐",
-    color: "from-[#A8D5BA] to-[#7BC9A6]",
+    color: "from-(--green) to-[#7BC9A6]",
     badgeText: "Découverte",
-    badgeColor: "bg-[#A8D5BA]",
+    badgeColor: "bg-(--green)",
     features: [
       "Accès à 20 ateliers essentiels",
+      "Système de gamification",
       "Progression basique",
       "Communauté étudiante",
-      "n credits par mois",
     ],
-    limitations: ["Ateliers limités", "Pas de certificats"],
+    limitations: ["Support prioritaire"],
     cta: "Commencer Gratuitement",
+    ctaHref: "https://app.learnsup.fr",
     highlight: false,
   },
   {
     name: "Premium",
     price: { monthly: 9.99, annual: 7.99 },
-    description: "Le meilleur rapport qualité/prix 🔥",
+    description: "",
     icon: Zap,
     emoji: "⚡",
-    color: "from-[#FFB647] to-[#FF9500]",
+    color: "from-(--brand-orange) to-(--brand-orange-dark)",
     badgeText: "Le Plus Populaire",
-    badgeColor: "bg-gradient-to-r from-[#FFB647] to-[#FF9500]",
+    badgeColor: "bg-linear-to-r from-(--brand-orange) to-(--brand-orange-dark)",
     popular: true,
     features: [
       "Accès illimité à TOUS les ateliers",
-      "Système de gamification",
-      "Certificats reconnus",
-      "Statistiques détaillées",
-      "Support prioritaire (24h)",
+      "Support prioritaire",
       "Badges exclusifs à débloquer",
     ],
     limitations: [],
     cta: "Choisir Premium",
+    ctaHref: "https://app.learnsup.fr",
     highlight: true,
     savings: "24€/an",
   },
@@ -73,11 +73,12 @@ export const pricingPlans: PricingPlan[] = [
     description: "Pour les écoles en études supérieures",
     icon: School,
     emoji: "👑",
-    color: "from-[#C9A0DC] to-[#A66FD9]",
-    badgeColor: "bg-gradient-to-r from-[#C9A0DC] to-[#A66FD9]",
+    color: "from-(--purple) to-(--purple-dark)",
+    badgeColor: "bg-linear-to-r from-(--purple) to-(--purple-dark)",
     features: ["TOUT du plan Premium"],
     limitations: [],
     cta: "Contactez-nous pour un devis",
+    ctaHref: "/contact",
     highlight: false,
   },
 ];

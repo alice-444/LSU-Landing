@@ -16,7 +16,9 @@ export const clarityEvent = {
           clarity("event", name, data);
         }
       } catch (error) {
-        console.warn("Erreur lors de l'envoi de l'événement Clarity:", error);
+        if (process.env.NODE_ENV !== "production") {
+          console.warn("Erreur lors de l'envoi de l'événement Clarity:", error);
+        }
       }
     }
   },
@@ -33,7 +35,9 @@ export const clarityEvent = {
           clarity("identify", userId);
         }
       } catch (error) {
-        console.warn("Erreur lors de l'identification Clarity:", error);
+        if (process.env.NODE_ENV !== "production") {
+          console.warn("Erreur lors de l'identification Clarity:", error);
+        }
       }
     }
   },
@@ -51,10 +55,12 @@ export const clarityEvent = {
           clarity.setTag(key, value);
         }
       } catch (error) {
-        console.warn(
-          "Erreur lors de la définition des métadonnées Clarity:",
-          error
-        );
+        if (process.env.NODE_ENV !== "production") {
+          console.warn(
+            "Erreur lors de la définition des métadonnées Clarity:",
+            error
+          );
+        }
       }
     }
   },

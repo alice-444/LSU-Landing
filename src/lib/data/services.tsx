@@ -60,7 +60,7 @@ export const uniqueFeatures: UniqueFeature[] = [
     title: "Gamification",
     description:
       "Monte en niveau, débloque des badges, ... Apprendre n'a jamais été aussi fun !",
-    color: "from-[#C9A0DC] to-[#A66FD9]",
+    color: "from-(--purple) to-(--purple-dark)",
     emoji: "🏆",
   },
   {
@@ -68,7 +68,7 @@ export const uniqueFeatures: UniqueFeature[] = [
     title: "Mentors Experts",
     description:
       "Des étudiants passionnés qui ont réussi et veulent t'aider. Pas de profs ennuyeux, juste de vrais mentors !",
-    color: "from-[#A8D5BA] to-[#7BC9A6]",
+    color: "from-(--green) to-[#7BC9A6]",
     emoji: "🧠",
   },
 ];

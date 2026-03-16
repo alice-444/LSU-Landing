@@ -1,7 +1,7 @@
 import React from "react";
-import PrivacyHero from "@/components/legal/PrivacyHero";
-import LegalSection from "@/components/legal/LegalSection";
-import LegalLink from "@/components/legal/LegalLink";
+import PrivacyHero from "@/components/domain/legal/PrivacyHero";
+import LegalSection from "@/components/ui/LegalSection";
+import LegalLink from "@/components/ui/LegalLink";
 import {
   DATA_COLLECTION,
   DATA_PURPOSES,

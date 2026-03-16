@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import FAQHero from "@/components/faq/FAQHero";
-import FAQPageSection from "@/components/faq/FAQPageSection";
+import FAQHero from "@/components/domain/faq/FAQHero";
+import FAQPageSection from "@/components/domain/faq/FAQPageSection";
 import { faqs, faqCategories } from "@/lib/data/faq";
 
 const FAQPage: React.FC = () => {
