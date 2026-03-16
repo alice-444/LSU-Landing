@@ -52,7 +52,7 @@ export const pricingPlans: PricingPlan[] = [
     emoji: "⚡",
     color: "from-[#FFB647] to-[#FF9500]",
     badgeText: "Le Plus Populaire",
-    badgeColor: "bg-gradient-to-r from-[#FFB647] to-[#FF9500]",
+    badgeColor: "bg-linear-to-r from-[#FFB647] to-[#FF9500]",
     popular: true,
     features: [
       "Accès illimité à TOUS les ateliers",
@@ -74,7 +74,7 @@ export const pricingPlans: PricingPlan[] = [
     icon: School,
     emoji: "👑",
     color: "from-[#C9A0DC] to-[#A66FD9]",
-    badgeColor: "bg-gradient-to-r from-[#C9A0DC] to-[#A66FD9]",
+    badgeColor: "bg-linear-to-r from-[#C9A0DC] to-[#A66FD9]",
     features: ["TOUT du plan Premium"],
     limitations: [],
     cta: "Contactez-nous pour un devis",

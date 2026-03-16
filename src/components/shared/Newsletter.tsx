@@ -1,6 +1,6 @@
 import { Sparkles } from "lucide-react";
 import Link from "next/link";
-import NewsletterForm from "@/components/newsletter/NewsletterForm";
+import NewsletterForm from "@/components/shared/NewsletterForm";
 
 const Newsletter = () => {
   return (
@@ -60,7 +60,7 @@ const Newsletter = () => {
 
             <div className="relative">
               <NewsletterForm />
-              <p className="text-xs sm:text-sm text-(--quaternary-blue)] mt-3 sm:mt-4">
+              <p className="text-xs sm:text-sm text-[var(--quaternary-blue)] mt-3 sm:mt-4">
                 En communiquant votre email, tu acceptes de recevoir des
                 informations marketing des services de LearnSup. Pour en savoir
                 plus, consulte notre{" "}

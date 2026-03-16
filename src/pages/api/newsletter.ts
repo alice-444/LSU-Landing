@@ -1,3 +1,4 @@
+import React from "react";
 import { NextApiRequest, NextApiResponse } from "next";
 import { resend } from "@/lib/resend";
 import { NewsletterWelcomeEmail } from "@/emails/NewsletterWelcomeEmail";
@@ -34,7 +35,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           from: fromEmail,
           to: email,
           subject: 'Bienvenue dans la newsletter LearnSup !',
-          react: NewsletterWelcomeEmail(),
+          react: React.createElement(NewsletterWelcomeEmail),
         });
       }
 

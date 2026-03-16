@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { SectionContentProps } from "@/lib/types";
-import Feature from "@/components/learnsup/Feature";
-import TeamMember from "@/components/learnsup/TeamMember";
+import Feature from "@/components/ui/Feature";
+import TeamMember from "@/components/ui/TeamMember";
 import Link from "next/link";
 import {
   HelpCircle,

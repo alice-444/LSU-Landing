@@ -1,5 +1,5 @@
 import React from "react";
-import PricingCard from "./PricingCard";
+import PricingCard from "@/components/ui/PricingCard";
 import { PricingPlan } from "@/lib/data/pricing";
 
 interface PricingCardsSectionProps {
@@ -16,7 +16,7 @@ const PricingCardsSection: React.FC<PricingCardsSectionProps> = ({
       <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
         {plans.map((plan, index) => (
           <PricingCard
-            key={index}
+            key={plan.name}
             plan={plan}
             billingPeriod={billingPeriod}
             index={index}

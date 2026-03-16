@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import AboutHero from "@/components/learnsup/AboutHero";
-import AboutNavigation from "@/components/learnsup/AboutNavigation";
-import AboutSectionContent from "@/components/learnsup/AboutSectionContent";
+import AboutHero from "@/components/domain/learnsup/AboutHero";
+import AboutNavigation from "@/components/domain/learnsup/AboutNavigation";
+import AboutSectionContent from "@/components/domain/learnsup/AboutSectionContent";
 import { Section } from "@/lib/types";
 
 export default function LearnSup() {

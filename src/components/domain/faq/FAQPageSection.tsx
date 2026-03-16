@@ -1,11 +1,11 @@
 import React from "react";
-import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import CategoryFilter from "./CategoryFilter";
-import FAQItem from "./FAQItem";
-import { FAQ } from "@/lib/data/pricing";
+import CategoryFilter from "@/components/ui/CategoryFilter";
+import FAQItem from "@/components/ui/FAQItem";
+import { FAQ } from "@/lib/data/faq";
+import Link from "next/link";
 
-interface FAQSectionProps {
+interface FAQPageSectionProps {
   faqs: FAQ[];
   categories: string[];
   selectedCategory: string;
@@ -14,7 +14,7 @@ interface FAQSectionProps {
   onFAQToggle: (index: number) => void;
 }
 
-const FAQSection: React.FC<FAQSectionProps> = ({
+const FAQPageSection: React.FC<FAQPageSectionProps> = ({
   faqs,
   categories,
   selectedCategory,
@@ -32,16 +32,6 @@ const FAQSection: React.FC<FAQSectionProps> = ({
   return (
     <section className="bg-white py-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-block bg-linear-to-r from-[#C9A0DC] to-[#A66FD9] text-white px-6 py-3 rounded-full mb-4 font-bold transform hover:scale-105 transition-transform">
-            Questions / Réponses 💬
-          </div>
-          <h2 className="text-4xl sm:text-5xl mb-4">FAQ Paiements</h2>
-          <p className="text-xl text-gray-600">
-            Tout ce que tu dois savoir sur nos tarifs et paiements
-          </p>
-        </div>
-
         <CategoryFilter
           categories={categories}
           selectedCategory={selectedCategory}
@@ -78,7 +68,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({
           </div>
         )}
 
-        <div className="mt-12 text-center p-8 bg-linear-to-r from-[#FFB647]/10 to-[#FF9500]/10 rounded-3xl border-2 border-[#FFB647]/20">
+        <div className="mt-12 text-center p-8 bg-linear-to-r from-[#C9A0DC]/10 to-[#A66FD9]/10 rounded-3xl border-2 border-[#C9A0DC]/20">
           <div className="text-4xl mb-4">🤔</div>
           <h3 className="text-2xl font-bold mb-2">Encore des questions ?</h3>
           <p className="text-gray-600 mb-6">
@@ -86,7 +76,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({
             super vite 💬
           </p>
           <Link href="/contact">
-            <button className="bg-linear-to-r from-[#FFB647] to-[#FF9500] text-white px-8 py-4 rounded-2xl hover:shadow-xl transition-all font-bold inline-flex items-center gap-2 group">
+            <button className="bg-linear-to-r from-[#C9A0DC] to-[#A66FD9] text-white px-8 py-4 rounded-2xl hover:shadow-xl transition-all font-bold inline-flex items-center gap-2 group">
               Contacter le Support
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
@@ -97,4 +87,4 @@ const FAQSection: React.FC<FAQSectionProps> = ({
   );
 };
 
-export default FAQSection;
+export default FAQPageSection;

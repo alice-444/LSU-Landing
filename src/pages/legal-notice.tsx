@@ -1,7 +1,7 @@
 import React from "react";
-import LegalHero from "@/components/legal/LegalHero";
-import LegalSection from "@/components/legal/LegalSection";
-import LegalLink from "@/components/legal/LegalLink";
+import LegalHero from "@/components/domain/legal/LegalHero";
+import LegalSection from "@/components/ui/LegalSection";
+import LegalLink from "@/components/ui/LegalLink";
 import {
   CONTACT_EMAIL,
   CONTACT_PHONE,

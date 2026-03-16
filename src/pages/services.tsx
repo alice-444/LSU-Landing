@@ -1,9 +1,9 @@
-import CTA from "@/components/CTA";
-import ServicesHero from "@/components/services/ServicesHero";
-import UniqueFeaturesSection from "@/components/services/UniqueFeaturesSection";
-import WorkshopsSection from "@/components/services/WorkshopsSection";
-import ComparisonTableSection from "@/components/services/ComparisonTableSection";
-import DemoSection from "@/components/services/DemoSection";
+import CTA from "@/components/shared/CTA";
+import ServicesHero from "@/components/domain/services/ServicesHero";
+import UniqueFeaturesSection from "@/components/domain/services/UniqueFeaturesSection";
+import WorkshopsSection from "@/components/domain/services/WorkshopsSection";
+import ComparisonTableSection from "@/components/domain/services/ComparisonTableSection";
+import DemoSection from "@/components/domain/services/DemoSection";
 import {
   competitors,
   comparisonFeatures,

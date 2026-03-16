@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { ContactFormData } from "@/lib/types";
-import FormField from "@/components/contact/FormField";
-import SubmitButton from "@/components/contact/SubmitButton";
+import FormField from "@/components/ui/FormField";
+import SubmitButton from "@/components/ui/SubmitButton";
 import { clarityEvent, ClarityEvents } from "@/lib/clarity";
 
 const ContactFormSection: React.FC = () => {

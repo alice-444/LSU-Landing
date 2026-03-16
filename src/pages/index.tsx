@@ -1,8 +1,8 @@
-import Hero from "@/components/home/Hero";
-import WhyLearnSup from "@/components/home/WhyLearnSup";
-import HowItWorks from "@/components/home/HowItWork";
-import Newsletter from "@/components/newsletter/Newsletter";
-import CTA from "@/components/CTA";
+import Hero from "@/components/domain/home/Hero";
+import WhyLearnSup from "@/components/domain/home/WhyLearnSup";
+import HowItWorks from "@/components/domain/home/HowItWork";
+import Newsletter from "@/components/shared/Newsletter";
+import CTA from "@/components/shared/CTA";
 
 const Home: React.FC = () => {
   return (

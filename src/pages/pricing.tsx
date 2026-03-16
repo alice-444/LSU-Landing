@@ -1,9 +1,9 @@
 import { useState } from "react";
-import Newsletter from "@/components/newsletter/Newsletter";
-import CTA from "@/components/CTA";
-import PricingHero from "@/components/pricing/PricingHero";
-import PricingCardsSection from "@/components/pricing/PricingCardsSection";
-import FAQSection from "@/components/pricing/FAQSection";
+import Newsletter from "@/components/shared/Newsletter";
+import CTA from "@/components/shared/CTA";
+import PricingHero from "@/components/domain/pricing/PricingHero";
+import PricingCardsSection from "@/components/domain/pricing/PricingCardsSection";
+import FAQSection from "@/components/domain/pricing/FAQSection";
 import { pricingPlans, faqs, faqCategories } from "@/lib/data/pricing";
 
 const PricingPage = () => {

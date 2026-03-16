@@ -1,3 +1,4 @@
+import React from "react";
 import { NextApiRequest, NextApiResponse } from "next";
 import { resend } from "@/lib/resend";
 import { ContactFormEmail } from "@/emails/ContactFormEmail";
@@ -19,7 +20,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         to: [toEmail],
         subject: `Contact Form: ${subject}`,
         replyTo: email,
-        react: ContactFormEmail({ name, email, subject, message }),
+        react: React.createElement(ContactFormEmail, { name, email, subject, message }),
       });
 
       if (error) {

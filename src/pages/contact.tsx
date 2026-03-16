@@ -1,7 +1,7 @@
 import React from "react";
-import ContactHero from "@/components/contact/ContactHero";
-import ContactInfoSection from "@/components/contact/ContactInfoSection";
-import ContactFormSection from "@/components/contact/ContactFormSection";
+import ContactHero from "@/components/domain/contact/ContactHero";
+import ContactInfoSection from "@/components/domain/contact/ContactInfoSection";
+import ContactFormSection from "@/components/domain/contact/ContactFormSection";
 
 const Contact: React.FC = () => {
   return (
