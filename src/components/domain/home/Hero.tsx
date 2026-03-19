@@ -1,17 +1,5 @@
 import Link from "next/link";
-import toast from "react-hot-toast";
 import { Rocket, Sparkles } from "lucide-react";
-
-const showComingSoonToast = () =>
-  toast("En cours de déploiement — à très bientôt ! 🚀", {
-    icon: "🔨",
-    duration: 4000,
-    style: {
-      background: "linear-gradient(135deg, var(--brand-orange) 0%, var(--brand-orange-dark) 100%)",
-      color: "#fff",
-      fontWeight: 600,
-    },
-  });
 
 const Hero: React.FC = () => {
   return (
@@ -56,10 +44,12 @@ const Hero: React.FC = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <button onClick={showComingSoonToast} className="group bg-white text-(--brand-orange) px-8 py-5 rounded-[24px] flex items-center justify-center gap-3 hover:scale-105 hover:shadow-2xl transition-all shadow-xl font-bold text-lg">
-                <span>Commence gratuitement</span>
-                <Rocket className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-              </button>
+              <Link href="https://app.learnsup.fr">
+                <button className="group bg-white text-(--brand-orange) px-8 py-5 rounded-[24px] flex items-center justify-center gap-3 hover:scale-105 hover:shadow-2xl transition-all shadow-xl font-bold text-lg">
+                  <span>Commence gratuitement</span>
+                  <Rocket className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </Link>
               <Link href="/services#demo">
                 <button className="bg-white/20 backdrop-blur-sm text-white px-8 py-5 rounded-[24px] hover:bg-white/30 transition-all border-4 border-white/40 font-bold text-lg hover:scale-105">
                   Voir la démo

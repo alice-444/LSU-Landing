@@ -1,19 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import toast from "react-hot-toast";
 import { Check, X, Star, ChevronRight } from "lucide-react";
 import { PricingPlan } from "@/lib/data/pricing";
-
-const showComingSoonToast = () =>
-  toast("En cours de déploiement — à très bientôt ! 🚀", {
-    icon: "🔨",
-    duration: 4000,
-    style: {
-      background: "linear-gradient(135deg, var(--brand-orange) 0%, var(--brand-orange-dark) 100%)",
-      color: "#fff",
-      fontWeight: 600,
-    },
-  });
 
 interface PricingCardProps {
   plan: PricingPlan;
@@ -145,9 +133,8 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, billingPeriod, index })
             )}
           </div>
 
-          {plan.ctaHref.startsWith("http") ? (
+          <Link href={plan.ctaHref}>
             <button
-              onClick={showComingSoonToast}
               className={`w-full py-5 rounded-full mb-8 font-bold text-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group ${plan.highlight
                   ? `bg-linear-to-r ${plan.color} text-white`
                   : "bg-gray-100 text-gray-900 hover:bg-gray-200"
@@ -156,19 +143,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, billingPeriod, index })
               {plan.cta}
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-          ) : (
-            <Link href={plan.ctaHref}>
-              <button
-                className={`w-full py-5 rounded-full mb-8 font-bold text-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group ${plan.highlight
-                    ? `bg-linear-to-r ${plan.color} text-white`
-                    : "bg-gray-100 text-gray-900 hover:bg-gray-200"
-                  }`}
-              >
-                {plan.cta}
-                <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </Link>
-          )}
+          </Link>
 
           <div className="space-y-4 mb-6">
             <div className="text-sm font-bold text-gray-900 uppercase tracking-wide">
