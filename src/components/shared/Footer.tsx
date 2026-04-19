@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Globe, HelpCircle, Instagram, Linkedin, Mail, Scale } from "lucide-react";
+import { Globe, HelpCircle, Mail, Scale } from "lucide-react";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -42,13 +43,13 @@ const Footer: React.FC = () => {
       color: "var(--brand-orange)",
     },
     {
-      icon: Instagram,
+      icon: FaInstagram,
       href: "https://www.instagram.com/learn_sup/",
       label: "Instagram",
       color: "var(--purple)",
     },
     {
-      icon: Linkedin,
+      icon: FaLinkedin,
       href: "https://www.linkedin.com/company/learnsup/",
       label: "LinkedIn",
       color: "var(--primary-blue)",
@@ -132,9 +133,9 @@ const Footer: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
             >
               <h4 className="text-gray-900 font-black mb-3 text-sm uppercase tracking-wide">
-              <span className="flex items-center gap-2">
-              {section.icon}
-              {section.category}</span>
+                <span className="flex items-center gap-2">
+                  {section.icon}
+                  {section.category}</span>
 
               </h4>
               <ul className="space-y-2">
