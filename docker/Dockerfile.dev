@@ -8,13 +8,13 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
 # Copie des fichiers de dépendances
-COPY ../package.json ../yarn.lock* ../package-lock.json* ../pnpm-lock.yaml* ../.npmrc* ./
+COPY ../package.json ../yarn.lock* ../package-lock.json* ../pnpm-lock.yaml* ../pnpm-workspace.yaml* ../.npmrc* ./
 
 # Installation des dépendances selon le gestionnaire de paquets utilisé
 RUN \
     if [ -f yarn.lock ]; then yarn install; \
-    elif [ -f package-lock.json ]; then npm install; \
     elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm install; \
+    elif [ -f package-lock.json ]; then npm install; \
     else echo "Lockfile not found." && exit 1; \
     fi
 
@@ -32,7 +32,7 @@ ENV HOSTNAME="0.0.0.0"
 # Commande pour démarrer le serveur de développement
 CMD \
     if [ -f yarn.lock ]; then yarn dev; \
-    elif [ -f package-lock.json ]; then npm run dev; \
     elif [ -f pnpm-lock.yaml ]; then pnpm dev; \
+    elif [ -f package-lock.json ]; then npm run dev; \
     else echo "Lockfile not found." && exit 1; \
     fi 

@@ -5,7 +5,7 @@ Ce document explique comment installer et lancer le projet localement.
 ## Prérequis
 
 - **Node.js** (v18 ou supérieur recommandé)
-- **npm** (inclus avec Node.js)
+- **[pnpm](https://pnpm.io/installation)** (gestionnaire de paquets ; avec Node 16.13+ vous pouvez activer Corepack : `corepack enable`)
 
 ## Installation
 
@@ -13,7 +13,7 @@ Ce document explique comment installer et lancer le projet localement.
 2. Installez les dépendances :
 
    ```bash
-   npm install
+   pnpm install
    ```
 
 ## Configuration
@@ -36,7 +36,7 @@ cp .env.example .env.local
 Lancez le serveur de développement :
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 L'application sera accessible sur [http://localhost:3000](http://localhost:3000).
@@ -46,8 +46,8 @@ L'application sera accessible sur [http://localhost:3000](http://localhost:3000)
 Pour générer une version optimisée :
 
 ```bash
-npm run build
-npm run start
+pnpm build
+pnpm start
 ```
 
 ## Linting
@@ -55,5 +55,5 @@ npm run start
 Pour vérifier la qualité du code :
 
 ```bash
-npm run lint
+pnpm lint
 ```

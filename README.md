@@ -29,7 +29,7 @@ Pour plus de détails sur l'architecture, le design, le mailing ou le déploieme
 
 1. Clone and install:
    ```bash
-   npm install
+   pnpm install
    ```
 2. Configure environment:
    ```bash
@@ -37,7 +37,7 @@ Pour plus de détails sur l'architecture, le design, le mailing ou le déploieme
    ```
 3. Run dev server:
    ```bash
-   npm run dev
+   pnpm dev
    ```
 
 ---
@@ -60,7 +60,7 @@ Pour plus de détails sur l'architecture, le design, le mailing ou le déploieme
 
 1. Clonez et installez :
    ```bash
-   npm install
+   pnpm install
    ```
 2. Configurez l'environnement :
    ```bash
@@ -69,7 +69,7 @@ Pour plus de détails sur l'architecture, le design, le mailing ou le déploieme
    ```
 3. Lancez le serveur :
    ```bash
-   npm run dev
+   pnpm dev
    ```
 
 ### Configuration Docker (FR)
